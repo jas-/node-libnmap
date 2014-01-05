@@ -1,0 +1,25 @@
+{
+  "name": "node-libnmap",
+  "version": "0.0.1",
+  "author": "Jason Gerfen <jason.gerfen@gmail.com>",
+  "keywords": [
+    "nmap",
+    "network host discovery",
+    "host operating system discovery"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jas-/node-libnmap.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "1.14.0",
+    "chai": "1.8.1"
+  },
+  "license": "MIT",
+  "engine": "node >= v0.9.*"
+}
