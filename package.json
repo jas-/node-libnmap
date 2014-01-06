@@ -15,7 +15,7 @@
     "test": "make test"
   },
   "dependencies": {
-    "glob": "~3.2.7"
+
   },
   "devDependencies": {
     "mocha": "1.14.0",
