@@ -1,1 +1,1 @@
-module.exports = require('./lib/libnmap.js')
+module.exports = require('./lib/node-libnmap.js')
