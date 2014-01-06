@@ -15,7 +15,7 @@
     "test": "make test"
   },
   "dependencies": {
-    "ipv6": "~3.1.1"
+    "netmask": "~1.0.4"
   },
   "devDependencies": {
     "mocha": "1.14.0",
