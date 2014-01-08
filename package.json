@@ -1,9 +1,13 @@
 {
   "name": "node-libnmap",
   "version": "0.0.1",
+  "description": "Use nmap from node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
     "nmap",
+    "nmap host discovery",
+    "libnmap",
+    "threaded nmap scanner",
     "network host discovery",
     "host operating system discovery"
   ],
@@ -11,17 +15,17 @@
     "type": "git",
     "url": "https://github.com/jas-/node-libnmap.git"
   },
+  "bugs": {
+    "url": "https://github.com/jas-/node-libnmap/issues"
+  },
   "scripts": {
+    "start": "index.js",
     "test": "make test"
   },
   "dependencies": {
     "netmask": "~1.0.4",
     "async": "~0.2.9"
   },
-  "devDependencies": {
-    "mocha": "1.14.0",
-    "chai": "1.8.1"
-  },
   "license": "MIT",
-  "engine": "node >= v0.9.*"
+  "engine": "node >= v0.11.*"
 }
