@@ -12,16 +12,16 @@ IP range into chunks then creates separate threads performing each scan
 sequentially.
 
 ## options ##
-* nmap {String} - Path to nmap binary
-* scripts {String} - Path to nmap scripts folder
-* flags {String} - Default scan flags
-* range {String} - Subnet range(s)
-* ports {String} - Port range(s)
-* callback {Function} - A user defined function to retrieve report
+* `nmap` {String} - Path to nmap binary
+* `scripts` {String} - Path to nmap scripts folder
+* `flags` {String} - Default scan flags
+* `range` {String} - Subnet range(s)
+* `ports` {String} - Port range(s)
+* `callback` {Function} - A user defined function to retrieve report
 
 ## methods ##
-* discover - Performs auto-discovery of online hosts
-* scan - Performs scan given available range & optional port
+* `discover` - Performs auto-discovery of online hosts
+* `scan` - Performs scan given available range & optional port
 
 ## examples ##
 Here are a few usage examples & their output (more will be added when complete)
