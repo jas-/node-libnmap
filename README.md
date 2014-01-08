@@ -17,6 +17,7 @@ sequentially.
 * flags {String} - Default scan flags
 * range {String} - Subnet range(s)
 * ports {String} - Port range(s)
+* callback {Function} - A user defined function to retrieve report
 
 ## methods ##
 * discover - Performs auto-discovery of online hosts
@@ -27,17 +28,10 @@ Here are a few usage examples & their output (more will be added when complete)
 
 ### discover ###
 ```javascript
-node> var report = require('./').libnmap('discover')
-node> console.log(report)
-{ adapter: 'eth0',
-  properties: 
-   { address: '10.0.2.15',
-     netmask: '255.255.255.0',
-     family: 'IPv4',
-     mac: '52:54:00:12:34:56',
-     internal: false,
-     cidr: '10.0.2.0/24',
-     hosts: 256,
-     range: { start: '10.0.2.1', end: '10.0.2.254' } },
-  neighbors: ['10.0.2.2', '10.0.2.15', '10.0.2.25'] }
+require('../').libnmap('discover', {
+  callback: function(err, report){
+    if (err) throw err
+    console.log(report)
+  }
+})
 ```
