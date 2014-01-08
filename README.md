@@ -53,3 +53,18 @@ Even with that in mind this library performs the following calculation prior
 to running scans on an IP range. `ip-range / cpu`. It tries to split the
 IP range into chunks then creates separate threads performing each scan
 sequentially.
+
+For example instead of executing nmap like this `nmap -sn -oG - 10.0.2.0/24`
+it instead breaks the subnet range into chunks based on the amount of cpu
+cores like this (i.e. 8 cores, where each command is run in its own thread)
+
+```
+nmap -sn -oG - 10.0.2.1-31
+nmap -sn -oG - 10.0.2.33-63
+nmap -sn -oG - 10.0.2.65-95
+nmap -sn -oG - 10.0.2.97-127
+nmap -sn -oG - 10.0.2.129-159
+nmap -sn -oG - 10.0.2.161-191
+nmap -sn -oG - 10.0.2.193-223
+nmap -sn -oG - 10.0.2.225-255
+```
