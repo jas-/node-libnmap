@@ -30,7 +30,7 @@ Here are a few usage examples & their output (more will be added when complete)
 ```javascript
 node> var report = require('./').libnmap('discover')
 node> console.log(report)
-{ interface: 'eth0',
+{ adapter: 'eth0',
   properties: 
    { address: '10.0.2.15',
      netmask: '255.255.255.0',
