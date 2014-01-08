@@ -15,7 +15,8 @@
     "test": "make test"
   },
   "dependencies": {
-    "netmask": "~1.0.4"
+    "netmask": "~1.0.4",
+    "async": "~0.2.9"
   },
   "devDependencies": {
     "mocha": "1.14.0",
