@@ -1,6 +1,6 @@
 require('../').libnmap('discover', {
-  debug: true,
-  callback: function(report){
+  callback: function(err, report){
+    console.log(err)
     console.log(report)
   }
 })
