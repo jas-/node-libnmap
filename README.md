@@ -1,5 +1,4 @@
-# node-libnmap #
-============
+# node-libnmap
 
 Access the nmap using node
 
