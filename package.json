@@ -19,7 +19,7 @@
     "url": "https://github.com/jas-/node-libnmap/issues"
   },
   "scripts": {
-    "start": "index.js",
+    "start": "node index.js",
     "test": "make test"
   },
   "dependencies": {

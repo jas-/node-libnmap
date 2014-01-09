@@ -15,14 +15,14 @@ To install `npm install node-libnmap`
 
 ## methods ##
 * `discover` - Performs auto-discovery of online hosts
-* `scan` - Performs scan given available range & optional port
+* `scan` - Performs scan given available range & optional port (not yet implemented)
 
 ## examples ##
 Here are a few usage examples & their output (more will be added when complete)
 
 ### discover ###
 ```javascript
-require('libnmap').libnmap('discover', {
+require('libnmap').nmap('discover', {
   callback: function(err, report){
     if (err) throw err
     console.log(report)
