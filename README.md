@@ -112,4 +112,35 @@ user    0m0.326s
 sys     0m0.412s
 ```
 
+And an example with multiple adapters on multiple 802.11q segments
+```
+$ time node test/run.js 
+[ { adapter: 'eth0',
+    properties: 
+     { address: '10.0.2.15',
+       netmask: '255.255.255.0',
+       family: 'IPv4',
+       mac: '52:54:00:12:34:56',
+       internal: false,
+       cidr: '10.0.2.0/24',
+       hosts: 256,
+       range: [Object] },
+    neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] },
+  { adapter: 'eth1',
+    properties: 
+     { address: '192.168.2.15',
+       netmask: '255.255.255.128',
+       family: 'IPv4',
+       mac: '52:54:00:12:34:57',
+       internal: false,
+       cidr: '192.168.2.0/25',
+       hosts: 128,
+       range: [Object] },
+    neighbors: [ '192.168.2.2', '192.168.2.3', '192.168.2.15' ] } ]
+
+real    0m3.447s
+user    0m0.493s
+sys     0m0.796s
+```
+
 Mileage may vary
