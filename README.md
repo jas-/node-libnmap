@@ -14,11 +14,22 @@ To install `npm install node-libnmap`
 * `callback` {Function} - A user defined function to retrieve report
 
 ## methods ##
+* `init` - Returns version, license, help & nmap legal resources
 * `discover` - Performs auto-discovery of online hosts
 * `scan` - Performs scan given available range & optional port (not yet implemented)
 
 ## examples ##
 Here are a few usage examples & their output (more will be added when complete)
+
+### discover ###
+```javascript
+console.log(require('libnmap').nmap())
+```
+
+### output ###
+```javascript
+
+```
 
 ### discover ###
 ```javascript
