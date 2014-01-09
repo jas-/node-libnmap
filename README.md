@@ -68,3 +68,48 @@ nmap -sn -oG - 10.0.2.161-191
 nmap -sn -oG - 10.0.2.193-223
 nmap -sn -oG - 10.0.2.225-255
 ```
+
+The technical details of [Fyodor's](http://insecure.org/fyodor/) optimizations
+can be found @ [insecure.org](http://nmap.org/book/man-performance.html).
+
+## benchmarks ##
+The results here are all coming from a virtual environment with limited system
+resources but should give an overall picture of performance of the scans. My VM
+environment is using 8 cores with 4 threads per core given a total returned from
+`require('os').cpus.length` = 32.
+
+Nmap host discovery
+```
+$ time nmap -sn -oG - 10.0.2.0/24
+# Nmap 5.51 scan initiated Wed Jan  8 18:54:07 2014 as: nmap -sn -oG - 10.0.2.0/24
+Host: 10.0.2.2 ()       Status: Up
+Host: 10.0.2.3 ()       Status: Up
+Host: 10.0.2.15 ()      Status: Up
+# Nmap done at Wed Jan  8 18:54:26 2014 -- 256 IP addresses (3 hosts up) scanned in 19.33 seconds
+
+real    0m19.339s
+user    0m0.052s
+sys     0m0.080s
+```
+
+Nmap host discovery using node-libnmap
+```
+$ time node test/run.js 
+{ adapter: 'eth0',
+  properties: 
+   { address: '10.0.2.15',
+     netmask: '255.255.255.0',
+     family: 'IPv4',
+     mac: '52:54:00:12:34:56',
+     internal: false,
+     cidr: '10.0.2.0/24',
+     hosts: 256,
+     range: { start: '10.0.2.1', end: '10.0.2.254' } },
+  neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] }
+
+real    0m3.323s
+user    0m0.326s
+sys     0m0.412s
+```
+
+Mileage may vary
