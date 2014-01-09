@@ -28,7 +28,13 @@ console.log(require('libnmap').nmap())
 
 ### output ###
 ```javascript
-
+> require('./').nmap()
+{ name: 'node-libnmap',
+  version: 'v0.0.3',
+  usage: 'https://github.com/jas-/node-libnmap',
+  license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
+  issues: 'https://github.com/jas-/node-libnmap/issues',
+  nmap: { legal: 'http://nmap.org/book/man-legal.html' } }
 ```
 
 ### discover ###
