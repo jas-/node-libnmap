@@ -184,3 +184,23 @@ sys     0m0.796s
 ```
 
 Mileage may vary
+
+## contributing ##
+I welcome contributions. Testing, patches, features etc. are appreciated. To
+submit a pull request the following instructions will help.
+
+### fork ###
+First fork the project from [github.com](https://github.com/jas-/node-libnmap).
+
+### upstream ###
+1. To ensure changes are as up to date as possible it is recommended to add an
+upstream branch to rebase any upstream changes like so:
+`git remote add upstream https://github.com/jas-/node-libnmap.git`
+
+2. You will then need to `merge` it to track the `contribute` branch:
+`git fetch upstream`
+
+### changes ###
+Any contributions you make should be made under a unique branch to avoid
+conflicts. While creating your branch it is recommended you track changes to the
+`contribute` branch like so: `git checkout -b my-new-feature -t origin/contribute`
