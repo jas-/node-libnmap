@@ -119,7 +119,7 @@ environment is using 8 cores with 4 threads per core given a total returned from
 `require('os').cpus.length` = 32.
 
 Nmap host discovery
-```
+```sh
 $ time nmap -sn -oG - 10.0.2.0/24
 # Nmap 5.51 scan initiated Wed Jan  8 18:54:07 2014 as: nmap -sn -oG - 10.0.2.0/24
 Host: 10.0.2.2 ()       Status: Up
@@ -133,7 +133,7 @@ sys     0m0.080s
 ```
 
 Nmap host discovery using node-libnmap
-```
+```javascript
 $ time node test/run.js 
 { adapter: 'eth0',
   properties: 
@@ -153,7 +153,7 @@ sys     0m0.412s
 ```
 
 And an example with multiple adapters on multiple 802.11q segments
-```
+```javascript
 $ time node test/run.js 
 [ { adapter: 'eth0',
     properties: 
@@ -164,7 +164,7 @@ $ time node test/run.js
        internal: false,
        cidr: '10.0.2.0/24',
        hosts: 256,
-       range: [Object] },
+       range: {start: '10.0.2.0', end: '10.0.2.255'} },
     neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] },
   { adapter: 'eth1',
     properties: 
@@ -175,7 +175,7 @@ $ time node test/run.js
        internal: false,
        cidr: '192.168.2.0/25',
        hosts: 128,
-       range: [Object] },
+       range: {start: '192.168.2.1', end: '192.168.2.128'} },
     neighbors: [ '192.168.2.2', '192.168.2.3', '192.168.2.15' ] } ]
 
 real    0m3.447s
@@ -184,3 +184,23 @@ sys     0m0.796s
 ```
 
 Mileage may vary
+
+## contributing ##
+I welcome contributions. Testing, patches, features etc. are appreciated. To
+submit a pull request the following instructions will help.
+
+### fork ###
+First fork the project from [github.com](https://github.com/jas-/node-libnmap).
+
+### upstream ###
+1. To ensure changes are as up to date as possible it is recommended to add an
+upstream branch to rebase any upstream changes like so:
+`git remote add upstream https://github.com/jas-/node-libnmap.git`
+
+2. You will then need to `merge` it to track the `contribute` branch:
+`git fetch upstream`
+
+### changes ###
+Any contributions you make should be made under a unique branch to avoid
+conflicts. While creating your branch it is recommended you track changes to the
+`contribute` branch like so: `git checkout -b my-new-feature -t origin/contribute`
