@@ -17,9 +17,15 @@
  * SUCH DAMAGE.
  */
 
-var libnmap = require('../')
+var version = 'v0.0.7'
+  , usage = 'https://github.com/jas-/node-libnmap'
+  , support = 'https://github.com/jas-/node-libnmap/issues'
+  , license = 'https://github.com/jas-/node-libnmap/blob/master/LICENSE'
+  , legal = 'http://nmap.org/book/man-legal.html'
+  , libnmap = require('../')
   , chai = require('chai')
   , should = chai.should()
+  , expect = chai.expect
   , nmap = libnmap.nmap()
 
 describe('nmap', function(){
@@ -37,17 +43,41 @@ describe('nmap', function(){
 
       nmap.nmap.should.be.a('object') 
       should.exist(nmap.nmap.legal)
+
       done()
     })
 
     it('latest version', function(done){
 
+      expect(nmap.version).to.be.equal(version)
 
       done()
     })
 
-    it('issues reference valid', function(done){
+    it('usage url', function(done){
 
+      expect(nmap.usage).to.be.equal(usage)
+
+      done()
+    })
+
+    it('support url', function(done){
+
+      expect(nmap.issues).to.be.equal(support)
+
+      done()
+    })
+
+    it('license url', function(done){
+
+      expect(nmap.license).to.be.equal(license)
+
+      done()
+    })
+
+    it('legal url (nmap)', function(done){
+
+      expect(nmap.nmap.legal).to.be.equal(legal)
 
       done()
     })
