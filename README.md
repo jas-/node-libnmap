@@ -38,6 +38,9 @@ console.log(require('libnmap').nmap())
 ```
 
 ### discover ###
+The discover method is the quickest method but is limited to finding local
+peers within the same CIDR per interface.
+
 ```javascript
 require('libnmap').nmap('discover', {
   callback: function(err, report){
@@ -61,6 +64,26 @@ require('libnmap').nmap('discover', {
      range: { start: '10.0.2.1', end: '10.0.2.254' } },
   neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] }
 ```
+
+### scan ###
+A manually specified scan example using a single host, a CIDR range a host
+range as well as a port range specification.
+
+```javascript
+require('libnmap').nmap('scan', {
+  flags: '-T4 -oG -',
+  range: ['10.0.2.15', '10.0.2.0/24', '10.0.2.0-16'],
+  ports: 1-1024,
+  callback: function(err, report){
+    if (err) throw err
+    console.log(report)
+  }
+})
+
+```
+
+### output ###
+Not yet implemented for scan
 
 ## performance ##
 A note on performance of nmap scans; the nmap tool already makes efforts to
