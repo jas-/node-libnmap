@@ -30,7 +30,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.0.3',
+  version: 'v0.0.7',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
