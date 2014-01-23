@@ -18,9 +18,10 @@
  */
 
 var libnmap = require('../')
+
 libnmap.nmap('scan', {
   flags: '-T4 -oG -',
-  range: ['localhost', '10.0.2.15'],
+  range: ['10.0.2.0/25', '192.168.2.128/25', '192.168.2.1-15'],
   callback: function(err, report){
     if (err) throw err
     console.log(report)
