@@ -84,7 +84,7 @@ require('libnmap').nmap('scan', {
 
 ### output ###
 
-```
+```javascript
 [ [ { ip: '127.0.0.1', hostname: 'localhost', ports:
   [ { port: '22',
       state: 'open',
