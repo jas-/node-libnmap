@@ -1,4 +1,4 @@
-# node-libnmap
+# node-libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap)
 
 Access nmap using node.js
 
@@ -190,7 +190,7 @@ user    0m0.052s
 sys     0m0.080s
 ```
 
-Nmap host discovery using node-libnmap
+Nmap host `discover` method using node-libnmap
 ```javascript
 $ time node test/run.js 
 { adapter: 'eth0',
@@ -210,7 +210,7 @@ user    0m0.326s
 sys     0m0.412s
 ```
 
-And an example with multiple adapters on multiple 802.11q segments
+And an example with multiple adapters on multiple 802.11Q segments
 ```javascript
 $ time node test/run.js 
 [ { adapter: 'eth0',
