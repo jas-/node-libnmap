@@ -21,7 +21,7 @@ To install `npm install node-libnmap`
 ## examples ##
 Here are a few usage examples & their output (more will be added when complete)
 
-### discover ###
+### default ###
 ```javascript
 console.log(require('libnmap').nmap())
 ```
@@ -83,7 +83,65 @@ require('libnmap').nmap('scan', {
 ```
 
 ### output ###
-Not yet implemented for scan
+
+```
+[ [ { ip: '127.0.0.1', hostname: 'localhost', ports:
+  [ { port: '22',
+      state: 'open',
+      protocol: 'tcp',
+      owner: '',
+      service: 'ssh',
+      rpc: '',
+      version: '' } ] } ],
+  [ { ip: '10.0.2.15', ports:
+  [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] } ],
+  [ { ip: '192.168.2.15', ports:
+  [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] } ],
+  [ { ip: '10.0.2.2', ports:
+  [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] } ],
+  [ { ip: '10.0.2.3', ports:
+  [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] } ],
+  [ { ip: '192.168.2.2', ports:
+  [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] } ],
+  [ { ip: '192.168.2.3', ports:
+  [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] } ] ]
+```
 
 ## performance ##
 A note on performance of nmap scans; the nmap tool already makes efforts to
