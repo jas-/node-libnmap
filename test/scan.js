@@ -31,10 +31,18 @@ describe('nmap', function(){
 
       libnmap.nmap('scan', {
         flags: '-T4 -oG -',
-        range: ['localhost', '10.0.2.0/25', '192.168.2.0/24'],
+        range: ['localhost'],
         callback: function(err, report){
           should.not.exist(err)
-          console.log(report)
+
+          report.should.be.a('array')
+          report[0].should.be.a('array')
+          report[0][0].should.be.a('object')
+
+          should.exist(report[0][0].ip)
+          should.exist(report[0][0].hostname)
+          should.exist(report[0][0].ports)
+
           done()
         }
       })
