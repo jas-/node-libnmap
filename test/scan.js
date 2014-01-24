@@ -18,19 +18,31 @@
  */
 
 var libnmap = require('../')
+  , timeout = 1024 * 1024 * 2
+  , chai = require('chai')
+  , should = chai.should()
+  , expect = chai.expect
 
 describe('nmap', function(){
 
   describe('scan method', function(){
-    it('valid object report', function(done){
+    it('valid report', function(done){
+      this.timeout(timeout)
 
       libnmap.nmap('scan', {
         flags: '-T4 -oG -',
         range: ['localhost'],
-        ports: 1-1024,
         callback: function(err, report){
-          if (err) throw err
-          //console.log(report)
+          should.not.exist(err)
+
+          report.should.be.a('array')
+          report[0].should.be.a('array')
+          report[0][0].should.be.a('object')
+
+          should.exist(report[0][0].ip)
+          should.exist(report[0][0].hostname)
+          should.exist(report[0][0].ports)
+
           done()
         }
       })
