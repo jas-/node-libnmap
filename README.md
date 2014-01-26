@@ -114,8 +114,46 @@ require('libnmap').nmap('scan', {
 The following errors are thrown when invalid configuration options are passed
 to the module and/or when the necessary node.js version is below version v0.11.*
 
+### method ###
+If you attempt to specify an unkown or unimplemented method, the following error
+is thrown. Allowed methods are `scan` & `discover`.
+
+```javascript
+Method "[missing method]" does not exist, please see node-libnmap API
+```
+
 ### version requirement ###
-  
+If your node.js installation is below version v0.11 the following error is
+thrown
+
+```javascript
+Requires node.js v0.11.* and above
+```
+
+### nmap binary ###
+If your system does not have the nmap binary installed the following error is
+thrown
+
+```javascript
+nmap binary not found, install nmap
+```
+
+### scanning ranges ###
+When specifying an invalid range to the `scan` method the following error is
+thrown. Valid range types are a single hostname/ipv4 (ipv6 is not yet
+implemented), a CIDR range notation or a range.
+
+```javascript
+Range must be an array of host(s), examples: ['192.168.2.10', '10.0.2.0/24', '10.0.10.5-20']
+```
+
+### port range ###
+A range of ports may also be specified with the `scan` method, for an invalid
+port specification the following error is thrown.
+
+```javascript
+Port(s) must match one of the following examples: 512 (single) | 0-65535 (range) | 22-25,80,443,3306 (multiple)
+```
 
 ## performance ##
 A note on performance of nmap scans; the nmap tool already makes efforts to
