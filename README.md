@@ -30,7 +30,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.0.8',
+  version: 'v0.0.9',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
@@ -85,63 +85,37 @@ require('libnmap').nmap('scan', {
 ### output ###
 
 ```javascript
-[ [ { ip: '127.0.0.1', hostname: 'localhost', ports:
-  [ { port: '22',
-      state: 'open',
-      protocol: 'tcp',
-      owner: '',
-      service: 'ssh',
-      rpc: '',
-      version: '' } ] } ],
-  [ { ip: '10.0.2.15', ports:
-  [ { port: '22',
+{ ip: '192.168.2.3',
+  ports: 
+   [ { port: '80',
        state: 'open',
        protocol: 'tcp',
        owner: '',
-       service: 'ssh',
+       service: 'http',
        rpc: '',
-       version: '' } ] } ],
-  [ { ip: '192.168.2.15', ports:
-  [ { port: '22',
+       version: '' },
+     { port: '513',
        state: 'open',
        protocol: 'tcp',
        owner: '',
-       service: 'ssh',
+       service: 'login',
        rpc: '',
-       version: '' } ] } ],
-  [ { ip: '10.0.2.2', ports:
-  [ { port: '22',
+       version: '' },
+     { port: '514',
        state: 'open',
        protocol: 'tcp',
        owner: '',
-       service: 'ssh',
+       service: 'shell',
        rpc: '',
-       version: '' } ] } ],
-  [ { ip: '10.0.2.3', ports:
-  [ { port: '22',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'ssh',
-       rpc: '',
-       version: '' } ] } ],
-  [ { ip: '192.168.2.2', ports:
-  [ { port: '22',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'ssh',
-       rpc: '',
-       version: '' } ] } ],
-  [ { ip: '192.168.2.3', ports:
-  [ { port: '22',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'ssh',
-       rpc: '',
-       version: '' } ] } ] ]
+       version: '' } ] }
 ```
+
+## error handling ##
+The following errors are thrown when invalid configuration options are passed
+to the module and/or when the necessary node.js version is below version v0.11.*
+
+### version requirement ###
+  
 
 ## performance ##
 A note on performance of nmap scans; the nmap tool already makes efforts to
