@@ -1,3 +1,32 @@
+commit 522c8773a184ce6555b5891334e450cb5180071c
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 26 08:12:09 2014 -0700
+
+    README: Performance for scan method
+    
+    README: Updated to reflect benchmarks for nmap vs. node-libnmap scans
+            on test nets
+
+commit fc8f653a01e024b9a8fc41f2b1e2a63332b24853
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 26 07:53:00 2014 -0700
+
+    README: Better example
+    
+    README: Added a better example test case for the scan method
+            and a more robust report example
+
+commit 0acf1509b5c918b06df87b119faf5cd6928efbaa
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 26 07:43:14 2014 -0700
+
+    README: Error handling
+    
+    README: Updates to the error handling section for all thrown
+            errors.
+    
+    CHANGELOG: Updated to reflect latest commits
+
 commit f01e68d3a5812d26105b589d92ee6dab6c7a27ce
 Author: jas- <jason.gerfen@gmail.com>
 Date:   Sun Jan 26 07:24:19 2014 -0700
