@@ -552,7 +552,7 @@ resources but should give an overall picture of performance of the scans. My VM
 environment is using 8 cores with 4 threads per core given a total returned from
 `require('os').cpus.length` = 32.
 
-Nmap host discovery
+### Nmap host discovery ###
 ```sh
 $ time nmap -sn -oG - 10.0.2.0/24
 # Nmap 5.51 scan initiated Wed Jan  8 18:54:07 2014 as: nmap -sn -oG - 10.0.2.0/24
@@ -566,7 +566,7 @@ user    0m0.052s
 sys     0m0.080s
 ```
 
-Nmap host `discover` method using node-libnmap
+### Nmap host `discover` method using node-libnmap ###
 ```javascript
 $ time node test/run.js 
 { adapter: 'eth0',
@@ -615,6 +615,342 @@ $ time node test/run.js
 real    0m3.447s
 user    0m0.493s
 sys     0m0.796s
+```
+
+### Nmap full port scan ###
+```sh
+$ time nmap -T4 -oG - localhost 10.0.2.0/24 192.168.2.0/25
+# Nmap 5.51 scan initiated Sun Jan 26 08:03:18 2014 as: nmap -T4 -oG - localhost 10.0.2.0/24 192.168.2.0/25
+Host: 127.0.0.1 (localhost)     Status: Up
+Host: 127.0.0.1 (localhost)     Ports: 22/open/tcp//ssh///      Ignored State: closed (999)
+Host: 10.0.2.2 ()       Status: Up
+Host: 10.0.2.2 ()       Ports: 513/open/tcp//login///, 514/open/tcp//shell///, 631/open/tcp//ipp///, 1192/filtered/tcp//caids-sensor///, 1524/filtered/tcp//ingreslock///, 1533/filtered/tcp//virtual-places///, 1862/filtered/tcp//mysql-cm-agent///, 1864/filtered/tcp//paradym-31///, 2179/filtered/tcp//vmrdp///, 2222/open/tcp//EtherNet|IP-1///, 2381/filtered/tcp//compaq-https///, 3000/open/tcp//ppp///, 3003/filtered/tcp//cgms///, 3369/filtered/tcp//satvid-datalnk///, 4343/open/tcp//unicall///, 5901/open/tcp//vnc-1///, 7019/filtered/tcp//unknown///, 8000/open/tcp//http-alt///, 8080/open/tcp//http-proxy///, 8300/filtered/tcp//tmi///, 9009/filtered/tcp//pichat///, 9594/filtered/tcp//msgsys///, 10009/filtered/tcp//swdtp-sv///, 16000/filtered/tcp//fmsas///       Ignored State: closed (976)
+Host: 10.0.2.15 ()      Status: Up
+Host: 10.0.2.15 ()      Ports: 22/open/tcp//ssh///      Ignored State: closed (999)
+Host: 192.168.2.2 ()    Status: Up
+Host: 192.168.2.2 ()    Ports: 513/open/tcp//login///, 514/open/tcp//shell///, 631/open/tcp//ipp///, 1174/filtered/tcp//fnet-remote-ui///, 2222/open/tcp//EtherNet|IP-1///, 3000/open/tcp//ppp///, 4343/open/tcp//unicall///, 5901/open/tcp//vnc-1///, 7402/filtered/tcp//rtps-dd-mt///, 8000/open/tcp//http-alt///, 8002/filtered/tcp//teradataordbms///, 8080/open/tcp//http-proxy///, 9100/filtered/tcp//jetdirect///, 9666/filtered/tcp//unknown///, 9968/filtered/tcp//unknown///, 11110/filtered/tcp//unknown///, 54045/filtered/tcp//unknown///       Ignored State: closed (983)
+Host: 192.168.2.3 ()    Status: Up
+Host: 192.168.2.3 ()    Ports: 80/open/tcp//http///, 513/open/tcp//login///, 514/open/tcp//shell///, 1051/filtered/tcp//optima-vnet///  Ignored State: closed (996)
+Host: 192.168.2.15 ()   Status: Up
+Host: 192.168.2.15 ()   Ports: 22/open/tcp//ssh///      Ignored State: closed (999)
+# Nmap done at Sun Jan 26 08:06:52 2014 -- 385 IP addresses (6 hosts up) scanned in 214.20 seconds
+
+real    3m34.218s
+user    0m0.911s
+sys     0m3.315s
+```
+
+### Nmap host `scan` method using node-libnmap ###
+The test case used:
+```javascript
+var libnmap = require('node-libnmap')
+
+libnmap.nmap('scan', {
+  flags: '-T4 -oG -',
+  range: ['localhost', '10.0.2.0/24', '192.168.2.0/25'],
+  callback: function(err, report){
+    if (err) throw err
+    report.forEach(function(item){
+      console.log(item[0])
+    })
+  }
+})
+```
+
+The results
+```javascript
+{ ip: '127.0.0.1',
+  hostname: 'localhost',
+  ports: 
+   [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] }
+{ ip: '10.0.2.15',
+  ports: 
+   [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] }
+{ ip: '192.168.2.15',
+  ports: 
+   [ { port: '22',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ssh',
+       rpc: '',
+       version: '' } ] }
+{ ip: '192.168.2.2',
+  ports: 
+   [ { port: '255',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'unknown',
+       rpc: '',
+       version: '' },
+     { port: '513',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'login',
+       rpc: '',
+       version: '' },
+     { port: '514',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'shell',
+       rpc: '',
+       version: '' },
+     { port: '631',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ipp',
+       rpc: '',
+       version: '' },
+     { port: '1186',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'mysql-cluster',
+       rpc: '',
+       version: '' },
+     { port: '2222',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'EtherNet|IP-1',
+       rpc: '',
+       version: '' },
+     { port: '3000',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ppp',
+       rpc: '',
+       version: '' },
+     { port: '4343',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'unicall',
+       rpc: '',
+       version: '' },
+     { port: '5901',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'vnc-1',
+       rpc: '',
+       version: '' },
+     { port: '8000',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'http-alt',
+       rpc: '',
+       version: '' },
+     { port: '8080',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'http-proxy',
+       rpc: '',
+       version: '' },
+     { port: '9111',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'DragonIDSConsole',
+       rpc: '',
+       version: '' },
+     { port: '19801',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'unknown',
+       rpc: '',
+       version: '' } ] }
+{ ip: '192.168.2.3',
+  ports: 
+   [ { port: '80',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'http',
+       rpc: '',
+       version: '' },
+     { port: '513',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'login',
+       rpc: '',
+       version: '' },
+     { port: '514',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'shell',
+       rpc: '',
+       version: '' },
+     { port: '1812',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'radius',
+       rpc: '',
+       version: '' },
+     { port: '3211',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'avsecuremgmt',
+       rpc: '',
+       version: '' },
+     { port: '4449',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'privatewire',
+       rpc: '',
+       version: '' },
+     { port: '7999',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'irdmi2',
+       rpc: '',
+       version: '' } ] }
+{ ip: '10.0.2.2',
+  ports: 
+   [ { port: '513',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'login',
+       rpc: '',
+       version: '' },
+     { port: '514',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'shell',
+       rpc: '',
+       version: '' },
+     { port: '631',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ipp',
+       rpc: '',
+       version: '' },
+     { port: '2222',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'EtherNet|IP-1',
+       rpc: '',
+       version: '' },
+     { port: '3000',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'ppp',
+       rpc: '',
+       version: '' },
+     { port: '4343',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'unicall',
+       rpc: '',
+       version: '' },
+     { port: '5901',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'vnc-1',
+       rpc: '',
+       version: '' },
+     { port: '8000',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'http-alt',
+       rpc: '',
+       version: '' },
+     { port: '8080',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'http-proxy',
+       rpc: '',
+       version: '' } ] }
+{ ip: '10.0.2.3',
+  ports: 
+   [ { port: '80',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'http',
+       rpc: '',
+       version: '' },
+     { port: '513',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'login',
+       rpc: '',
+       version: '' },
+     { port: '514',
+       state: 'open',
+       protocol: 'tcp',
+       owner: '',
+       service: 'shell',
+       rpc: '',
+       version: '' },
+     { port: '1036',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'nsstp',
+       rpc: '',
+       version: '' },
+     { port: '2605',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'bgpd',
+       rpc: '',
+       version: '' },
+     { port: '5963',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'indy',
+       rpc: '',
+       version: '' },
+     { port: '50001',
+       state: 'filtered',
+       protocol: 'tcp',
+       owner: '',
+       service: 'unknown',
+       rpc: '',
+       version: '' } ] }
+
+real    2m32.158s
+user    0m13.066s
+sys     0m8.890s
 ```
 
 Mileage may vary
