@@ -30,8 +30,8 @@ describe('nmap', function(){
       this.timeout(timeout)
 
       libnmap.nmap('scan', {
-        flags: '-T4 -oG -',
         range: ['localhost'],
+        ports: '1-1024',
         callback: function(err, report){
           should.not.exist(err)
 
@@ -40,7 +40,6 @@ describe('nmap', function(){
           report[0][0].should.be.a('object')
 
           should.exist(report[0][0].ip)
-          should.exist(report[0][0].hostname)
           should.exist(report[0][0].ports)
 
           done()
