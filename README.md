@@ -71,7 +71,6 @@ range as well as a port range specification.
 
 ```javascript
 require('libnmap').nmap('scan', {
-  flags: '-T4 -oG -',
   range: ['localhost', '10.0.2.0/24', '192.168.2.0/25'],
   callback: function(err, report){
     if (err) throw err
@@ -341,7 +340,6 @@ The test case used:
 var libnmap = require('node-libnmap')
 
 libnmap.nmap('scan', {
-  flags: '-T4 -oG -',
   range: ['localhost', '10.0.2.0/24', '192.168.2.0/25'],
   callback: function(err, report){
     if (err) throw err
