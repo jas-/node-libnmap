@@ -24,12 +24,11 @@
   },
   "dependencies": {
     "netmask": "~1.0.4",
-    "async": "~0.2.10",
-    "mocha": "~1.17.1"
+    "async": "~0.2.10"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
-    "chai": "~1.9.1"
+    "chai": "~1.8.1"
   },
   "license": "MIT",
   "engine": "node >= v0.11.*"
