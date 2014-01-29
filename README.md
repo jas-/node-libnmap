@@ -31,7 +31,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.1.0',
+  version: 'v0.1.1',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
@@ -212,6 +212,18 @@ port specification the following error is thrown.
 
 ```javascript
 Port(s) must match one of the following examples: 512 (single) | 0-65535 (range) | 22-25,80,443,3306 (multiple)
+```
+
+### ulimit ###
+If you recieve the `spawn EAGAIN` error you have reached the max number of
+`max user processes`. This error is generally thrown if your attempting to scan
+a very large network block such as a class `b` or `c` network.
+
+To alleviate this you may need to increase the max number of processes which can
+be done like so:
+
+```sh
+$ ulimit -u 65000
 ```
 
 ## performance ##
@@ -645,6 +657,27 @@ The results
 real    2m32.158s
 user    0m13.066s
 sys     0m8.890s
+```
+
+### Class B network scans ###
+To really test the performance of the module I did several scans of a class B
+network containing a maximum host count of `32766`. Below are the times for
+both scans.
+
+```sh
+$ time nmap -T4 -n -oG - 155.97.0.0/17
+
+real    10m32.856s
+user    0m11.709s
+sys     0m33.364s
+```
+
+```sh
+$ time node nmap-test.js
+
+real    0m32.034s
+user    1m3.209s
+sys     0m33.950s
 ```
 
 Mileage may vary
