@@ -5,13 +5,14 @@ Access nmap using node.js
 ## install ##
 To install `npm install node-libnmap`
 
+## tests ##
+To test `npm test`
+
 ## options ##
-* `nmap` {String} - Path to nmap binary
-* `scripts` {String} - Path to nmap scripts folder
-* `flags` {String} - Default scan flags
-* `range` {String} - Subnet range(s)
-* `ports` {String} - Port range(s)
-* `callback` {Function} - A user defined function to retrieve report
+* `nmap` - Path to nmap binary
+* `range` - Subnet range(s)
+* `ports` - Port range(s)
+* `callback` - A user defined callback function to retrieve & parse report
 
 ## methods ##
 * `init` - Returns version, license, help & nmap legal resources
@@ -19,7 +20,7 @@ To install `npm install node-libnmap`
 * `scan` - Performs scan given available range & optional port (not yet implemented)
 
 ## examples ##
-Here are a few usage examples & their output (more will be added when complete)
+Here are a few usage examples & their output
 
 ### default ###
 ```javascript
@@ -30,7 +31,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.0.9',
+  version: 'v0.1.0',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
