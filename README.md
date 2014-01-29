@@ -215,16 +215,21 @@ Port(s) must match one of the following examples: 512 (single) | 0-65535 (range)
 ```
 
 ### ulimit ###
-If you recieve the `spawn EAGAIN` error you have reached the max number of
-`max user processes`. This error is generally thrown if your attempting to scan
-a very large network block such as a class `b` or `c` network.
+If you recieve the `spawn EAGAIN` or `spawn EMFILE` error(s) you have reached
+the max number of `max user processes`. This error is generally thrown if your
+attempting to scan a very large network block.
 
-To alleviate this you may need to increase the max number of processes which can
-be done like so:
+To alleviate this you may need to increase the max number of processes and/or
+which can file handles can be done like so (though not recommended):
 
 ```sh
 $ ulimit -u 65000
+$ ulimit -n 65000
 ```
+
+*Important* These limits are in place to help protect the operating system
+against attacks such as a [fork bombing](http://en.wikipedia.org/wiki/Fork_bomb)
+& [chroot jail breaking](http://www.bpfh.net/simes/computing/chroot-break.html).
 
 ## performance ##
 A note on performance of nmap scans; the nmap tool already makes efforts to
