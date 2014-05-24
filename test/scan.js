@@ -29,21 +29,22 @@ describe('nmap', function(){
     it('valid report', function(done){
       this.timeout(timeout)
 
-      libnmap.nmap('scan', {
+      var opts = {
         range: ['localhost'],
-        ports: '1-1024',
-        callback: function(err, report){
-          should.not.exist(err)
+        ports: '1-1024'
+      }
 
-          report.should.be.a('array')
-          report[0].should.be.a('array')
-          report[0][0].should.be.a('object')
+      libnmap.nmap('scan', opts, function(err, report){
+        should.not.exist(err)
 
-          should.exist(report[0][0].ip)
-          should.exist(report[0][0].ports)
+        report.should.be.a('array')
+        report[0].should.be.a('array')
+        report[0][0].should.be.a('object')
 
-          done()
-        }
+        should.exist(report[0][0].ip)
+        should.exist(report[0][0].ports)
+
+        done()
       })
     })
   })
