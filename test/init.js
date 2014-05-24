@@ -17,7 +17,7 @@
  * SUCH DAMAGE.
  */
 
-var version = 'v0.1.1'
+var version = 'v0.1.4'
   , usage = 'https://github.com/jas-/node-libnmap'
   , support = 'https://github.com/jas-/node-libnmap/issues'
   , license = 'https://github.com/jas-/node-libnmap/blob/master/LICENSE'
@@ -41,7 +41,7 @@ describe('nmap', function(){
       should.exist(nmap.issues)
       should.exist(nmap.name)
 
-      nmap.nmap.should.be.a('object') 
+      nmap.nmap.should.be.a('object')
       should.exist(nmap.nmap.legal)
 
       done()

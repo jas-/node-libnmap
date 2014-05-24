@@ -31,7 +31,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.1.1',
+  version: 'v0.1.4',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
@@ -54,7 +54,7 @@ require('libnmap').nmap('discover', {
 ### output ###
 ```javascript
 { adapter: 'eth0',
-  properties: 
+  properties:
    { address: '10.0.2.15',
      netmask: '255.255.255.0',
      family: 'IPv4',
@@ -88,7 +88,7 @@ require('libnmap').nmap('scan', {
 ```javascript
 { ip: '127.0.0.1',
   hostname: 'localhost',
-  ports: 
+  ports:
    [ { port: '22',
        state: 'open',
        protocol: 'tcp',
@@ -97,7 +97,7 @@ require('libnmap').nmap('scan', {
        rpc: '',
        version: '' } ] }
 { ip: '10.0.2.15',
-  ports: 
+  ports:
    [ { port: '22',
        state: 'open',
        protocol: 'tcp',
@@ -106,7 +106,7 @@ require('libnmap').nmap('scan', {
        rpc: '',
        version: '' } ] }
 { ip: '192.168.2.15',
-  ports: 
+  ports:
    [ { port: '22',
        state: 'open',
        protocol: 'tcp',
@@ -115,7 +115,7 @@ require('libnmap').nmap('scan', {
        rpc: '',
        version: '' } ] }
 { ip: '192.168.2.2',
-  ports: 
+  ports:
    [ { port: '513',
        state: 'open',
        protocol: 'tcp',
@@ -138,7 +138,7 @@ require('libnmap').nmap('scan', {
        rpc: '',
        version: '' } ] }
 { ip: '10.0.2.3',
-  ports: 
+  ports:
    [ { port: '80',
        state: 'open',
        protocol: 'tcp',
@@ -280,9 +280,9 @@ sys     0m0.080s
 
 ### Nmap host `discover` method using node-libnmap ###
 ```javascript
-$ time node test/run.js 
+$ time node test/run.js
 { adapter: 'eth0',
-  properties: 
+  properties:
    { address: '10.0.2.15',
      netmask: '255.255.255.0',
      family: 'IPv4',
@@ -300,9 +300,9 @@ sys     0m0.412s
 
 And an example with multiple adapters on multiple 802.11Q segments
 ```javascript
-$ time node test/run.js 
+$ time node test/run.js
 [ { adapter: 'eth0',
-    properties: 
+    properties:
      { address: '10.0.2.15',
        netmask: '255.255.255.0',
        family: 'IPv4',
@@ -313,7 +313,7 @@ $ time node test/run.js
        range: {start: '10.0.2.0', end: '10.0.2.255'} },
     neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] },
   { adapter: 'eth1',
-    properties: 
+    properties:
      { address: '192.168.2.15',
        netmask: '255.255.255.128',
        family: 'IPv4',
@@ -372,7 +372,7 @@ The results
 ```javascript
 { ip: '127.0.0.1',
   hostname: 'localhost',
-  ports: 
+  ports:
    [ { port: '22',
        state: 'open',
        protocol: 'tcp',
@@ -381,7 +381,7 @@ The results
        rpc: '',
        version: '' } ] }
 { ip: '10.0.2.15',
-  ports: 
+  ports:
    [ { port: '22',
        state: 'open',
        protocol: 'tcp',
@@ -390,7 +390,7 @@ The results
        rpc: '',
        version: '' } ] }
 { ip: '192.168.2.15',
-  ports: 
+  ports:
    [ { port: '22',
        state: 'open',
        protocol: 'tcp',
@@ -399,7 +399,7 @@ The results
        rpc: '',
        version: '' } ] }
 { ip: '192.168.2.2',
-  ports: 
+  ports:
    [ { port: '255',
        state: 'filtered',
        protocol: 'tcp',
@@ -492,7 +492,7 @@ The results
        rpc: '',
        version: '' } ] }
 { ip: '192.168.2.3',
-  ports: 
+  ports:
    [ { port: '80',
        state: 'open',
        protocol: 'tcp',
@@ -543,7 +543,7 @@ The results
        rpc: '',
        version: '' } ] }
 { ip: '10.0.2.2',
-  ports: 
+  ports:
    [ { port: '513',
        state: 'open',
        protocol: 'tcp',
@@ -608,7 +608,7 @@ The results
        rpc: '',
        version: '' } ] }
 { ip: '10.0.2.3',
-  ports: 
+  ports:
    [ { port: '80',
        state: 'open',
        protocol: 'tcp',
