@@ -31,7 +31,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.1.4',
+  version: 'v0.1.5',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
@@ -43,11 +43,9 @@ The discover method is the quickest method but is limited to finding local
 peers within the same CIDR per interface.
 
 ```javascript
-require('libnmap').nmap('discover', {
-  callback: function(err, report){
-    if (err) throw err
-    console.log(report)
-  }
+require('libnmap').nmap('discover', function(err, report){
+  if (err) throw err
+  console.log(report)
 })
 ```
 
@@ -71,14 +69,14 @@ A manually specified scan example using a single host, a CIDR range a host
 range as well as a port range specification.
 
 ```javascript
-require('libnmap').nmap('scan', {
-  range: ['localhost', '10.0.2.0/24', '192.168.2.0/25'],
-  callback: function(err, report){
-    if (err) throw err
-    report.forEach(function(item){
-      console.log(item[0])
-    })
-  }
+var opts = {
+  range: ['localhost', '10.0.2.0/24', '192.168.2.0/25']
+}
+require('libnmap').nmap('scan', opts, function(err, report){
+  if (err) throw err
+  report.forEach(function(item){
+    console.log(item[0])
+  })
 })
 
 ```
@@ -357,14 +355,15 @@ The test case used:
 ```javascript
 var libnmap = require('node-libnmap')
 
-libnmap.nmap('scan', {
-  range: ['localhost', '10.0.2.0/24', '192.168.2.0/25'],
-  callback: function(err, report){
-    if (err) throw err
-    report.forEach(function(item){
-      console.log(item[0])
-    })
-  }
+var opts = {
+  range: ['localhost', '10.0.2.0/24', '192.168.2.0/25']
+}
+
+libnmap.nmap('scan', opts, function(err, report){
+  if (err) throw err
+  report.forEach(function(item){
+    console.log(item[0])
+  })
 })
 ```
 
