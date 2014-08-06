@@ -31,7 +31,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.1.5',
+  version: 'v0.1.6',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
@@ -180,8 +180,9 @@ Method "[missing method]" does not exist, please see node-libnmap API
 ```
 
 ### version requirement ###
-If your node.js installation is below version v0.11 the following error is
-thrown
+The discover method requires a node.js version > `v0.11` due to the
+`os.networkInterfaces().netmask` property being used to traverse each
+physical/virtual adapter and examing the address space for online hosts.
 
 ```javascript
 Requires node.js v0.11.* and above
