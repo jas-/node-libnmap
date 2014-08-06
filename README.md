@@ -705,4 +705,4 @@ upstream branch to rebase any upstream changes like so:
 ### changes ###
 Any contributions you make should be made under a unique branch to avoid
 conflicts. While creating your branch it is recommended you track changes to the
-`contribute` branch like so: `git checkout -b my-new-feature -t origin/contribute`
+`contribute` branch like so: `git checkout -b my-new-feature -t origin/master`
