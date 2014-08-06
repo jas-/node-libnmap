@@ -1,0 +1,166 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.3.8
+3 info using node@v0.11.7
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /home/jas/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz
+12 verbose folder .
+13 silly lockFile 1f1177db-tar tar://.
+14 verbose lock tar://. /home/jas/.npm/1f1177db-tar.lock
+15 silly lockFile 5bd3b025-10567-0-6051767559256405-tmp-tgz tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz
+16 verbose lock tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz /home/jas/.npm/5bd3b025-10567-0-6051767559256405-tmp-tgz.lock
+17 silly lockFile 1f1177db-tar tar://.
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 5bd3b025-10567-0-6051767559256405-tmp-tgz tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz
+20 silly lockFile 5bd3b025-10567-0-6051767559256405-tmp-tgz tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz
+21 verbose tar unpack /home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz
+22 silly lockFile fbd0d3e3-10567-0-6051767559256405-package tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package
+23 verbose lock tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package /home/jas/.npm/fbd0d3e3-10567-0-6051767559256405-package.lock
+24 silly lockFile 5bd3b025-10567-0-6051767559256405-tmp-tgz tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz
+25 verbose lock tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz /home/jas/.npm/5bd3b025-10567-0-6051767559256405-tmp-tgz.lock
+26 silly gunzTarPerm modes [ '755', '644' ]
+27 silly gunzTarPerm extractEntry package.json
+28 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+31 silly gunzTarPerm extractEntry README.md
+32 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+33 silly gunzTarPerm extractEntry LICENSE
+34 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+35 silly gunzTarPerm extractEntry index.js
+36 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+37 silly gunzTarPerm extractEntry Makefile
+38 silly gunzTarPerm modified mode [ 'Makefile', 436, 420 ]
+39 silly gunzTarPerm extractEntry .travis.yml
+40 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+41 silly gunzTarPerm extractEntry lib/node-libnmap.js
+42 silly gunzTarPerm modified mode [ 'lib/node-libnmap.js', 436, 420 ]
+43 silly gunzTarPerm extractEntry lib/node-libnmap.min.js
+44 silly gunzTarPerm modified mode [ 'lib/node-libnmap.min.js', 436, 420 ]
+45 silly gunzTarPerm extractEntry CHANGELOG
+46 silly gunzTarPerm modified mode [ 'CHANGELOG', 436, 420 ]
+47 silly gunzTarPerm extractEntry test/discover.js
+48 silly gunzTarPerm modified mode [ 'test/discover.js', 436, 420 ]
+49 silly gunzTarPerm extractEntry test/init.js
+50 silly gunzTarPerm modified mode [ 'test/init.js', 436, 420 ]
+51 silly gunzTarPerm extractEntry test/scan.js
+52 silly gunzTarPerm modified mode [ 'test/scan.js', 436, 420 ]
+53 silly lockFile fbd0d3e3-10567-0-6051767559256405-package tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package
+54 silly lockFile fbd0d3e3-10567-0-6051767559256405-package tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package
+55 silly lockFile 5bd3b025-10567-0-6051767559256405-tmp-tgz tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz
+56 silly lockFile 5bd3b025-10567-0-6051767559256405-tmp-tgz tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/tmp.tgz
+57 verbose tar pack [ '/home/jas/.npm/node-libnmap/0.1.5/package.tgz',
+57 verbose tar pack   '/home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package' ]
+58 verbose tarball /home/jas/.npm/node-libnmap/0.1.5/package.tgz
+59 verbose folder /home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package
+60 silly lockFile fbd0d3e3-10567-0-6051767559256405-package tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package
+61 verbose lock tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package /home/jas/.npm/fbd0d3e3-10567-0-6051767559256405-package.lock
+62 silly lockFile 76bed935-m-node-libnmap-0-1-5-package-tgz tar:///home/jas/.npm/node-libnmap/0.1.5/package.tgz
+63 verbose lock tar:///home/jas/.npm/node-libnmap/0.1.5/package.tgz /home/jas/.npm/76bed935-m-node-libnmap-0-1-5-package-tgz.lock
+64 silly lockFile fbd0d3e3-10567-0-6051767559256405-package tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package
+65 silly lockFile fbd0d3e3-10567-0-6051767559256405-package tar:///home/jas/tmp/npm-22404-cUqp64FW/1407345610567-0.6051767559256405/package
+66 silly lockFile 76bed935-m-node-libnmap-0-1-5-package-tgz tar:///home/jas/.npm/node-libnmap/0.1.5/package.tgz
+67 silly lockFile 76bed935-m-node-libnmap-0-1-5-package-tgz tar:///home/jas/.npm/node-libnmap/0.1.5/package.tgz
+68 silly lockFile 77b4ce76-s-npm-node-libnmap-0-1-5-package /home/jas/.npm/node-libnmap/0.1.5/package
+69 verbose lock /home/jas/.npm/node-libnmap/0.1.5/package /home/jas/.npm/77b4ce76-s-npm-node-libnmap-0-1-5-package.lock
+70 silly lockFile 77b4ce76-s-npm-node-libnmap-0-1-5-package /home/jas/.npm/node-libnmap/0.1.5/package
+71 silly lockFile 77b4ce76-s-npm-node-libnmap-0-1-5-package /home/jas/.npm/node-libnmap/0.1.5/package
+72 verbose tar unpack /home/jas/.npm/node-libnmap/0.1.5/package.tgz
+73 silly lockFile 1afeeba8-s-npm-node-libnmap-0-1-5-package tar:///home/jas/.npm/node-libnmap/0.1.5/package
+74 verbose lock tar:///home/jas/.npm/node-libnmap/0.1.5/package /home/jas/.npm/1afeeba8-s-npm-node-libnmap-0-1-5-package.lock
+75 silly lockFile 76bed935-m-node-libnmap-0-1-5-package-tgz tar:///home/jas/.npm/node-libnmap/0.1.5/package.tgz
+76 verbose lock tar:///home/jas/.npm/node-libnmap/0.1.5/package.tgz /home/jas/.npm/76bed935-m-node-libnmap-0-1-5-package-tgz.lock
+77 silly gunzTarPerm modes [ '755', '644' ]
+78 silly gunzTarPerm extractEntry package.json
+79 silly gunzTarPerm extractEntry .npmignore
+80 silly gunzTarPerm extractEntry README.md
+81 silly gunzTarPerm extractEntry LICENSE
+82 silly gunzTarPerm extractEntry index.js
+83 silly gunzTarPerm extractEntry .travis.yml
+84 silly gunzTarPerm extractEntry CHANGELOG
+85 silly gunzTarPerm extractEntry Makefile
+86 silly gunzTarPerm extractEntry lib/node-libnmap.js
+87 silly gunzTarPerm extractEntry lib/node-libnmap.min.js
+88 silly gunzTarPerm extractEntry test/discover.js
+89 silly gunzTarPerm extractEntry test/init.js
+90 silly gunzTarPerm extractEntry test/scan.js
+91 silly lockFile 1afeeba8-s-npm-node-libnmap-0-1-5-package tar:///home/jas/.npm/node-libnmap/0.1.5/package
+92 silly lockFile 1afeeba8-s-npm-node-libnmap-0-1-5-package tar:///home/jas/.npm/node-libnmap/0.1.5/package
+93 silly lockFile 76bed935-m-node-libnmap-0-1-5-package-tgz tar:///home/jas/.npm/node-libnmap/0.1.5/package.tgz
+94 silly lockFile 76bed935-m-node-libnmap-0-1-5-package-tgz tar:///home/jas/.npm/node-libnmap/0.1.5/package.tgz
+95 verbose chmod /home/jas/.npm/node-libnmap/0.1.5/package.tgz 644
+96 verbose chown /home/jas/.npm/node-libnmap/0.1.5/package.tgz [ 500, 500 ]
+97 silly lockFile 3a52ce78- .
+98 silly lockFile 3a52ce78- .
+99 silly publish { name: 'node-libnmap',
+99 silly publish   version: '0.1.5',
+99 silly publish   description: 'Use nmap from node.js',
+99 silly publish   author: { name: 'Jason Gerfen', email: 'jason.gerfen@gmail.com' },
+99 silly publish   keywords:
+99 silly publish    [ 'nmap',
+99 silly publish      'nmap host discovery',
+99 silly publish      'libnmap',
+99 silly publish      'threaded nmap scanner',
+99 silly publish      'network host discovery',
+99 silly publish      'host operating system discovery',
+99 silly publish      'port scanner' ],
+99 silly publish   repository: { type: 'git', url: 'https://github.com/jas-/node-libnmap.git' },
+99 silly publish   bugs: { url: 'https://github.com/jas-/node-libnmap/issues' },
+99 silly publish   scripts: { start: 'node index.js', test: 'make test' },
+99 silly publish   dependencies: { netmask: '~1.0.4', async: '~0.2.10', chai: '^1.8.1' },
+99 silly publish   devDependencies: { mocha: '~1.17.0', chai: '~1.8.1' },
+99 silly publish   license: 'MIT',
+99 silly publish   engine: 'node >= v0.11.*',
+99 silly publish   readme: '# node-libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap)\n\nAccess nmap using node.js\n\n## install ##\nTo install `npm install node-libnmap`\n\n## tests ##\nTo test `npm test`\n\n## options ##\n* `nmap` - Path to nmap binary\n* `range` - Subnet range(s)\n* `ports` - Port range(s)\n* `callback` - A user defined callback function to retrieve & parse report\n\n## methods ##\n* `init` - Returns version, license, help & nmap legal resources\n* `discover` - Performs auto-discovery of online hosts\n* `scan` - Performs scan given available range & optional port (not yet implemented)\n\n## examples ##\nHere are a few usage examples & their output\n\n### default ###\n```javascript\nconsole.log(require(\'libnmap\').nmap())\n```\n\n### output ###\n```javascript\n> require(\'./\').nmap()\n{ name: \'node-libnmap\',\n  version: \'v0.1.6\',\n  usage: \'https://github.com/jas-/node-libnmap\',\n  license: \'https://github.com/jas-/node-libnmap/blob/master/LICENSE\',\n  issues: \'https://github.com/jas-/node-libnmap/issues\',\n  nmap: { legal: \'http://nmap.org/book/man-legal.html\' } }\n```\n\n### discover ###\nThe discover method is the quickest method but is limited to finding local\npeers within the same CIDR per interface.\n\n```javascript\nrequire(\'libnmap\').nmap(\'discover\', function(err, report){\n  if (err) throw err\n  console.log(report)\n})\n```\n\n### output ###\n```javascript\n{ adapter: \'eth0\',\n  properties:\n   { address: \'10.0.2.15\',\n     netmask: \'255.255.255.0\',\n     family: \'IPv4\',\n     mac: \'52:54:00:12:34:56\',\n     internal: false,\n     cidr: \'10.0.2.0/24\',\n     hosts: 256,\n     range: { start: \'10.0.2.1\', end: \'10.0.2.254\' } },\n  neighbors: [ \'10.0.2.2\', \'10.0.2.3\', \'10.0.2.15\' ] }\n```\n\n### scan ###\nA manually specified scan example using a single host, a CIDR range a host\nrange as well as a port range specification.\n\n```javascript\nvar opts = {\n  range: [\'localhost\', \'10.0.2.0/24\', \'192.168.2.0/25\']\n}\nrequire(\'libnmap\').nmap(\'scan\', opts, function(err, report){\n  if (err) throw err\n  report.forEach(function(item){\n    console.log(item[0])\n  })\n})\n\n```\n\n### output ###\n\n```javascript\n{ ip: \'127.0.0.1\',\n  hostname: \'localhost\',\n  ports:\n   [ { port: \'22\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ssh\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'10.0.2.15\',\n  ports:\n   [ { port: \'22\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ssh\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'192.168.2.15\',\n  ports:\n   [ { port: \'22\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ssh\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'192.168.2.2\',\n  ports:\n   [ { port: \'513\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'login\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'514\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'shell\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'631\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ipp\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'10.0.2.3\',\n  ports:\n   [ { port: \'80\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'http\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'513\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'login\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'514\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'shell\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'5952\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'unknown\',\n       rpc: \'\',\n       version: \'\' } ] }\n```\n\n## error handling ##\nThe following errors are thrown when invalid configuration options are passed\nto the module and/or when the necessary node.js version is below version v0.11.*\n\n### method ###\nIf you attempt to specify an unkown or unimplemented method, the following error\nis thrown. Allowed methods are `scan` & `discover`.\n\n```javascript\nMethod "[missing method]" does not exist, please see node-libnmap API\n```\n\n### version requirement ###\nThe discover method requires a node.js version > `v0.11` due to the\n`os.networkInterfaces().netmask` property being used to traverse each\nphysical/virtual adapter and examing the address space for online hosts.\n\n```javascript\nRequires node.js v0.11.* and above\n```\n\n### nmap binary ###\nIf your system does not have the nmap binary installed the following error is\nthrown\n\n```javascript\nnmap binary not found, install nmap\n```\n\n### scanning ranges ###\nWhen specifying an invalid range to the `scan` method the following error is\nthrown. Valid range types are a single hostname/ipv4 (ipv6 is not yet\nimplemented), a CIDR range notation or a range.\n\n```javascript\nRange must be an array of host(s), examples: [\'192.168.2.10\', \'10.0.2.0/24\', \'10.0.10.5-20\']\n```\n\n### port range ###\nA range of ports may also be specified with the `scan` method, for an invalid\nport specification the following error is thrown.\n\n```javascript\nPort(s) must match one of the following examples: 512 (single) | 0-65535 (range) | 22-25,80,443,3306 (multiple)\n```\n\n### ulimit ###\nIf you recieve the `spawn EAGAIN` or `spawn EMFILE` error(s) you have reached\nthe max number of `max user processes`. This error is generally thrown if your\nattempting to scan a very large network block.\n\nTo alleviate this you may need to increase the max number of processes and/or\nwhich can file handles can be done like so (though not recommended):\n\n```sh\n$ ulimit -u 65000\n$ ulimit -n 65000\n```\n\n*Important* These limits are in place to help protect the operating system\nagainst attacks such as a [fork bombing](http://en.wikipedia.org/wiki/Fork_bomb)\n& [chroot jail breaking](http://www.bpfh.net/simes/computing/chroot-break.html).\n\n## performance ##\nA note on performance of nmap scans; the nmap tool already makes efforts to\nutilize parallel processing when multiple processor cores are available.\n\nEven with that in mind this library performs the following calculation prior\nto running scans on an IP range. `ip-range / cpu`. It tries to split the\nIP range into chunks then creates separate threads performing each scan\nsequentially.\n\nFor example instead of executing nmap like this `nmap -sn -oG - 10.0.2.0/24`\nit instead breaks the subnet range into chunks based on the amount of cpu\ncores like this (i.e. 8 cores, where each command is run in its own thread)\n\n```\nnmap -sn -oG - 10.0.2.1-31\nnmap -sn -oG - 10.0.2.33-63\nnmap -sn -oG - 10.0.2.65-95\nnmap -sn -oG - 10.0.2.97-127\nnmap -sn -oG - 10.0.2.129-159\nnmap -sn -oG - 10.0.2.161-191\nnmap -sn -oG - 10.0.2.193-223\nnmap -sn -oG - 10.0.2.225-255\n```\n\nThe technical details of [Fyodor\'s](http://insecure.org/fyodor/) optimizations\ncan be found @ [insecure.org](http://nmap.org/book/man-performance.html).\n\n## benchmarks ##\nThe results here are all coming from a virtual environment with limited system\nresources but should give an overall picture of performance of the scans. My VM\nenvironment is using 8 cores with 4 threads per core given a total returned from\n`require(\'os\').cpus.length` = 32.\n\n### Nmap host discovery ###\n```sh\n$ time nmap -sn -oG - 10.0.2.0/24\n# Nmap 5.51 scan initiated Wed Jan  8 18:54:07 2014 as: nmap -sn -oG - 10.0.2.0/24\nHost: 10.0.2.2 ()       Status: Up\nHost: 10.0.2.3 ()       Status: Up\nHost: 10.0.2.15 ()      Status: Up\n# Nmap done at Wed Jan  8 18:54:26 2014 -- 256 IP addresses (3 hosts up) scanned in 19.33 seconds\n\nreal    0m19.339s\nuser    0m0.052s\nsys     0m0.080s\n```\n\n### Nmap host `discover` method using node-libnmap ###\n```javascript\n$ time node test/run.js\n{ adapter: \'eth0\',\n  properties:\n   { address: \'10.0.2.15\',\n     netmask: \'255.255.255.0\',\n     family: \'IPv4\',\n     mac: \'52:54:00:12:34:56\',\n     internal: false,\n     cidr: \'10.0.2.0/24\',\n     hosts: 256,\n     range: { start: \'10.0.2.1\', end: \'10.0.2.254\' } },\n  neighbors: [ \'10.0.2.2\', \'10.0.2.3\', \'10.0.2.15\' ] }\n\nreal    0m3.323s\nuser    0m0.326s\nsys     0m0.412s\n```\n\nAnd an example with multiple adapters on multiple 802.11Q segments\n```javascript\n$ time node test/run.js\n[ { adapter: \'eth0\',\n    properties:\n     { address: \'10.0.2.15\',\n       netmask: \'255.255.255.0\',\n       family: \'IPv4\',\n       mac: \'52:54:00:12:34:56\',\n       internal: false,\n       cidr: \'10.0.2.0/24\',\n       hosts: 256,\n       range: {start: \'10.0.2.0\', end: \'10.0.2.255\'} },\n    neighbors: [ \'10.0.2.2\', \'10.0.2.3\', \'10.0.2.15\' ] },\n  { adapter: \'eth1\',\n    properties:\n     { address: \'192.168.2.15\',\n       netmask: \'255.255.255.128\',\n       family: \'IPv4\',\n       mac: \'52:54:00:12:34:57\',\n       internal: false,\n       cidr: \'192.168.2.0/25\',\n       hosts: 128,\n       range: {start: \'192.168.2.1\', end: \'192.168.2.128\'} },\n    neighbors: [ \'192.168.2.2\', \'192.168.2.3\', \'192.168.2.15\' ] } ]\n\nreal    0m3.447s\nuser    0m0.493s\nsys     0m0.796s\n```\n\n### Nmap full port scan ###\n```sh\n$ time nmap -T4 -oG - localhost 10.0.2.0/24 192.168.2.0/25\n# Nmap 5.51 scan initiated Sun Jan 26 08:03:18 2014 as: nmap -T4 -oG - localhost 10.0.2.0/24 192.168.2.0/25\nHost: 127.0.0.1 (localhost)     Status: Up\nHost: 127.0.0.1 (localhost)     Ports: 22/open/tcp//ssh///      Ignored State: closed (999)\nHost: 10.0.2.2 ()       Status: Up\nHost: 10.0.2.2 ()       Ports: 513/open/tcp//login///, 514/open/tcp//shell///, 631/open/tcp//ipp///, 1192/filtered/tcp//caids-sensor///, 1524/filtered/tcp//ingreslock///, 1533/filtered/tcp//virtual-places///, 1862/filtered/tcp//mysql-cm-agent///, 1864/filtered/tcp//paradym-31///, 2179/filtered/tcp//vmrdp///, 2222/open/tcp//EtherNet|IP-1///, 2381/filtered/tcp//compaq-https///, 3000/open/tcp//ppp///, 3003/filtered/tcp//cgms///, 3369/filtered/tcp//satvid-datalnk///, 4343/open/tcp//unicall///, 5901/open/tcp//vnc-1///, 7019/filtered/tcp//unknown///, 8000/open/tcp//http-alt///, 8080/open/tcp//http-proxy///, 8300/filtered/tcp//tmi///, 9009/filtered/tcp//pichat///, 9594/filtered/tcp//msgsys///, 10009/filtered/tcp//swdtp-sv///, 16000/filtered/tcp//fmsas///       Ignored State: closed (976)\nHost: 10.0.2.15 ()      Status: Up\nHost: 10.0.2.15 ()      Ports: 22/open/tcp//ssh///      Ignored State: closed (999)\nHost: 192.168.2.2 ()    Status: Up\nHost: 192.168.2.2 ()    Ports: 513/open/tcp//login///, 514/open/tcp//shell///, 631/open/tcp//ipp///, 1174/filtered/tcp//fnet-remote-ui///, 2222/open/tcp//EtherNet|IP-1///, 3000/open/tcp//ppp///, 4343/open/tcp//unicall///, 5901/open/tcp//vnc-1///, 7402/filtered/tcp//rtps-dd-mt///, 8000/open/tcp//http-alt///, 8002/filtered/tcp//teradataordbms///, 8080/open/tcp//http-proxy///, 9100/filtered/tcp//jetdirect///, 9666/filtered/tcp//unknown///, 9968/filtered/tcp//unknown///, 11110/filtered/tcp//unknown///, 54045/filtered/tcp//unknown///       Ignored State: closed (983)\nHost: 192.168.2.3 ()    Status: Up\nHost: 192.168.2.3 ()    Ports: 80/open/tcp//http///, 513/open/tcp//login///, 514/open/tcp//shell///, 1051/filtered/tcp//optima-vnet///  Ignored State: closed (996)\nHost: 192.168.2.15 ()   Status: Up\nHost: 192.168.2.15 ()   Ports: 22/open/tcp//ssh///      Ignored State: closed (999)\n# Nmap done at Sun Jan 26 08:06:52 2014 -- 385 IP addresses (6 hosts up) scanned in 214.20 seconds\n\nreal    3m34.218s\nuser    0m0.911s\nsys     0m3.315s\n```\n\n### Nmap host `scan` method using node-libnmap ###\nThe test case used:\n```javascript\nvar libnmap = require(\'node-libnmap\')\n\nvar opts = {\n  range: [\'localhost\', \'10.0.2.0/24\', \'192.168.2.0/25\']\n}\n\nlibnmap.nmap(\'scan\', opts, function(err, report){\n  if (err) throw err\n  report.forEach(function(item){\n    console.log(item[0])\n  })\n})\n```\n\nThe results\n```javascript\n{ ip: \'127.0.0.1\',\n  hostname: \'localhost\',\n  ports:\n   [ { port: \'22\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ssh\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'10.0.2.15\',\n  ports:\n   [ { port: \'22\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ssh\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'192.168.2.15\',\n  ports:\n   [ { port: \'22\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ssh\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'192.168.2.2\',\n  ports:\n   [ { port: \'255\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'unknown\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'513\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'login\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'514\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'shell\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'631\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ipp\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'1186\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'mysql-cluster\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'2222\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'EtherNet|IP-1\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'3000\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ppp\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'4343\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'unicall\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'5901\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'vnc-1\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'8000\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'http-alt\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'8080\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'http-proxy\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'9111\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'DragonIDSConsole\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'19801\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'unknown\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'192.168.2.3\',\n  ports:\n   [ { port: \'80\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'http\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'513\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'login\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'514\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'shell\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'1812\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'radius\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'3211\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'avsecuremgmt\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'4449\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'privatewire\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'7999\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'irdmi2\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'10.0.2.2\',\n  ports:\n   [ { port: \'513\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'login\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'514\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'shell\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'631\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ipp\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'2222\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'EtherNet|IP-1\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'3000\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'ppp\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'4343\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'unicall\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'5901\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'vnc-1\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'8000\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'http-alt\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'8080\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'http-proxy\',\n       rpc: \'\',\n       version: \'\' } ] }\n{ ip: \'10.0.2.3\',\n  ports:\n   [ { port: \'80\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'http\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'513\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'login\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'514\',\n       state: \'open\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'shell\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'1036\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'nsstp\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'2605\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'bgpd\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'5963\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'indy\',\n       rpc: \'\',\n       version: \'\' },\n     { port: \'50001\',\n       state: \'filtered\',\n       protocol: \'tcp\',\n       owner: \'\',\n       service: \'unknown\',\n       rpc: \'\',\n       version: \'\' } ] }\n\nreal    2m32.158s\nuser    0m13.066s\nsys     0m8.890s\n```\n\n### Class B network scans ###\nTo really test the performance of the module I did several scans of a class B\nnetwork containing a maximum host count of `32766`. Below are the times for\nboth scans.\n\n```sh\n$ time nmap -T4 -n -oG - 155.97.0.0/17\n\nreal    10m32.856s\nuser    0m11.709s\nsys     0m33.364s\n```\n\n```sh\n$ time node nmap-test.js\n\nreal    0m32.034s\nuser    1m3.209s\nsys     0m33.950s\n```\n\nMileage may vary\n\n## contributing ##\nI welcome contributions. Testing, patches, features etc. are appreciated. To\nsubmit a pull request the following instructions will help.\n\n### fork ###\nFirst fork the project from [github.com](https://github.com/jas-/node-libnmap).\n\n### upstream ###\n1. To ensure changes are as up to date as possible it is recommended to add an\nupstream branch to rebase any upstream changes like so:\n`git remote add upstream https://github.com/jas-/node-libnmap.git`\n\n2. You will then need to `merge` it to track the `contribute` branch:\n`git fetch upstream`\n\n### changes ###\nAny contributions you make should be made under a unique branch to avoid\nconflicts. While creating your branch it is recommended you track changes to the\n`contribute` branch like so: `git checkout -b my-new-feature -t origin/master`\n',
+99 silly publish   readmeFilename: 'README.md',
+99 silly publish   _id: 'node-libnmap@0.1.5',
+99 silly publish   dist: { shasum: '0e54c53d6096ed5f408791c8733d521d28e5af82' },
+99 silly publish   _from: '.' }
+100 verbose url raw node-libnmap
+101 verbose url resolving [ 'https://registry.npmjs.org/', './node-libnmap' ]
+102 verbose url resolved https://registry.npmjs.org/node-libnmap
+103 info trying registry request attempt 1 at 11:20:10
+104 http PUT https://registry.npmjs.org/node-libnmap
+105 http 403 https://registry.npmjs.org/node-libnmap
+106 info trying registry request attempt 1 at 11:20:13
+107 http PUT https://registry.npmjs.org/node-libnmap
+108 http 201 https://registry.npmjs.org/node-libnmap
+109 verbose url raw node-libnmap
+110 verbose url resolving [ 'https://registry.npmjs.org/', './node-libnmap' ]
+111 verbose url resolved https://registry.npmjs.org/node-libnmap
+112 info trying registry request attempt 1 at 11:20:14
+113 http GET https://registry.npmjs.org/node-libnmap
+114 http 200 https://registry.npmjs.org/node-libnmap
+115 error publish fail Cannot publish over existing version.
+115 error publish fail Update the 'version' field in package.json and try again.
+115 error publish fail
+115 error publish fail If the previous version was published in error, see:
+115 error publish fail     npm help unpublish
+115 error publish fail
+115 error publish fail To automatically increment version numbers, see:
+115 error publish fail     npm help version
+116 error System Linux 2.6.32-431.23.3.el6.x86_64
+117 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+118 error cwd /home/jas/projects/mine/node-libnmap
+119 error node -v v0.11.7
+120 error npm -v 1.3.8
+121 error code EPUBLISHCONFLICT
+122 verbose exit [ 1, true ]
