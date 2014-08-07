@@ -31,7 +31,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.1.5',
+  version: 'v0.1.6',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
@@ -180,8 +180,9 @@ Method "[missing method]" does not exist, please see node-libnmap API
 ```
 
 ### version requirement ###
-If your node.js installation is below version v0.11 the following error is
-thrown
+The discover method requires a node.js version > `v0.11` due to the
+`os.networkInterfaces().netmask` property being used to traverse each
+physical/virtual adapter and examing the address space for online hosts.
 
 ```javascript
 Requires node.js v0.11.* and above
@@ -704,4 +705,4 @@ upstream branch to rebase any upstream changes like so:
 ### changes ###
 Any contributions you make should be made under a unique branch to avoid
 conflicts. While creating your branch it is recommended you track changes to the
-`contribute` branch like so: `git checkout -b my-new-feature -t origin/contribute`
+`contribute` branch like so: `git checkout -b my-new-feature -t origin/master`
