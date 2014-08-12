@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "netmask": "~1.0.4",
-    "async": "~0.2.10"
+    "async": "~0.2.10",
+    "ipv6": "~3.1.1"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
