@@ -31,7 +31,7 @@ console.log(require('libnmap').nmap())
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
-  version: 'v0.1.9',
+  version: 'v0.1.10',
   usage: 'https://github.com/jas-/node-libnmap',
   license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
   issues: 'https://github.com/jas-/node-libnmap/issues',
@@ -65,12 +65,13 @@ require('libnmap').nmap('discover', function(err, report){
 ```
 
 ### scan ###
-A manually specified scan example using a single host, a CIDR range a host
-range as well as a port range specification.
+A manually specified scan example using a single host (both IPv4 & IPv6 notation),
+a CIDR range a host range as well as a port range specification.
 
 ```javascript
 var opts = {
-  range: ['localhost', '10.0.2.0/24', '192.168.2.0/25']
+  range: ['10.0.2.128-255', '10.0.2.0/25', '192.168.0.0/17', '::ffff:192.168.2.15'],
+	ports: '21,22,80,443,3306,60000-65535'
 }
 require('libnmap').nmap('scan', opts, function(err, report){
   if (err) throw err
