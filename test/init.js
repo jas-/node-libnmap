@@ -17,7 +17,7 @@
  * SUCH DAMAGE.
  */
 
-var version = 'v0.1.10'
+var version = 'v0.1.11'
   , usage = 'https://github.com/jas-/node-libnmap'
   , support = 'https://github.com/jas-/node-libnmap/issues'
   , license = 'https://github.com/jas-/node-libnmap/blob/master/LICENSE'
