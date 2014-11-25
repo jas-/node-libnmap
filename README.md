@@ -43,7 +43,7 @@ The discover method is the quickest method but is limited to finding local
 peers within the same CIDR per interface.
 
 ```javascript
-require('libnmap').nmap('discover', function(err, report){
+require('node-libnmap').nmap('discover', function(err, report){
   if (err) throw err
   console.log(report)
 })
