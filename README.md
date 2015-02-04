@@ -24,7 +24,7 @@ Here are a few usage examples & their output
 
 ### default ###
 ```javascript
-console.log(require('libnmap').nmap())
+console.log(require('node-libnmap').nmap())
 ```
 
 ### output ###
@@ -43,7 +43,7 @@ The discover method is the quickest method but is limited to finding local
 peers within the same CIDR per interface.
 
 ```javascript
-require('libnmap').nmap('discover', function(err, report){
+require('node-libnmap').nmap('discover', function(err, report){
   if (err) throw err
   console.log(report)
 })
@@ -67,19 +67,20 @@ require('libnmap').nmap('discover', function(err, report){
 ### scan ###
 A manually specified scan example using a single host (both IPv4 & IPv6 notation),
 a CIDR range a host range as well as a port range specification.
+If you have only one adress in your range list, you can give just a single string.
 
 ```javascript
 var opts = {
   range: ['10.0.2.128-255', '10.0.2.0/25', '192.168.0.0/17', '::ffff:192.168.2.15'],
-	ports: '21,22,80,443,3306,60000-65535'
+  // range: '127.0.0.1',
+  ports: '21,22,80,443,3306,60000-65535'
 }
-require('libnmap').nmap('scan', opts, function(err, report){
+require('node-libnmap').nmap('scan', opts, function(err, report){
   if (err) throw err
   report.forEach(function(item){
     console.log(item[0])
   })
 })
-
 ```
 
 ### output ###
