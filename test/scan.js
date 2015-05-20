@@ -30,7 +30,7 @@ describe('nmap', function(){
       this.timeout(timeout)
 
       var opts = {
-        range: ['localhost'],
+        range: 'localhost',
         ports: '1-1024'
       }
 
