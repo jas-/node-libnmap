@@ -5,8 +5,9 @@ Access nmap using node.js
 ## install ##
 To install `npm install node-libnmap`
 
-## tests ##
-To test `npm test`
+## methods ##
+* `discover` - Performs auto-discovery of online hosts
+* `scan` - Performs scan given available range & optional port
 
 ## options ##
 * `nmap` - Path to nmap binary
@@ -15,9 +16,8 @@ To test `npm test`
 * `callback` - A user defined callback function to retrieve & parse report
 * `threshold` - Limits for concurrent processing
 
-## methods ##
-* `discover` - Performs auto-discovery of online hosts
-* `scan` - Performs scan given available range & optional port
+## tests ##
+To test `npm test`
 
 ## examples ##
 Here are a few usage examples & their output
@@ -88,16 +88,6 @@ nmap.scan(opts, function(err, report){
 ### output ###
 
 ```javascript
-{ ip: '127.0.0.1',
-  hostname: 'localhost',
-  ports:
-   [ { port: '22',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'ssh',
-       rpc: '',
-       version: '' } ] }
 { ip: '10.0.2.15',
   ports:
    [ { port: '22',
@@ -179,7 +169,11 @@ port specification the following error is thrown.
 Port(s) must match one of the following examples: 512 (single) | 0-65535 (range) | 22-25,80,443,3306 (multiple)
 ```
 
-### ulimit ###
+### threshold ###
+The current value of the `threshold` limits the number of spawned processes to
+protect the performance of the system in use. The default value is to only
+spawn double the amount of CPU cores on the system.
+
 If you recieve the `spawn EAGAIN` or `spawn EMFILE` error(s) you have reached
 the max number of `max user processes`. This error is generally thrown if your
 attempting to scan a very large network block.
@@ -485,26 +479,3 @@ sys     0m33.950s
 ```
 
 Mileage may vary
-
-## contributing ##
-I welcome contributions. Testing, patches, features etc. are appreciated. To
-submit a pull request the following instructions will help.
-
-### fork ###
-First fork the project from [github.com](https://github.com/jas-/node-libnmap).
-
-### branch ###
-Any contributions you make should be made under a unique branch to avoid
-conflicts. While creating your branch it is recommended you track changes with the latest production
-branch like so: `git checkout -b my-new-feature -t origin/master`
-
-### upstream changes ###
-1. To ensure changes are as up to date as possible it is recommended to add an
-upstream branch to rebase any upstream changes like so:
-`git remote add upstream https://github.com/jas-/node-libnmap.git`
-
-2. You will then need to `merge` it to track the `contribute` branch:
-`git fetch upstream`
-
-### pull request ###
-Once you have modified your branch simply create a pull request that I can review and test prior to acceptance.
