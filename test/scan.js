@@ -17,35 +17,36 @@
  * SUCH DAMAGE.
  */
 
-var libnmap = require('../')
-  , timeout = 1024 * 1024 * 2
+var lib = require('../')
+  , timeout = 1024 * 1024
   , chai = require('chai')
   , should = chai.should()
   , expect = chai.expect
+  , nmap = new lib()
+  , opts = {
+      range: ['localhost', 'scanme.nmap.org'],
+      ports: '21,22,80,443,2000-3000,8080,8443'
+    };
 
-describe('nmap', function(){
 
-  describe('scan method', function(){
-    it('valid report', function(done){
-      this.timeout(timeout)
+describe('nmap', function() {
 
-      var opts = {
-        range: ['localhost'],
-        ports: '1-1024'
-      }
+  describe('scan method', function() {
+    it('valid report', function(done) {
+      this.timeout(timeout);
 
-      libnmap.nmap('scan', opts, function(err, report){
-        should.not.exist(err)
+      nmap.scan(opts, function(err, report) {
+        should.not.exist(err);
 
-        report.should.be.a('array')
-        report[0].should.be.a('array')
-        report[0][0].should.be.a('object')
+        report.should.be.a('array');
+        report[0].should.be.a('array');
+        report[0][0].should.be.a('object');
 
-        should.exist(report[0][0].ip)
-        should.exist(report[0][0].ports)
+        should.exist(report[0][0].ip);
+        should.exist(report[0][0].ports);
 
-        done()
-      })
-    })
-  })
-})
+        done();
+      });
+    });
+  });
+});
