@@ -1,7 +1,7 @@
 {
   "name": "node-libnmap",
-  "version": "0.1.12",
-  "description": "Use nmap from node.js",
+  "version": "0.2.0",
+  "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
     "nmap",
@@ -24,9 +24,10 @@
     "test": "make test"
   },
   "dependencies": {
-    "netmask": "~1.0.4",
-    "async": "~0.2.10",
-    "ipv6": "~3.1.1"
+    "async": "^0.2.10",
+    "deepmerge": "^0.2.7",
+    "ip-address": "~4.0.*",
+    "netmask": "~1.0.4"
   },
   "devDependencies": {
     "mocha": "~1.17.0",

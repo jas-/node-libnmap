@@ -13,43 +13,34 @@ To test `npm test`
 * `range` - Subnet range(s)
 * `ports` - Port range(s)
 * `callback` - A user defined callback function to retrieve & parse report
+* `threshold` - Limits for concurrent processing
 
 ## methods ##
-* `init` - Returns version, license, help & nmap legal resources
 * `discover` - Performs auto-discovery of online hosts
 * `scan` - Performs scan given available range & optional port (not yet implemented)
 
 ## examples ##
 Here are a few usage examples & their output
 
-### default ###
-```javascript
-console.log(require('libnmap').nmap())
-```
-
-### output ###
-```javascript
-> require('./').nmap()
-{ name: 'node-libnmap',
-  version: 'v0.1.12',
-  usage: 'https://github.com/jas-/node-libnmap',
-  license: 'https://github.com/jas-/node-libnmap/blob/master/LICENSE',
-  issues: 'https://github.com/jas-/node-libnmap/issues',
-  nmap: { legal: 'http://nmap.org/book/man-legal.html' } }
-```
-
 ### discover ###
 The discover method is the quickest method but is limited to finding local
 peers within the same CIDR per interface.
 
+If the device is using 802.1Q all attached subnets are probed. See example
+output.
+
 ```javascript
-require('libnmap').nmap('discover', function(err, report){
+var lib = require('node-libnmap')
+  , nmap = new lib();
+
+nmap.discover(function(err, report){
   if (err) throw err
   console.log(report)
 })
 ```
 
 ### output ###
+
 ```javascript
 { adapter: 'eth0',
   properties:
@@ -61,7 +52,18 @@ require('libnmap').nmap('discover', function(err, report){
      cidr: '10.0.2.0/24',
      hosts: 256,
      range: { start: '10.0.2.1', end: '10.0.2.254' } },
-  neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] }
+  neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] },
+{ adapter: 'eth1',
+  properties:
+   { address: '172.0.2.135',
+     netmask: '255.255.255.0',
+     family: 'IPv4',
+     mac: '23:56:10:e2:3f:a1',
+     internal: false,
+     cidr: '172.0.2.128/25',
+     hosts: 128,
+     range: { start: '172.0.2.129', end: '172.0.2.254' } },
+  neighbors: [ '172.0.2.145', '172.0.2.146', '172.0.2.147', '172.0.2.201' ] }
 ```
 
 ### scan ###
@@ -69,19 +71,20 @@ A manually specified scan example using a single host (both IPv4 & IPv6 notation
 a CIDR range a host range as well as a port range specification.
 
 ```javascript
-var opts = {
-  range: ['10.0.2.128-255', '10.0.2.0/25', '192.168.0.0/17', '::ffff:192.168.2.15'],
-	ports: '21,22,80,443,3306,60000-65535'
-}
-require('libnmap').nmap('scan', opts, function(err, report){
-  if (err) throw err
+var lib = require('node-libnmap')
+  , nmap = new lib()
+  , opts = {
+      range: ['10.0.2.128-255', '10.0.2.0/25', '192.168.0.0/17', '::ffff:192.168.2.15'],
+	    ports: '21,22,80,443,3306,60000-65535'
+    };
+
+nmap.scan(opts, function(err, report){
+  if (err) throw err;
   report.forEach(function(item){
-    console.log(item[0])
-  })
-})
-
+    console.log(item[0]);
+  });
+});
 ```
-
 ### output ###
 
 ```javascript
