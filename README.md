@@ -17,7 +17,7 @@ To test `npm test`
 
 ## methods ##
 * `discover` - Performs auto-discovery of online hosts
-* `scan` - Performs scan given available range & optional port (not yet implemented)
+* `scan` - Performs scan given available range & optional port
 
 ## examples ##
 Here are a few usage examples & their output
@@ -75,7 +75,7 @@ var lib = require('node-libnmap')
   , nmap = new lib()
   , opts = {
       range: ['10.0.2.128-255', '10.0.2.0/25', '192.168.0.0/17', '::ffff:192.168.2.15'],
-	    ports: '21,22,80,443,3306,60000-65535'
+      ports: '21,22,80,443,3306,60000-65535'
     };
 
 nmap.scan(opts, function(err, report){
@@ -144,14 +144,6 @@ nmap.scan(opts, function(err, report){
 ## error handling ##
 The following errors are thrown when invalid configuration options are passed
 to the module and/or when the necessary node.js version is below version v0.11.*
-
-### method ###
-If you attempt to specify an unkown or unimplemented method, the following error
-is thrown. Allowed methods are `scan` & `discover`.
-
-```javascript
-Method "[missing method]" does not exist, please see node-libnmap API
-```
 
 ### version requirement ###
 The discover method requires a node.js version > `v0.11` due to the
