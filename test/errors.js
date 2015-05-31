@@ -22,16 +22,40 @@ describe('nmap', function() {
       };
       nmap.scan(opts, function(err, report) {
         should.exist(err);
+        should.not.exist(report);
         done();
       });
     });
 
-    it('Invalid host range(s)', function(done) {
+    it('Invalid host range (host)', function(done) {
       opts = {
-        range: ['256.128.0/17', '10.0.2.5-256', '10.0.5.256']
+        range: ['10.0.5.256']
       };
       nmap.scan(opts, function(err, report) {
         should.exist(err);
+        should.not.exist(report);
+        done();
+      });
+    });
+
+    it('Invalid host range (range)', function(done) {
+      opts = {
+        range: ['10.0.2.5-256']
+      };
+      nmap.scan(opts, function(err, report) {
+        should.exist(err);
+        should.not.exist(report);
+        done();
+      });
+    });
+
+    it('Invalid host range (CIDR)', function(done) {
+      opts = {
+        range: ['256.128.0/17']
+      };
+      nmap.scan(opts, function(err, report) {
+        should.exist(err);
+        should.not.exist(report);
         done();
       });
     });
@@ -42,6 +66,7 @@ describe('nmap', function() {
       };
       nmap.scan(opts, function(err, report) {
         should.exist(err);
+        should.not.exist(report);
         done();
       });
     });
