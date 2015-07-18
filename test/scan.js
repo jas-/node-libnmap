@@ -1,28 +1,14 @@
-/*
+/*!
  * node-libnmap
- *
- * Copyright 2014 Jason Gerfen
- * All rights reserved.
- *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
+ * Copyright(c) 2013-2015 Jason Gerfen <jason.gerfen@gmail.com>
+ * License: MIT
  */
 
-var lib = require('../')
+var nmap = require('../')
   , timeout = 1024 * 1024
   , chai = require('chai')
   , should = chai.should()
   , expect = chai.expect
-  , nmap = new lib()
   , opts = {
       range: ['localhost', 'scanme.nmap.org'],
       ports: '21,22,80,443,2000-3000,8080,8443'
@@ -44,8 +30,6 @@ describe('nmap', function() {
 
         should.exist(report[0][0].ip);
         should.exist(report[0][0].ports);
-
-        done();
       });
     });
   });

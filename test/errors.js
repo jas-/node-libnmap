@@ -4,11 +4,10 @@
  * License: MIT
  */
 
-var lib = require('../')
+var nmap = require('../')
   , chai = require('chai')
   , should = chai.should()
   , expect = chai.expect
-  , nmap = new lib()
   , opts;
 
 

@@ -17,12 +17,11 @@
  * SUCH DAMAGE.
  */
 
-var lib = require('../')
+var nmap = require('../')
   , timeout = 1024 * 1024
   , chai = require('chai')
   , should = chai.should()
-  , expect = chai.expect
-  , nmap = new lib();
+  , expect = chai.expect;
 
 describe('nmap', function() {
 
@@ -55,8 +54,6 @@ describe('nmap', function() {
         should.exist(report[0].properties.range.end);
 
         report[0].neighbors.should.be.a('array');
-
-        done();
       });
     });
   });
