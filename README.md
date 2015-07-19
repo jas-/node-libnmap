@@ -9,6 +9,7 @@ To install `npm install node-libnmap`
 To test `npm test`
 
 ## options ##
+* `threshold` - Defaults to processor core * 2, use `0` to disable
 * `nmap` - Path to nmap binary
 * `range` - Subnet range(s)
 * `ports` - Port range(s)
