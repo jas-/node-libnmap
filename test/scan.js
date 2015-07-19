@@ -1,7 +1,7 @@
 /*
  * node-libnmap
  *
- * Copyright 2014 Jason Gerfen
+ * Copyright 2014-2015 Jason Gerfen
  * All rights reserved.
  *
  * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND

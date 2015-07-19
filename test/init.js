@@ -1,7 +1,7 @@
 /*
  * node-libnmap
  *
- * Copyright 2014 Jason Gerfen
+ * Copyright 2014-2015 Jason Gerfen
  * All rights reserved.
  *
  * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
@@ -17,7 +17,7 @@
  * SUCH DAMAGE.
  */
 
-var version = 'v0.1.12'
+var version = 'v0.1.13'
   , usage = 'https://github.com/jas-/node-libnmap'
   , support = 'https://github.com/jas-/node-libnmap/issues'
   , license = 'https://github.com/jas-/node-libnmap/blob/master/LICENSE'
