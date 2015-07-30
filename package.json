@@ -21,16 +21,20 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "make test"
+    "test": "./node_modules/.bin/mocha -R spec"
   },
   "dependencies": {
-    "netmask": "~1.0.4",
     "async": "~0.2.10",
-    "ipv6": "~3.1.1"
+    "hasbin": "^1.1.0",
+    "ipv6": "~3.1.1",
+    "netmask": "~1.0.4",
+    "xml2js": "^0.4.9"
   },
   "devDependencies": {
+    "ip": "^0.3.3",
+    "chai": "~1.8.1",
     "mocha": "~1.17.0",
-    "chai": "~1.8.1"
+    "mockery": "^1.4.0"
   },
   "license": "MIT",
   "engine": "node >= v0.11.*"
