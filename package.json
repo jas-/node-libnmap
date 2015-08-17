@@ -1,6 +1,6 @@
 {
   "name": "node-libnmap",
-  "version": "0.1.13",
+  "version": "0.2.0",
   "description": "Use nmap from node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
