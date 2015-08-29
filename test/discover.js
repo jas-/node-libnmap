@@ -1,33 +1,29 @@
-/*
- * node-libnmap
- *
- * Copyright 2014-2015 Jason Gerfen
- * All rights reserved.
- *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- */
+var TIMEOUT = 1024 * 1024;
 
-var libnmap = require('../')
-  , timeout = 1024 * 1024
-  , chai = require('chai')
-  , should = chai.should()
-  , expect = chai.expect
+var chai = require('chai');
+var should = chai.should();
+var expect = chai.expect;
 
-describe('nmap', function(){
+var mockery = require('mockery');
 
-  describe('discovery method', function(){
-    it('validate report', function(done){
-      this.timeout(timeout)
+
+describe('nmap', function() {
+
+  var childProcessMock = require('./cp-mocks.js').discover;
+
+  mockery.enable({
+    warnOnReplace: false,
+    warnOnUnregistered: false,
+    useCleanCache: true
+  });
+
+  mockery.registerMock('child_process', childProcessMock);
+
+  var libnmap = require('../');
+
+  describe('discovery method', function() {
+    it('validate report', function(done) {
+      this.timeout(TIMEOUT)
 
       libnmap.nmap('discover', function(err, report){
         should.not.exist(err)
@@ -59,4 +55,9 @@ describe('nmap', function(){
       })
     })
   })
+
+  after(function () {
+    mockery.deregisterMock('child_process');
+  });
 })
+
