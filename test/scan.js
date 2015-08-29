@@ -37,7 +37,6 @@ describe('nmap', function() {
 
         reports.should.be.a('array')
 
-        reports[0].$.scanner.should.equal('nmap');
         reports[0].host.should.be.a('array');
         expect(reports[0].host[0].hostnames.name).to.equal('mock.data');
         expect(reports[0].host[0].hostnames.type).to.equal('PTR');
