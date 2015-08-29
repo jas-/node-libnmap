@@ -21,12 +21,13 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "make test"
+    "test": "./node_modules/.bin/mocha -R spec"
   },
   "dependencies": {
-    "async": "^1.0.0",
+    "async": "~1.4.*",
     "deepmerge": "~0.2.*",
-    "ip-address": "~4.0.*",
+    "hasbin": "~1.1.*",
+    "ip-address": "^4.0.0",
     "netmask": "~1.0.*"
   },
   "devDependencies": {
