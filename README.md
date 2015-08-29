@@ -2,33 +2,33 @@
 
 Access nmap using node.js
 
-## install ##
+## install
 To install `npm install node-libnmap`
 
-## tests ##
+## tests
 To test `npm test`
 
-## options ##
+## options
 * `threshold` - Defaults to processor core * 2, use `0` to disable
 * `nmap` - Path to nmap binary
 * `range` - Subnet range(s)
 * `ports` - Port range(s)
 * `callback` - A user defined callback function to retrieve & parse report
 
-## methods ##
+## methods
 * `init` - Returns version, license, help & nmap legal resources
 * `discover` - Performs auto-discovery of online hosts
 * `scan` - Performs scan given available range & optional port (not yet implemented)
 
-## examples ##
+## examples
 Here are a few usage examples & their output
 
-### default ###
+### default
 ```javascript
 console.log(require('libnmap').nmap())
 ```
 
-### output ###
+### output
 ```javascript
 > require('./').nmap()
 { name: 'node-libnmap',
@@ -39,111 +39,156 @@ console.log(require('libnmap').nmap())
   nmap: { legal: 'http://nmap.org/book/man-legal.html' } }
 ```
 
-### discover ###
+### discover
 The discover method is the quickest method but is limited to finding local
 peers within the same CIDR per interface.
 
 ```javascript
-require('libnmap').nmap('discover', function(err, report){
-  if (err) throw err
-  console.log(report)
-})
+require('libnmap').nmap('discover', function(err, reports) {
+  if (err) throw new Error(err);
+
+  console.log(reports);
+});
 ```
 
-### output ###
+### output
 ```javascript
-{ adapter: 'eth0',
-  properties:
-   { address: '10.0.2.15',
-     netmask: '255.255.255.0',
-     family: 'IPv4',
-     mac: '52:54:00:12:34:56',
-     internal: false,
-     cidr: '10.0.2.0/24',
-     hosts: 256,
-     range: { start: '10.0.2.1', end: '10.0.2.254' } },
-  neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] }
+[{ 
+  adapter: 'eth0',
+  properties: { 
+    address: '10.0.2.15',
+    netmask: '255.255.255.0',
+    family: 'IPv4',
+    mac: '52:54:00:12:34:56',
+    internal: false,
+    cidr: '10.0.2.0/24',
+    hosts: 256,
+    range: { start: '10.0.2.1', end: '10.0.2.254' } 
+  },
+  neighbors: [ '10.0.2.2', '10.0.2.3', '10.0.2.15' ] 
+}]
 ```
 
-### scan ###
+### scan
 A manually specified scan example using a single host (both IPv4 & IPv6 notation),
 a CIDR range a host range as well as a port range specification.
 
 ```javascript
-var opts = {
+var options = {
   range: ['10.0.2.128-255', '10.0.2.0/25', '192.168.0.0/17', '::ffff:192.168.2.15'],
-	ports: '21,22,80,443,3306,60000-65535'
-}
-require('libnmap').nmap('scan', opts, function(err, report){
-  if (err) throw err
-  report.forEach(function(item){
-    console.log(item[0])
-  })
-})
+  ports: '80,443'
+};
 
+require('libnmap').nmap('scan', options, function(err, reports) {
+  if (err) throw new Error(err);
+
+  reports.forEach(function (report) {
+    console.log(report);
+  });
+});
 ```
 
-### output ###
+Check the [examples/nmap-scan.js](examples/nmap-scan.js) for a neat output.
+
+### output
+
+Flatten JSON representation of the nmap XML output Documentation
 
 ```javascript
-{ ip: '127.0.0.1',
-  hostname: 'localhost',
-  ports:
-   [ { port: '22',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'ssh',
-       rpc: '',
-       version: '' } ] }
-{ ip: '10.0.2.15',
-  ports:
-   [ { port: '22',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'ssh',
-       rpc: '',
-       version: '' } ] }
-{ ip: '192.168.2.15',
-  ports:
-   [ { port: '22',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'ssh',
-       rpc: '',
-       version: '' } ] }
-{ ip: '192.168.2.2',
-  ports:
-   [ { port: '513',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'login',
-       rpc: '',
-       version: '' },
-     { port: '514',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'shell',
-       rpc: '',
-       version: '' },
-     { port: '631',
-       state: 'open',
-       protocol: 'tcp',
-       owner: '',
-       service: 'ipp',
-       rpc: '',
-       version: '' } ] }
+{
+    "$": {
+        "scanner": "nmap",
+        "args": "nmap -oX - -T5 -p80,443 10.12.20.97-128",
+        "start": "1438608336",
+        "startstr": "Mon Aug  3 15:25:36 2015",
+        "version": "6.47",
+        "xmloutputversion": "1.04"
+    },
+    "scaninfo": {
+        "type": "connect",
+        "protocol": "tcp",
+        "numservices": "2",
+        "services": "80,443"
+    },
+    "verbose": "0",
+    "debugging": "0",
+    "host": [{
+        "$": {
+            "starttime": "1438608336",
+            "endtime": "1438608336"
+        },
+        "status": {
+            "state": "up",
+            "reason": "conn-refused",
+            "reason_ttl": "0"
+        },
+        "address": {
+            "addr": "10.12.20.99",
+            "addrtype": "ipv4"
+        },
+        "hostnames": {
+            "name": "some-host-name",
+            "type": "PTR"
+        },
+        "ports": [{
+            "$": {
+                "protocol": "tcp",
+                "portid": "80"
+            },
+            "state": {
+                "state": "open",
+                "reason": "syn-ack",
+                "reason_ttl": "0"
+            },
+            "service": {
+                "name": "http",
+                "method": "table",
+                "conf": "3"
+            }
+        }, {
+            "$": {
+                "protocol": "tcp",
+                "portid": "443"
+            },
+            "state": {
+                "state": "closed",
+                "reason": "conn-refused",
+                "reason_ttl": "0"
+            },
+            "service": {
+                "name": "https",
+                "method": "table",
+                "conf": "3"
+            }
+        }],
+        "times": {
+            "srtt": "1812",
+            "rttvar": "2242",
+            "to": "50000"
+        }
+    }],
+    "runstats": {
+        "finished": {
+            "time": "1438608336",
+            "timestr": "Mon Aug  3 15:25:36 2015",
+            "elapsed": "0.05",
+            "summary": "Nmap done at Mon Aug  3 15:25:36 2015; 32 IP addresses (1 host up) scanned in 0.05 seconds",
+            "exit": "success"
+        },
+        "hosts": {
+            "up": "1",
+            "down": "31",
+            "total": "32"
+        }
+    }
+}
 ```
 
-## error handling ##
+## error handling
 The following errors are thrown when invalid configuration options are passed
 to the module and/or when the necessary node.js version is below version v0.11.*
 
-### method ###
+### method
 If you attempt to specify an unkown or unimplemented method, the following error
 is thrown. Allowed methods are `scan` & `discover`.
 
@@ -151,7 +196,7 @@ is thrown. Allowed methods are `scan` & `discover`.
 Method "[missing method]" does not exist, please see node-libnmap API
 ```
 
-### version requirement ###
+### version requirement
 The discover method requires a node.js version > `v0.11` due to the
 `os.networkInterfaces().netmask` property being used to traverse each
 physical/virtual adapter and examing the address space for online hosts.
@@ -160,7 +205,7 @@ physical/virtual adapter and examing the address space for online hosts.
 Requires node.js v0.11.* and above
 ```
 
-### nmap binary ###
+### nmap binary
 If your system does not have the nmap binary installed the following error is
 thrown
 
@@ -168,7 +213,7 @@ thrown
 nmap binary not found, install nmap
 ```
 
-### scanning ranges ###
+### scanning ranges
 When specifying an invalid range to the `scan` method the following error is
 thrown. Valid range types are a single hostname/ipv4 (ipv6 is not yet
 implemented), a CIDR range notation or a range.
@@ -177,7 +222,7 @@ implemented), a CIDR range notation or a range.
 Range must be an array of host(s), examples: ['192.168.2.10', '10.0.2.0/24', '10.0.10.5-20']
 ```
 
-### port range ###
+### port range
 A range of ports may also be specified with the `scan` method, for an invalid
 port specification the following error is thrown.
 
@@ -185,7 +230,7 @@ port specification the following error is thrown.
 Port(s) must match one of the following examples: 512 (single) | 0-65535 (range) | 22-25,80,443,3306 (multiple)
 ```
 
-### ulimit ###
+### ulimit
 If you recieve the `spawn EAGAIN` or `spawn EMFILE` error(s) you have reached
 the max number of `max user processes`. This error is generally thrown if your
 attempting to scan a very large network block.
@@ -202,7 +247,7 @@ $ ulimit -n 65000
 against attacks such as a [fork bombing](http://en.wikipedia.org/wiki/Fork_bomb)
 & [chroot jail breaking](http://www.bpfh.net/simes/computing/chroot-break.html).
 
-## performance ##
+## performance
 A note on performance of nmap scans; the nmap tool already makes efforts to
 utilize parallel processing when multiple processor cores are available.
 
@@ -229,13 +274,13 @@ nmap -sn -oG - 10.0.2.225-255
 The technical details of [Fyodor's](http://insecure.org/fyodor/) optimizations
 can be found @ [insecure.org](http://nmap.org/book/man-performance.html).
 
-## benchmarks ##
+## benchmarks
 The results here are all coming from a virtual environment with limited system
 resources but should give an overall picture of performance of the scans. My VM
 environment is using 8 cores with 4 threads per core given a total returned from
 `require('os').cpus.length` = 32.
 
-### Nmap host discovery ###
+### Nmap host discovery
 ```sh
 $ time nmap -sn -oG - 10.0.2.0/24
 # Nmap 5.51 scan initiated Wed Jan  8 18:54:07 2014 as: nmap -sn -oG - 10.0.2.0/24
@@ -249,7 +294,7 @@ user    0m0.052s
 sys     0m0.080s
 ```
 
-### Nmap host `discover` method using node-libnmap ###
+### Nmap host `discover` method using node-libnmap
 ```javascript
 $ time node test/run.js
 { adapter: 'eth0',
@@ -300,7 +345,7 @@ user    0m0.493s
 sys     0m0.796s
 ```
 
-### Nmap full port scan ###
+### Nmap full port scan
 ```sh
 $ time nmap -T4 -oG - localhost 10.0.2.0/24 192.168.2.0/25
 # Nmap 5.51 scan initiated Sun Jan 26 08:03:18 2014 as: nmap -T4 -oG - localhost 10.0.2.0/24 192.168.2.0/25
@@ -323,7 +368,7 @@ user    0m0.911s
 sys     0m3.315s
 ```
 
-### Nmap host `scan` method using node-libnmap ###
+### Nmap host `scan` method using node-libnmap
 The test case used:
 ```javascript
 var libnmap = require('node-libnmap')
@@ -469,7 +514,7 @@ user    0m13.066s
 sys     0m8.890s
 ```
 
-### Class B network scans ###
+### Class B network scans
 To really test the performance of the module I did several scans of a class B
 network containing a maximum host count of `32766`. Below are the times for
 both scans.
@@ -492,19 +537,19 @@ sys     0m33.950s
 
 Mileage may vary
 
-## contributing ##
+## contributing
 I welcome contributions. Testing, patches, features etc. are appreciated. To
 submit a pull request the following instructions will help.
 
-### fork ###
+### fork
 First fork the project from [github.com](https://github.com/jas-/node-libnmap).
 
-### branch ###
+### branch
 Any contributions you make should be made under a unique branch to avoid
 conflicts. While creating your branch it is recommended you track changes with the latest production
 branch like so: `git checkout -b my-new-feature -t origin/master`
 
-### upstream changes ###
+### upstream changes
 1. To ensure changes are as up to date as possible it is recommended to add an
 upstream branch to rebase any upstream changes like so:
 `git remote add upstream https://github.com/jas-/node-libnmap.git`
@@ -512,5 +557,5 @@ upstream branch to rebase any upstream changes like so:
 2. You will then need to `merge` it to track the `contribute` branch:
 `git fetch upstream`
 
-### pull request ###
+### pull request
 Once you have modified your branch simply create a pull request that I can review and test prior to acceptance.

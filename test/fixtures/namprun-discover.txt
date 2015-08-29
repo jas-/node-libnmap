@@ -1,0 +1,6 @@
+# Nmap 6.47 scan initiated Mon Aug  3 13:31:11 2015 as: nmap -oG - -sn 10.10.20.1-63
+Strange error from connect (65):No route to host
+Host: 10.12.18.1 (mock.data)  Status: Up
+Host: 10.12.18.24 (osmc.mock.data)  Status: Up
+Host: 10.12.18.34 (Mock-MBP) Status: Up
+# Nmap done at Mon Aug  3 13:31:15 2015 -- 63 IP addresses (3 hosts up) scanned in 4.43 seconds

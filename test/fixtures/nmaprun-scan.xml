@@ -1,0 +1,42 @@
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 6.47 scan initiated Mon Aug  3 12:59:38 2015 as: nmap -oX - -T5 -p1-1024 10.11.18.1-32 -->
+<nmaprun scanner="nmap" args="nmap -oX - -T5 -p1-1024 10.11.18.1-32" start="1438599578" startstr="Mon Aug  3 12:59:38 2015" version="6.47" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="1024" services="1-1024"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1438599578" endtime="1438599580"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.11.18.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="mock.data" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="1019">
+<extrareasons reason="conn-refused" count="1019"/>
+</extraports>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="telnet" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1012"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<times srtt="18841" rttvar="792" to="50000"/>
+</host>
+<host starttime="1438599578" endtime="1438599581"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.11.18.24" addrtype="ipv4"/>
+<hostnames>
+<hostname name="osmc.mock.data" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="1019">
+<extrareasons reason="conn-refused" count="1019"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="13198" rttvar="32" to="50000"/>
+</host>
+<runstats><finished time="1438599581" timestr="Mon Aug  3 12:59:41 2015" elapsed="3.24" summary="Nmap done at Mon Aug  3 12:59:41 2015; 32 IP addresses (2 hosts up) scanned in 3.24 seconds" exit="success"/><hosts up="2" down="30" total="32"/>
+</runstats>
+</nmaprun>

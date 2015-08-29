@@ -1,51 +1,55 @@
-/*
- * node-libnmap
- *
- * Copyright 2014-2015 Jason Gerfen
- * All rights reserved.
- *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- */
+var TIMEOUT = timeout = 1024 * 1024 * 2;
 
-var libnmap = require('../')
-  , timeout = 1024 * 1024 * 2
-  , chai = require('chai')
-  , should = chai.should()
-  , expect = chai.expect
+var chai = require('chai');
+var should = chai.should();
+var expect = chai.expect;
 
-describe('nmap', function(){
+var mockery = require('mockery');
+var ip = require('ip');
 
-  describe('scan method', function(){
-    it('valid report', function(done){
-      this.timeout(timeout)
+describe('nmap', function() {
+
+  var childProcessMock = require('./cp-mocks.js').scan;
+
+  mockery.enable({
+    warnOnReplace: false,
+    warnOnUnregistered: false,
+    useCleanCache: true
+  });
+
+  mockery.registerMock('child_process', childProcessMock);
+
+  var libnmap = require('../');
+
+  describe('scan method', function() {
+    it('valid reports', function(done) {
+      this.timeout(TIMEOUT)
+
+      var ipRange = ip.address().split('.').slice(0, 3).join('.') + '.0/25';
 
       var opts = {
-        range: ['localhost', '172.17.0.0/21'],
+        range: ['localhost', ipRange],
         ports: '1-1024'
       }
 
-      libnmap.nmap('scan', opts, function(err, report){
+      libnmap.nmap('scan', opts, function(err, reports) {
         should.not.exist(err)
 
-        report.should.be.a('array')
-        report[0].should.be.a('array')
-        report[0][0].should.be.a('object')
+        reports.should.be.a('array')
 
-        should.exist(report[0][0].ip)
-        should.exist(report[0][0].ports)
+        reports[0].$.scanner.should.equal('nmap');
+        reports[0].host.should.be.a('array');
+        expect(reports[0].host[0].hostnames.name).to.equal('mock.data');
+        expect(reports[0].host[0].hostnames.type).to.equal('PTR');
+        reports[0].host[0].ports[0].port.should.be.a('array');
+        reports[0].host[0].ports[0].port[0].service.name.should.be.a('string');
 
         done()
       })
     })
   })
+
+  after(function () {
+    mockery.deregisterMock('child_process');
+  });
 })
