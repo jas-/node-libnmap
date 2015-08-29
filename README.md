@@ -1,6 +1,8 @@
 # node-libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap)
 
 Access nmap using node.js
+v0.2.0 is a breaking change version iteration. Please update implementations to
+accomodate API changes.
 
 ## install ##
 To install `npm install node-libnmap`
@@ -13,7 +15,7 @@ To install `npm install node-libnmap`
 * `nmap` - Path to nmap binary
 * `range` - Subnet range(s)
 * `ports` - Port range(s)
-* `callback` - A user defined callback function to retrieve & parse report
+* `callback` - A user defined callback function to retrieve report
 * `threshold` - Limits for concurrent processing
 
 ## tests ##
@@ -30,12 +32,11 @@ If the device is using 802.1Q all attached subnets are probed. See example
 output.
 
 ```javascript
-var lib = require('node-libnmap')
-  , nmap = new lib();
+var nmap = require('node-libnmap');
 
 nmap.discover(function(err, report){
-  if (err) throw err
-  console.log(report)
+  if (err) throw err;
+  console.log(report);
 })
 ```
 
@@ -71,10 +72,10 @@ A manually specified scan example using a single host (both IPv4 & IPv6 notation
 a CIDR range a host range as well as a port range specification.
 
 ```javascript
-var lib = require('node-libnmap')
-  , nmap = new lib()
+var nmap = require('node-libnmap')
   , opts = {
-      range: ['10.0.2.128-255', '10.0.2.0/25', '192.168.0.0/17', '::ffff:192.168.2.15'],
+      // RFC-1123 hostname, IPv4 range notation, IPv4 CIDR notation & IPv6
+      range: ['scanme.nmap.org', '10.0.2.128-255', '10.0.2.0/25', '::ffff:192.168.2.15'],
       ports: '21,22,80,443,3306,60000-65535'
     };
 
