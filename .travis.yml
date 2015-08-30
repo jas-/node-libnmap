@@ -1,5 +1,10 @@
 language: node_js
 node_js:
+  - 0.9
+  - 0.10
   - 0.11
-before_script:
-  - sudo apt-get install nmap
+  - 0.12
+addons:
+  apt:
+    packages:
+    - nmap
