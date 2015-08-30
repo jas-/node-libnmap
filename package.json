@@ -28,7 +28,8 @@
     "deepmerge": "~0.2.*",
     "hasbin": "~1.1.*",
     "ip-address": "^4.0.0",
-    "netmask": "~1.0.*"
+    "netmask": "~1.0.*",
+    "xml2js": "~0.4.*"
   },
   "devDependencies": {
     "mocha": "~2.2.*",
