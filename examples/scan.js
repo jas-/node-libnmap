@@ -5,31 +5,27 @@
  */
 
 var nmap = require('../')
+  , fs = require('fs')
+  , path = './scans/'
   , opts = {
-      //range: ['scanme.nmap.org', 'localhost', '172.17.190.0/16'],
-      range: ['scanme.nmap.org', 'localhost'],
-      //range: ['localhost', 'scanme.nmap.org', '10.0.2.0/16', '192.168.1.10-100'],
-      //ports: '21,22,80,443,2000-3000,8080,8443'
-      ports: '22,80,443'
+      range: ['scanme.nmap.org', 'localhost', '172.17.190.0/16'],
+      ports: '21,22,80,443,2000-3000,8080,8443'
     };
-
-function printer(obj) {
-  if (/object|array/.test(obj)) {
-    for (var key in obj) {
-      console.log(key);
-      if (/object|array/.test(obj[key])) {
-        printer(obj[key]);
-      } else {
-        console.log('   '+obj[key]);
-      }
-    }
-  }
-}
 
 nmap.scan(opts, function(err, report) {
   if (err) throw new Error(err);
 
-  console.log(Object.keys(report).length);
-  console.log(report['scanme.nmap.org']);
-  console.log(report['localhost']);
+  for (var item in report) {
+    for (var host in report[item].host) {
+      console.log(report[item].host[host])
+
+      var data = JSON.stringify(report[item].host[host])
+        , filename = report[item].host[host].address.addr;
+
+      fs.writeFile(path+filename+'.json', data, function(error){
+        if (error) throw error;
+        console.log('Wrote report for '+filename);
+      });
+    }
+  }
 });
