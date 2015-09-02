@@ -9,7 +9,7 @@ var nmap = require('../')
   , path = './scans/'
   , opts = {
       //range: ['scanme.nmap.org', 'localhost', '172.17.190.0/16'],
-      range: ['scanme.nmap.org', 'localhost'],
+      range: ['scanme.nmap.org', 'localhost', '172.17.190.0/26'],
       //ports: '21,22,80,443,2000-3000,8080,8443'
       ports: '21,22,23,80,443'
     };
@@ -23,7 +23,7 @@ nmap.scan(opts, function(err, report) {
       var data = JSON.stringify(report[item].host[host])
         , filename = report[item].host[host].address.addr;
 
-      fs.writeFile(path+filename+'.json', data, function(error){
+      fs.writeFile(path+filename+'.json', data, function(error) {
         if (error) throw error;
         console.log('Wrote report for '+filename);
       });
