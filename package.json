@@ -1,6 +1,6 @@
 {
   "name": "node-libnmap",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
@@ -10,7 +10,8 @@
     "threaded nmap scanner",
     "network host discovery",
     "host operating system discovery",
-    "port scanner"
+    "port scanner",
+    "network scanner"
   ],
   "repository": {
     "type": "git",
@@ -35,6 +36,5 @@
     "mocha": "~2.2.*",
     "chai": "~2.3.*"
   },
-  "license": "MIT",
-  "engine": "node >= v0.11.*"
+  "license": "MIT"
 }
