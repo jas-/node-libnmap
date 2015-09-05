@@ -10,10 +10,9 @@ var nmap = require('../')
   , should = chai.should()
   , expect = chai.expect
   , opts = {
-      range: ['localhost', 'scanme.nmap.org'],
+      range: ['127.0.0.1', 'scanme.nmap.org'],
       ports: '22,135'
     };
-
 
 describe('nmap', function() {
 
@@ -22,8 +21,6 @@ describe('nmap', function() {
       this.timeout(timeout);
 
       nmap.scan(opts, function(err, report) {
-console.log(err);
-console.log(report);
         should.not.exist(err);
 
         report.should.be.a('object');
