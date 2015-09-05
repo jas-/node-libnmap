@@ -4,6 +4,8 @@ node_js:
   - 0.10
   - 0.11
   - 0.12
+before_script:
+  - sudo apt-get install nmap
 addons:
   apt:
     packages:
