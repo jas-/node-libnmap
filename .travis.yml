@@ -1,12 +1,9 @@
 language: node_js
-sudo: false
 node_js:
-  - 0.10
-  - 0.11
-  - 0.12
+  - "0.10"
+  - "0.11"
+  - "0.12"
+  - "iojs"
+  - "iojs-v1.0.4"
 before_script:
-  - sudo apt-get install nmap
-addons:
-  apt:
-    packages:
-    - nmap
+  sudo apt-get install nmap
