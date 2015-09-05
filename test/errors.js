@@ -20,8 +20,8 @@ describe('nmap', function() {
         nmap: '/var/tmp/bin/nmap'
       };
       nmap.scan(opts, function(err, report) {
-        should.exist(err);
-        should.not.exist(report);
+        should.not.exist(err);
+        should.exist(report);
         done();
       });
     });

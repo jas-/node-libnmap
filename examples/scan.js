@@ -9,7 +9,7 @@ var nmap = require('../')
   , path = './scans/'
   , opts = {
       blocksize: 128,
-      range: ['scanme.nmap.org', 'localhost', '172.17.190.0/16'],
+      range: ['scanme.nmap.org', 'localhost', '172.17.190.0/25'],
       ports: '21,22,80,443,2000-3000,8080,8443'
     };
 

@@ -11,7 +11,7 @@ var nmap = require('../')
   , expect = chai.expect
   , opts = {
       range: ['localhost', 'scanme.nmap.org'],
-      ports: '21,22,80,443,2000-3000,8080,8443'
+      ports: '22,135'
     };
 
 
@@ -24,12 +24,8 @@ describe('nmap', function() {
       nmap.scan(opts, function(err, report) {
         should.not.exist(err);
 
-        report.should.be.a('array');
-        report[0].should.be.a('array');
-        report[0][0].should.be.a('object');
-
-        should.exist(report[0][0].ip);
-        should.exist(report[0][0].ports);
+        report.should.be.a('object');
+        done();
       });
     });
   });
