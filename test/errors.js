@@ -17,11 +17,11 @@ describe('nmap', function() {
 
     it('Missing nmap binary', function(done) {
       opts = {
-        nmap: '/var/tmp/bin/nmap'
+        nmap: 'ping-pong'
       };
       nmap.scan(opts, function(err, report) {
-        should.not.exist(err);
-        should.exist(report);
+        should.exist(err);
+        should.not.exist(report);
         done();
       });
     });

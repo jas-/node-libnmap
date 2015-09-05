@@ -1,0 +1,1475 @@
+commit b56e54fc25cfe4328f7f6b82a233ccb666bd7f5a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 5 13:35:13 2015 +0000
+
+    Remove debugging on command
+
+commit 32a0739da162a0334b07de448f6301f75ed25191
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Sep 4 02:16:13 2015 +0000
+
+    Added version increment (minor), also fix for ipv6 scans & large blocksize coupled with large cidr ranges
+
+commit a8fc4b1e84244bab86614f3af501559f10b755e5
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Sep 4 02:14:41 2015 +0000
+
+    Added/modified:
+    Added return of XML report type
+    Added timeout to optimize speed of scans regarding wait times of responses
+    Set blocksize option to a default of 64 hosts per scan block (this may be reduced)
+    Added -T4 option to scan flags
+
+commit 8b1a4a86e9e8edb4d7af8084eb0fcc8ed1f0982c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Sep 3 01:20:07 2015 +0000
+
+    Removed undefined fn()
+
+commit 01613744dba96e65e32bd67a7dde69594b571a33
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Sep 2 03:08:45 2015 +0000
+
+    v0.2.1 minor patch to address sync to async by providing report per network block completion vs. buffering all hosts
+
+commit d362875bb2e4196191130becfcab3d0e547dcc8b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Sep 2 02:51:29 2015 +0000
+
+    Minor updates
+
+commit c1fa6f3c38de8d45548dd594fbb38948125d4757
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 1 02:13:06 2015 +0000
+
+    Update scan example to accomodate complex use case
+
+commit 0684d291b178839c5a73d2a7560676199f99d5ed
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 31 00:52:40 2015 +0000
+
+    Removed duplicate reports from being generated per host
+
+commit 27a93ce44e9e5f7fb3bd05ed81dfdd3623750c56
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 16:04:45 2015 +0000
+
+    Disabled ipv6 support temporarily during command creation
+
+commit 63c36641d767f6dcd01d78cbbf118d63aab26cd8
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 15:59:43 2015 +0000
+
+    Updates to package.json reflecting package use
+
+commit c2e15c85ee87b626e4279d8a0d5400e3433e9a7b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 15:51:00 2015 +0000
+
+    Migration to travis-ci new infrastructure
+
+commit 5dacaf9502fa3bc27af41f04270df96c543346f8
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 15:49:30 2015 +0000
+
+    Modification to auto-test builds
+
+commit da8a2401487aba289c44406c25ca09c23fa5d888
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 14:57:48 2015 +0000
+
+    async.parallel() now working and generating xml->json reports
+
+commit 45e764a27ec2d7fe8ffe123eebf9a988765a5e25
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 13:42:31 2015 +0000
+
+    Reorganization of objects & members
+
+commit 1a4af48f21a87955687480cd109c33f55da1fc3c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 00:03:47 2015 +0000
+
+    Renamed a var & cleaned up some comments
+
+commit c0daa207fc76a2231ead84d1098131f6e12e68a3
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Aug 29 23:56:31 2015 +0000
+
+    Working on function creation for async.parallel()
+
+commit 522b695fb5601eb534d09b76aa9a3b0d535d97ac
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Aug 29 23:52:20 2015 +0000
+
+    Work on array of functions for async.parallelLimit()
+
+commit 2278c7ce3f37300d8859d9531021be9df278bb37
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Aug 29 21:13:47 2015 +0000
+
+    Work on array of functions for async.parallelLimit()
+
+commit 4e1272f41dd4639c4dbbb5cc5c598f683333ed27
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Aug 29 16:08:44 2015 +0000
+
+    Some house cleaning regarding args
+
+commit 11a982544320e20ddffc37891a28ec1659cd758f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Aug 29 15:41:15 2015 +0000
+
+    README doc updated (not complete)
+
+commit d6f0ed04038047eead90b1af4bd6162b6a0a384d
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Aug 29 15:34:49 2015 +0000
+
+    Host/Range/CIDR validation & block calculations
+
+commit 9227b6d4c9014fdcdca7d71e6bacaa643e54bd43
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Aug 29 14:42:06 2015 +0000
+
+    Migrated to hasbin for nmap path & updated dependancies
+
+commit 87a231f977bb03f8be6e5bbb8bd1eaf950d601b5
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jul 18 14:35:34 2015 +0000
+
+    v0.2.0 - progress
+
+commit 9a5f1389dbba13ed4eb86117910f21ff813fb16c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun May 31 13:57:02 2015 +0000
+
+    Nit for port range test
+
+commit 4a7c78b18d2fb729ef4653e88059d131a163b61f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun May 31 13:45:15 2015 +0000
+
+    Error handling test harness in place
+
+commit 72f078debc985e73ecfbdb7bfb95dd86ab57917f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun May 31 01:17:55 2015 +0000
+
+    Added error handling for nmap binary
+
+commit 5d9b6d90b9d4d8430da0718fd33f0b06730cde59
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat May 30 15:33:53 2015 +0000
+
+    Updated threshold documentation
+
+commit 8a269916b55eff0e8056380392190d1f122811c0
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat May 30 15:30:25 2015 +0000
+
+    Removed changelog
+
+commit 607adbceddd7c275ddff1bfb3b61f804bc62b3f3
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat May 30 14:13:55 2015 +0000
+
+    Small changes to README
+
+commit 17b24f22d0d72c0d67e473f78aa8b91404c274ba
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat May 30 14:12:15 2015 +0000
+
+    Error handling test case
+
+commit cd66d5a2dd0eaf9116f0b4eb6753c0d0f07772b6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat May 30 04:04:20 2015 +0000
+
+    Updated package dependencies
+
+commit dcf859bc6bba5c8a4fd66099f1113daa911c7e4c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat May 30 03:56:35 2015 +0000
+
+    Updated test cases to reflect new API
+
+commit 356f28bc1b8739f8e37561a40252853afd0ef412
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat May 30 03:47:13 2015 +0000
+
+    Removed old test case
+
+commit 065cdc8d0dfd596820ac0089c8b0df185424b429
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat May 30 03:29:00 2015 +0000
+
+    Breaking change branch
+
+commit 105c65c84963e8d6384a00cbd783aeee21de6c68
+Author: Jason Gerfen <jason.gerfen@gmail.com>
+Date:   Fri May 8 11:15:47 2015 -0600
+
+    Update README.md
+    
+    Fixed the contributing section of readme
+
+commit f85357b55c3dd121ed92bd0ed79d307f4d2a8706
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 11 08:14:01 2014 -0600
+
+    Discover returns hostname vs. IPv4 if present in results, incremental version
+
+commit 7d19d66aea7ef2fe62536acad17624ac0d40be23
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Oct 8 13:16:24 2014 -0600
+
+    Issue #1: Regex fix for IP ranges
+
+commit cd245b13c1f37169663a527af3fe6fb8e05edb6a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 13 09:37:47 2014 -0600
+
+    v0.1.10: Updated package.json
+
+commit 3f5f0ad81c8eb46147a4f4433e741f3efeea3f8e
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 13 09:35:40 2014 -0600
+
+    v0.1.10: Addresses fix for invalid range > 255
+
+commit d3a48b532c621c99cb0341050fe68c0473d8999e
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Aug 12 10:02:49 2014 -0600
+
+    v0.1.9 ready
+
+commit 9f7215d1618428254dd96914ebfbe27d0d7a8a11
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 19:37:58 2014 -0600
+
+    Work on IPv6 CIDR notation & IPv4 range notation (i.e. xxx.xxx.xxx.xxx-xxx)
+
+commit 1b8d5d142b3ac926187a2bdc44caa695e0ac2bcb
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 18:20:56 2014 -0600
+
+    Test case updated to reflect version
+
+commit 16d8d201c519c3d97396638d412def7642ceaea7
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 18:16:01 2014 -0600
+
+    Fix for IPv6 address scanning by adding the -6 option
+
+commit 1dc8483a640fdfb9bbdbf130cee2eaa051dfb62a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 11:25:31 2014 -0600
+
+    Version increment for package dependency fix
+
+commit 7a7c8949678118fa44befafe686c0d7fb013e0f6
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 11:24:09 2014 -0600
+
+    Fix for dependency list in package.json
+
+commit 59fbd1113a964b46a2638b1ea00362414a8b9be1
+Merge: 9269aec 1b4d41b
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 11:16:44 2014 -0600
+
+    Merge branch 'v0.1.7'
+
+commit 1b4d41b06f60b238dcdf86270b6bd864ab866500
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 11:16:24 2014 -0600
+
+    updated package.json
+
+commit 9269aec316fa4f5350e9fd629fa3a0626efca16d
+Merge: 5814703 30dfee7
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 11:12:16 2014 -0600
+
+    Merge branch 'v0.1.7'
+
+commit 30dfee787cd6d661d774e3ed89e5b61db2c9b785
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 11 11:10:27 2014 -0600
+
+    v0.1.7 fix for cidr ranges
+
+commit 5814703544140218d639f5449ccb415c9769648e
+Merge: 605262f 5e46f3f
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Aug 7 10:31:38 2014 -0600
+
+    Merge branch 'master' of github.com:jas-/node-libnmap
+
+commit 5e46f3f11102038f1c360c3bc58e711e7954a666
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:52:54 2014 -0600
+
+    Removed minified version
+
+commit 51f92a705c901b96e57a9cc1b8cc3dd492e1f3ef
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:51:42 2014 -0600
+
+    Removed minified version
+
+commit 18360037a1c905b527e7143af898a4cee21cf0ca
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:21:45 2014 -0600
+
+    Updated package.json file
+
+commit b7928302b852cb6ecdd72b7443bd04eb5b963f09
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:21:13 2014 -0600
+
+    Updated package.json file
+
+commit 959deb99dafe57e60740e2098bd6817d7f4e69fe
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:20:46 2014 -0600
+
+    Updated package.json file
+
+commit 09878ab0ee57e0e12eab5b75a81e1d3dec366157
+Merge: d1f3bd5 8f0069d
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:18:31 2014 -0600
+
+    Merge branch 'v0.1.6'
+
+commit 8f0069d686ac325551602ad8380ce3f5dcb6d519
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:18:08 2014 -0600
+
+    Updated readme to reflect contributing branch
+
+commit d1f3bd550ec7aa17f9330a3028d73a0d9afa9ede
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:17:16 2014 -0600
+
+    Updated readme to reflect contributing branch
+
+commit 1dc28bee7ccb102e31de8103ebaa8023ab17ba8f
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:14:49 2014 -0600
+
+    Removed minified version
+
+commit ef4cf7bc439010467373145c2737aac7ba8e6749
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Aug 6 11:14:26 2014 -0600
+
+    v0.1.6 fixes & optimizations
+    
+    Incremented version to v0.1.6
+    Removed -n flag for hostname resolution of DNS A records
+    Added semi-colons
+    Migrated version check into its own function and removed os check
+    and is now relying on availablity of os.adapters[n].netmask property
+    Removed < v0.11 dependancy for standard scanning, only discovery mode
+    relies on netmask property per adapter
+
+commit 605262f4e61a5fd79931e39e6810923e69c5252e
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri May 23 19:49:58 2014 -0600
+
+    Removed file
+
+commit 6dde1d178284e0aab7771de1ee0eff22b6942890
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri May 23 19:44:02 2014 -0600
+
+    Version: Package info update
+
+commit 047c8c8b4f65fbc66e35900d1f23dabdc1521457
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri May 23 19:42:36 2014 -0600
+
+    v0.1.5: Fixes
+
+commit 83be02015b68589eb752648ed8e67a53e03540cf
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri May 23 19:39:25 2014 -0600
+
+    Minified: Updated to reflect changes
+
+commit af4ae9594328a1ba4e83a7f68a4ff87565d03026
+Merge: 5cec3c9 d751383
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri May 23 19:35:35 2014 -0600
+
+    Branch: Merging v0.1.4 with master
+
+commit d7513832675f7624f1077b833fbd86045a9de0b6
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri May 23 19:34:20 2014 -0600
+
+    v0.1.4: Added callback to argument list to eliminate the callback option
+
+commit a61534f44d3576dd453a80b648413fbc2bfa9eeb
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu May 22 13:39:39 2014 -0600
+
+    v0.1.2: New branch to address callback functionality
+
+commit 5cec3c9e9fb8fd5395c7d8184e65f3040c182c48
+Merge: 5fde70e bcbc156
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Mar 9 19:46:15 2014 -0600
+
+    Merge branch 'v0.1.3'
+
+commit bcbc1565007eb3dab878fff9988638211fcb9d68
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Mar 9 19:41:15 2014 -0600
+
+    Package updates
+
+commit ae0980cfde2f903a061dd8185ac4a4c9e3b2244c
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Feb 19 11:00:33 2014 -0700
+
+    Version update
+
+commit b3cb090328da2a084ed35e6d950ac45cb925464e
+Merge: cd93b96 f26ee88
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Feb 19 10:59:21 2014 -0700
+
+    Merge branch 'v0.1.1' into v0.1.2
+
+commit 5fde70e03b505558d56b44a2b71efb9bf52c65d6
+Merge: c81a875 f26ee88
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Feb 19 10:56:03 2014 -0700
+
+    Merge branch 'contribute'
+
+commit f26ee88faf8728677d615daa09a7c5954689df56
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Feb 19 10:55:12 2014 -0700
+
+    Fix for ignored file for npm install
+
+commit cd93b960d1db6433afb68b4d5d892a12a40c8c22
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Feb 19 06:39:02 2014 -0700
+
+    Removed ignore for index.js
+
+commit c81a875be60807afde30a995506790dec3326df9
+Merge: 8fdf4cf a28de98
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 09:39:33 2014 -0700
+
+    Merge branch 'contribute'
+
+commit a28de98f8b7ceaa5dabbd602bd533837c6ede382
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 09:38:31 2014 -0700
+
+    README: Updated information regarding ulimit
+
+commit ac2d800bde177ff317a0c671a26ea8177250ce49
+Merge: 7039a70 e782e02
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 07:39:25 2014 -0700
+
+    Merge branch 'v0.1.1' into contribute
+
+commit 8fdf4cfcf78c0112f36238c9f62c4499e787b9ea
+Merge: 60d2e54 e782e02
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 07:39:04 2014 -0700
+
+    Merge branch 'v0.1.1'
+
+commit e782e027464a959660d7c0a572a0efa8281f6f19
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 07:36:56 2014 -0700
+
+    v0.1.1: Fixes for CIDR calculations
+    
+    README: Updated version information, and added test case performance
+            regarding large network block port scans.
+    
+    package.json: Updated version information for module.
+    
+    test:
+     init.js: Updated version information.
+    
+    lib:
+     node-libnmap.js: Fix applied for scan method when calculating large
+                      class a, b or c network blocks.
+     node-libnmap.min.js: Updated to reflect latest fix.
+
+commit 60d2e544eccc8b0847960817a5de05170ea87ac6
+Merge: 55a92c9 678356a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 03:43:30 2014 -0700
+
+    Merge branch 'master' of github.com:jas-/node-libnmap
+
+commit 7039a70fa000672d52687e841b730ecb38ef2293
+Merge: 028ac45 a15c9e0
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 03:42:44 2014 -0700
+
+    Merge branch 'contribute' of github.com:jas-/node-libnmap into contribute
+
+commit 028ac45aa3afe012b1803ac5ed6655c8a820fed1
+Merge: 55a92c9 678356a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 03:40:47 2014 -0700
+
+    Merge branch 'contribute', remote branch 'origin' into contribute
+
+commit 55a92c9a48938c878935f127f5d825b5431b23a9
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 29 03:37:53 2014 -0700
+
+    README: Updated options, version etc
+
+commit a15c9e07e68a60abafd9b1ef2ef470c514f837bd
+Merge: e30cb51 4ef76a6
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:31:03 2014 -0700
+
+    Merge branch 'v0.1.0' into contribute
+
+commit 678356af7e771bdaa2ab19aae1c052ab68e531b4
+Merge: a79a7d0 4ef76a6
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:30:42 2014 -0700
+
+    Merge branch 'v0.1.0'
+
+commit 4ef76a6bb624af62883a2283d6d79ed36523bb53
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:30:19 2014 -0700
+
+    README: Updated docs to reflect flag changes
+
+commit e30cb51c83072a3a7c667be7a9b9a4d2c5bbf5a3
+Merge: 5f32d4a 2d5bf56
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:23:48 2014 -0700
+
+    Merge branch 'v0.1.0' into contribute
+
+commit a79a7d0fb264c55b9a98e1a011b2ac4e0da882b4
+Merge: b0901b7 2d5bf56
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:23:25 2014 -0700
+
+    Merge branch 'v0.1.0'
+
+commit 2d5bf5647c2326b95a2ad6686fe35f105decae8a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:23:06 2014 -0700
+
+    package.json: Bug with chai version fix
+
+commit b0901b7de1f92a8631eb94b40aa483ab58be9b98
+Merge: 8a5946b f6b52b0
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:20:34 2014 -0700
+
+    Merge branch 'v0.1.0'
+
+commit 5f32d4a0140cfafb2c736ac03612a6c9ea76ec7b
+Merge: 16db3bd f6b52b0
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:20:11 2014 -0700
+
+    Merge branch 'v0.1.0' into contribute
+
+commit f6b52b0059993157c071e141de88ac605c0cdcc8
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 08:19:39 2014 -0700
+
+    Flags: Update to default flags.
+    
+    package.json: Updated modules & version information.
+    
+    tests:
+     scan.js: Updated scan report test case.
+     init.js: Updated to reflect changes in version
+    
+    lib:
+     node-libnmap.js: Updated flags for both scan() & discover()
+                      methods ensuring that when a port range is
+                      used during the scan() method.
+
+commit 8a5946bc569732f96d975fb0e0ba4ad043eaa47d
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 06:14:35 2014 -0700
+
+    Merge branch 'master', remote branch 'origin'
+
+commit 16db3bd31c098836f56004382fd7a395ea146d90
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 28 06:14:18 2014 -0700
+
+    Merge branch 'contribute', remote branch 'origin' into contribute
+
+commit 459cf0c4d24c9576d452bbe5ac2abbfe24e8fd7c
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 27 03:37:03 2014 -0700
+
+    package.json: Updated version info
+
+commit a7f5b78773471cda4c74fb84745b6a6b82f40e10
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 27 03:35:34 2014 -0700
+
+    README: Updated scan report to exclude some items
+
+commit efca7a32af1c1b43a391c51d1f97d6ab175dada2
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 26 08:12:35 2014 -0700
+
+    CHANGELOG: Updated
+
+commit 522c8773a184ce6555b5891334e450cb5180071c
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 26 08:12:09 2014 -0700
+
+    README: Performance for scan method
+    
+    README: Updated to reflect benchmarks for nmap vs. node-libnmap scans
+            on test nets
+
+commit fc8f653a01e024b9a8fc41f2b1e2a63332b24853
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 26 07:53:00 2014 -0700
+
+    README: Better example
+    
+    README: Added a better example test case for the scan method
+            and a more robust report example
+
+commit 0acf1509b5c918b06df87b119faf5cd6928efbaa
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 26 07:43:14 2014 -0700
+
+    README: Error handling
+    
+    README: Updates to the error handling section for all thrown
+            errors.
+    
+    CHANGELOG: Updated to reflect latest commits
+
+commit f01e68d3a5812d26105b589d92ee6dab6c7a27ce
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 26 07:24:19 2014 -0700
+
+    scan: Fix for ports object
+    
+    README: Updated readme to reflect object returned from scan method
+            regarding updated/fixed ports per scanned object.
+    
+    libs:
+     Fixes for the following:
+      - Binary check of specified nmap tool, throws error if not found.
+      - Ports object(s) were being overwritten with inaccurate results.
+     Updated minified version to reflect changes
+
+commit c0ec459175e570b751bf29a84cf40ffb6bafaf9f
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 24 11:05:24 2014 -0700
+
+    Error: Modifications to error handling
+
+commit c37d3c5bc327ddcf01cc3fd9abf482a4cd7288c5
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 24 10:54:01 2014 -0700
+
+    setup: Fix on conditional version check for check()
+
+commit 2603dbb25253f96d91ce18028ff3fd3805b96f36
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 24 06:50:14 2014 -0700
+
+    README: Updated syntax
+
+commit 3142d32776162d2313398db68586cf21cb69c2af
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 24 06:23:36 2014 -0700
+
+    README: Updated syntax for scan report output
+
+commit 22d6361e88b236cd5fb2466e89a32d52e1a1eb12
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 24 04:22:53 2014 -0700
+
+    README: Updated to reflect scan method report
+
+commit 0f462519d28051b8856130099f0e478cea123212
+Merge: a3fba74 d2b275a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 24 04:15:53 2014 -0700
+
+    Merge branch 'v0.0.8'
+
+commit d2b275a92de62a7eef5670f03d81202973943ea2
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 24 04:14:35 2014 -0700
+
+    scan: Reporting for scan method
+    
+    package.json:
+     Updated version information.
+    
+    test:
+     Completed test case for scan method report object
+    
+    lib:
+     Error reporting has been migrated away from simple string to an object
+     containing details of the error(s).
+    
+     Refactored scan method report processing to accomidate for multiple
+     scan target results.
+
+commit 61c43870a0d530e6571c56af1c1d339841c43597
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 24 03:35:30 2014 -0700
+
+    test: Updated test case for scan method
+
+commit c97748942ede23baad8b91a788e9e018ef896305
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 23 13:59:56 2014 -0700
+
+    scan: Refactored scan method
+
+commit 6c1b6c8801edb1b5104d41dc01cb9f3e063d22a0
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 23 03:57:35 2014 -0700
+
+    tests: catchall for scan method progress
+
+commit 36ba06f0d8711d7ca6d066401e5487296cdd3d25
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 14 14:39:09 2014 -0700
+
+    Devlopment process on multiple host reports
+
+commit a3fba745f003802bbe552442387ac7618c5fb425
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 14 06:59:29 2014 -0700
+
+    travis-ci: updated travis.yml
+    
+    travis-ci:
+     Added pre-install to add nmap binary for tests
+
+commit 2864eda86894870f59cead035c3459a38911d537
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 14 06:56:02 2014 -0700
+
+    travis-ci: updated travis.yml
+    
+    travis-ci:
+     Added pre-install to add nmap binary for tests
+
+commit 705317fec0b6212f9c83ebafc9b1181ec14f51d3
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 13:46:11 2014 -0700
+
+    EOD catchall
+    
+    lib:
+     node-libnmap.js: Working on report parsing for scan method
+
+commit 8cdae6a41a0b2db35b7c737b50ef3d856e1c44ba
+Merge: 8bbd46f 5a01314
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:48:28 2014 -0700
+
+    Merge branch 'contribute'
+
+commit 5a01314bd1bc55e18b7e4d733620082f614a0958
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:47:03 2014 -0700
+
+    Minified version updated
+
+commit e8d43a34a4c2debac87321bf77aa3ea7f22f0d05
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:46:09 2014 -0700
+
+    setup: verify()
+    
+    methods:
+     setup:
+      verify(): Updated regex & comment to verify port ranges
+
+commit 8bbd46f601b3cc46c7a7f1028c25dcb702c87bd9
+Merge: 7edf310 5f99917
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:18:46 2014 -0700
+
+    Merge branch 'contribute'
+
+commit 5f99917b7f64952bc4e30d6fe91c794887684418
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:18:24 2014 -0700
+
+    Added minified version for merge purposes
+
+commit 7edf310262d4799ad0593bf661f3b7d7f25b433d
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:17:12 2014 -0700
+
+    Pre merge commit
+
+commit faeac6197282cd055e3d9a8214a174449608088b
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:16:49 2014 -0700
+
+    Pre merge commit
+
+commit 479546b841253406c6fecfbea6f9dc7fe8018001
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:02:37 2014 -0700
+
+    Removed ignoring of production js
+
+commit 7896dbb7124a7e858ab699348b87428fcbab695c
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 09:01:38 2014 -0700
+
+    Removed ignoring of non-production js
+
+commit 45c6f48ee1ec7242f95413116448986981d1b90f
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 08:32:17 2014 -0700
+
+    setup->check() version check fix
+    
+    setup:
+     check(): Fixed operator in conditional for version check
+
+commit b23474ecc45cf8b54051ce6c566012bab2e541c2
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 08:31:04 2014 -0700
+
+    test: discover.js
+    
+    test:
+     discover.js: Now properly tests for valid report object
+                  during the discovery mode.
+
+commit 833b9c32a575a0acb96b660adb24258c1d16a454
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 08:17:46 2014 -0700
+
+    test: init.js
+    
+    test:
+     init.js: Now tests for nmap object init object properties,
+              latest version check, usage URL, support URL, license
+              URL & Nmap binary legal URL
+
+commit 1c64dcf8429bb1c0906d329b4284dfb0e3695a7a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 07:32:30 2014 -0700
+
+    README: Added 'contribute' section
+
+commit 7a57c69a4fd9f60fdba9db30d3183b6364cffb03
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 07:30:37 2014 -0700
+
+    Ignoring non-production js
+
+commit 239fc7231a5d55ce11015b16ff96336c92043169
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 07:26:21 2014 -0700
+
+    README: Added 'contribute' section
+
+commit 375c202b288edfc043c94c3741f65ef665c748e2
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 07:12:15 2014 -0700
+
+    Removed non-procuction js & added to ignore list
+
+commit f798000df0fbee1c3c4917fde7d8c6f9e3331b7d
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 07:03:29 2014 -0700
+
+    Removed minified version from 'contribute' branch
+
+commit 7da949de42e27164845f68e9c1a93bc9e63cf369
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 07:00:50 2014 -0700
+
+    Force use of minified version
+
+commit 225f1f0877f8ab182166b08346c568849dcdfe02
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 04:01:43 2014 -0700
+
+    tests now use mocha & chai
+    
+    test:
+     init.js, scan.js & discover.js all use proper test case methods
+     but are currently in progress
+
+commit bc9877bb973eaeb1cfcd199812316e969a4b45a9
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 04:00:03 2014 -0700
+
+    setup:check()
+    
+    methods:
+     setup:
+      check(): Added to handle node.js versioning requirement
+
+commit 57351682f1dca54d96b54c14983fd8bff964b455
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 13 03:22:33 2014 -0700
+
+    package.json & version
+    
+    Dependancies:
+     Added development dependancy list for tests to package.json.
+    
+    lib:
+     node-libnmap.js & minified version are updated to refect new
+     version number.
+
+commit d7a8eebbba4a40b05e7bf3cf35521588791eb121
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 12 19:07:17 2014 -0700
+
+    Updated version number
+
+commit da7d4f0d85ab2cc29600c520b0d809def9846efe
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 12 17:22:55 2014 -0700
+
+    README: Scan method notes
+
+commit d668d2bd11226e0f242bfe602ecc3078d604f0f8
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 12 17:19:12 2014 -0700
+
+    v0.0.3 -> v0.0.6 & minified version
+
+commit 25c41c0acc7db69ea3e05c16157c3406b1fec57a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 12 17:15:15 2014 -0700
+
+    Cluster module removed
+    
+    Methods:
+     init:
+      cluster(opts) & end(opts) functions removed as all tests performed
+      were not handling threaded forks propertly
+
+commit 0b84032bffb8d4c759124680bfe5523f718ba8a5
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 12 17:08:32 2014 -0700
+
+    v0.0.3-scan branch complete
+
+commit ad3356e54262af4d3c4caa3a27c2e3dfa9be0f86
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 12 06:09:23 2014 -0700
+
+    Tests & Options
+    
+    test:
+     scan.js: Removed the -A flag from scan to speed up test case
+    
+    options:
+     verify: No performs proper regex on port specifications
+
+commit 9a589e7641faffe558f6396ba5d0fdf37e8c50fa
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 11 19:34:06 2014 -0700
+
+    Test: Removed run.js
+
+commit bc3fa9ad76b35761a26050180b5841fa731ebbd9
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 11 19:33:28 2014 -0700
+
+    tests: Split into separate cases
+
+commit ff750c6639f5271711a5c092bad60f586276e4b6
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 11 19:11:51 2014 -0700
+
+    Removed throw from scan & discovery methods
+
+commit d1501824a818b141decc7c45def755c9f9d09955
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 11 04:49:49 2014 -0700
+
+    method: convert(hosts)
+    
+    method:
+     convert(hosts): Migrated away from if/else if/else conditional to
+                     switch/case. Now performs eval on host elements
+                     supplied as 'range' arg and tests for valid hostname,
+                     valid IPv4 or IPv6 address. In the case of an IPv4 or
+                     IPv6 CIDR notation the range is calculated and then
+                     split into smaller scanning chunks.
+
+commit 9f4bf90cea2bbc44e8b8f3101dadb9c718fe2812
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 10 07:24:35 2014 -0700
+
+    tools: convert()
+    
+    methods:
+     tools:
+      convert(hosts): Added function to perform validation &
+                      host type (CIDR, range, IPv4 | IPv6 &
+                      hostname. Then calls helper function if
+                      CIDR or range found to break network
+                      block into smaller chunck prior to scan
+
+commit 6292375f261d92479a4d31b5beb6bf1fb180c2fb
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 10 06:50:40 2014 -0700
+
+    validate method
+    
+    Methods:
+     validate: Structure for API now the following -
+      net: Object of REGEX pattern matching
+      perform(regex, str): Function to perform specified
+                           pattern matching test on string
+
+commit 3445f1ce18495de0d9a1f6722bd3049f46ca5913
+Merge: 57b2068 1dbeef2
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 10 06:14:53 2014 -0700
+
+    validate
+    
+    Methods:
+     validate: Added the following object to handle validation of
+               hostnames (RFC-1123), IPv4, IPv4 CIDR notation,
+               IPv4 range notation as welll as IPv6, IPv6 CIDR
+               notation & IPv6 range notation.
+
+commit 1dbeef29648ae334b91e1d50d57f584e36bd3f17
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 12:32:23 2014 -0700
+
+    options: Default flag to disable rDNS queries
+
+commit c091cc68f401d38f091c3ca0931f0baba0cc536f
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 12:21:03 2014 -0700
+
+    cluster: Removed cluster
+    
+    Global:
+     Removed cluster module import from global scope.
+    
+    setup:
+     cluster: Removed
+     end: Removed
+
+commit 57b2068e9bc6e1fd54c34119359c6c550938f651
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 12:16:04 2014 -0700
+
+    scan: In progress save Thu Jan  9 12:16:04 MST 2014
+    
+    methods:
+     scan(opts): Working on async scan method for user defined host
+                 scanning.
+    
+    global:
+     Moved init of child_process, async & cluster module into global
+     scope.
+    
+    setup:
+     verify(opts): Added to handle user defined options and proper
+                 format for library.
+
+commit 6839b897bd2501ff2edcb26ab0ee9f55ac2b0a35
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 06:00:00 2014 -0700
+
+    README: init() method output
+
+commit c4d6c8407cc1ea93929438a076b50bbeedc7cea3
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 05:58:24 2014 -0700
+
+    Minified version update
+
+commit 9f797d6d3c63320c14e26aae19fbc989cb1e6846
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 05:57:10 2014 -0700
+
+    README: methods -> init
+    
+    methods:
+     init(opts) - Added to reflect nmap legal notice most importantly.
+
+commit a8f77d801784850d60283974bf1907d56e6df30c
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 05:46:54 2014 -0700
+
+    `date` - Init method
+    
+    methods:
+     init(opts): Added default method to return references to help,
+                 licensing & legal"
+
+commit 031e97fafbd794b7dbdf7025a386bf1aa27c3311
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 05:37:35 2014 -0700
+
+    Thu Jan  9 05:37:35 MST 2014 - Version: v0.0.3, w00t
+
+commit 29ae86bd19c9e099da0bbd90037b7fad4be5cd03
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 05:35:29 2014 -0700
+
+    README: Advanced performance output
+
+commit 577f3e430c15db3f2c87794389587394129a589a
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 05:29:22 2014 -0700
+
+    Minified: Reflects d0957e8..1a86721
+
+commit 1a86721db7f93900ea33daa2548125cee1e2233e
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Thu Jan 9 05:27:28 2014 -0700
+
+    Fix: Multiple adapters
+    
+    methods:
+     discover(opts): An error in the amount of results when multiple
+                     public (non internal) adapters were present on
+                     the system
+
+commit d0957e81788efad998e58c3876d26fdef158b437
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 19:01:04 2014 -0700
+
+    Wed Jan  8 19:01:04 MST 2014 - README benchmarks
+    
+    README: Added additional documentation regarding current nmap
+    internals & references as well as current benchmarks from local
+    tests
+
+commit 1f9fb9d9d432f89727e8e9e7b5b932d90a5df09f
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 18:47:16 2014 -0700
+
+    Wed Jan  8 18:47:16 MST 2014 - Export name
+    
+    Updated newly renamed export name to match function name
+
+commit 94a953d65bcd941b2404fb882a39d7930cc2ed21
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 18:43:02 2014 -0700
+
+    Wed Jan  8 18:43:02 MST 2014 - Function rename
+    
+    Renamed module init from libnmap -> nmap.
+
+commit 9b0028424c93040cb1e5858bac02e4291218c247
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 12:10:51 2014 -0700
+
+    Wed Jan  8 12:10:51 MST 2014 - README - Performance
+
+commit c919888fca1226a947e19959aa3cf166cfb05043
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 12:02:37 2014 -0700
+
+    Wed Jan  8 12:02:37 MST 2014 - README updates
+
+commit dc0bda055b9171163cd79e4b508e1d1022fb14db
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 11:42:26 2014 -0700
+
+    Wed Jan  8 11:42:26 MST 2014
+    
+    test:
+     run.js: Updated to only print 'err' if it exists
+
+commit e116a2f213033aa83a1fbbebda582f190913e9d4
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 11:40:35 2014 -0700
+
+    Wed Jan  8 11:40:35 MST 2014
+    
+    Updated minified version to reflect recent changes. Also updated
+    index.js to utilize compressed version
+
+commit bfd446a11da95328be9926fa2c72be28dcad3f36
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 11:37:59 2014 -0700
+
+    Wed Jan  8 11:37:59 MST 2014
+    
+    Update to README
+
+commit a7d1718c5bf0016e6ceef639a5ba7d416094dd9e
+Merge: 7cd8d5f 50bc072
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 11:36:34 2014 -0700
+
+    Merge branch 'async'
+
+commit 50bc072712ba7a36444a0917ccd3c4e2a18aeb87
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 11:36:07 2014 -0700
+
+    Wed Jan  8 11:36:07 MST 2014
+    
+    README: Updated example and available options & example report
+    
+    discover(opts):
+     Now utilizes async module for processing and callback funcitonality
+
+commit 7cd8d5f157f7b6e709a0a2fc0f5f55a55c7980af
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 10:44:44 2014 -0700
+
+    Wed Jan  8 10:44:44 MST 2014
+    
+    README: Typo fix
+
+commit 6e267f7df3af3254ad14ea2e97437e1008ec2ecb
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 10:42:55 2014 -0700
+
+    Wed Jan  8 10:42:55 MST 2014
+    
+    methods:
+     discover: Added some debugging output based on user based params.
+               Added callback.
+
+commit 1d8daf921370290f8a2c97115765db97c630d389
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 10:29:45 2014 -0700
+
+    Wed Jan  8 10:29:45 MST 2014
+    
+    Merged branch
+
+commit 8a9bc93318ce2194a88f053f8db8b1b8761fd6d7
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 10:27:46 2014 -0700
+
+    Wed Jan  8 10:27:46 MST 2014
+    
+    LICENSE: Copyright field is now accurate.
+    Makefile: Reflects test case execution
+    README: Reflects usage, options etc
+    package.json: Added async module dependency
+    lib:
+     Added several app options including debug & custom callback
+
+commit 36156db34197369c0fdd618f50959c5b9456e8e4
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Wed Jan 8 07:14:21 2014 -0700
+
+    Wed Jan  8 07:14:21 MST 2014
+    
+    methods:
+     discover(): Removed 'cluster' functionality as it was not
+                 working as I would have expected. Now performs
+                 CIDR split equally as individual child_process es
+                 to imporove scan speeds.
+    tools:
+     calculate(size, range): Added to perform calculations on CIDR
+                             range.
+
+commit 6b54d562b93be113e679d99ad5bcaec4d90f4614
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 7 13:59:58 2014 -0700
+
+    Tue Jan  7 13:59:58 MST 2014
+    
+    Marked as inefficient due to the need of splitting
+    IP ranges prior to clustered scans
+
+commit a0b335e29ba8c9c0ac057ceefd66553528494907
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 7 04:16:15 2014 -0700
+
+    Tue Jan  7 04:16:15 MST 2014
+    
+    Minified version has been added
+
+commit 05d8dd72473810f0c731f9fc24139b14f7ef6ff8
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Tue Jan 7 04:09:16 2014 -0700
+
+    Tue Jan  7 04:09:16 MST 2014
+    
+    setup:
+     cluster(): Added to handle speed & performance issues with
+                executing large network CIDR scans.
+     end(): Added to cleanup all setup.cluster() child processes
+            once they have completed.
+    
+    tools:
+     command(): Added to handle creation of nmap command string.
+    
+    With the addition of the cluster module for scans to run in
+    parrallel the following performance increases were observed:
+    
+    W/O: Nmap done: 256 IP addresses (3 hosts up) scanned in 18.77 seconds
+    W/: Nmap done: 256 IP addresses (3 hosts up) scanned in 7.14 seconds
+
+commit 2e65da98828245c08445f1af30d117c60cf20f41
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 6 19:52:18 2014 -0700
+
+    Mon Jan  6 19:52:18 MST 2014
+    
+    tools:
+     range(): Modified to add all external facing CIDR addresses.
+    
+    methods:
+     disover(): Now performs threaded scan on all elements of
+                array returned from tools.range()
+
+commit 21624e6b4602c488deedc2a722fc887d8e2aa35e
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 6 13:50:30 2014 -0700
+
+    Mon Jan  6 13:50:30 MST 2014
+    
+    modules: Removed all from dist & added to .gitignore
+    
+    Current auto-discovery of peers on subnet working. Need to
+    rethink command creation, as well as reusable system exec()
+    functionality"
+
+commit e3563d13db9b4e913aa6fe6db325e359c0fbde39
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 6 08:58:45 2014 -0700
+
+    Mon Jan  6 08:58:45 MST 2014
+    
+    modules:
+     Removed ipv6 module from dependancy list. Added
+     netmask module.
+    tools:
+     range(): Removed references to ipv6 module, migrated
+     to netmask API for getting start/end addresses.
+
+commit 1ed073c3e2bab14dccd0d70afd9957f23c06f944
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 6 06:57:29 2014 -0700
+
+    Mon Jan  6 06:57:29 MST 2014
+    
+    tools:
+     range(): Working on setting start/end range based on
+              subnet information returned from ipv6 module
+
+commit 252f132970a226d75d900bfb858f4073cc2fff75
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 6 05:38:35 2014 -0700
+
+    Mon Jan  6 05:38:35 MST 2014
+    
+    modules:
+     Added ipv6 module to help with determining subnet range for
+     auto-discovery option
+
+commit 9f3f3ec624d348c847cb5feb9c86c4c95786ff92
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 6 04:59:56 2014 -0700
+
+    Mon Jan  6 04:59:56 MST 2014
+    
+    methods:
+     tools:
+      adapters(): Added, filters all internal network adapters
+                  while returning an array of external network
+                  adapters as nested objects
+
+commit 1ebada5b0060e6d3be316843b08eef7b6d6f62bf
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 6 04:19:50 2014 -0700
+
+    Mon Jan  6 04:19:50 MST 2014
+    
+    method:
+     tools:
+      merge(opts, defaults): Fixed problem with undefined
+                             arg.
+     setup:
+      init(opts): Performs call to tools.merge().
+    
+     methods:
+      scan(opts) & discover(opts): Both merge options with
+                                   defaults as preliminary
+                                   step
+
+commit c80d27162cdb171015f0283f5a73fa898627f542
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Mon Jan 6 03:57:42 2014 -0700
+
+    Mon Jan  6 03:57:42 MST 2014
+    
+    Documenting methods, functions etc. Plan on having
+    two files; node-libnmap.js (documented, uncompressed
+    for development) and node-libnmap.min.js (compressed,
+    undocumented for production)
+
+commit 7895d6fdd0bb2acd55227b8f762277d3fd7bb26c
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 5 18:26:20 2014 -0700
+
+    Sun Jan  5 18:26:20 MST 2014
+    
+    Removed glob package dependancy
+
+commit 6489696fe8b30ce070cc8e48dfd4a3d599279ffb
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 5 18:25:20 2014 -0700
+
+    Sun Jan  5 18:25:20 MST 2014
+    
+    Working on framework for module
+
+commit a159e772a9d968783fbddc3e253e409b982a2b77
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 5 10:40:14 2014 -0700
+
+    Sun Jan  5 10:40:14 MST 2014
+    
+    package.json: Pre-fill
+
+commit aa6366b401249f4c2b610b08a1efbab9dc55b048
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 5 10:35:45 2014 -0700
+
+    Sun Jan  5 10:35:45 MST 2014
+    
+    Initial project creation.
+
+commit 9e922b52cfe71d194ed5e9cc3da19da074f3f5fd
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 4 16:39:41 2014 -0800
+
+    Initial commit
