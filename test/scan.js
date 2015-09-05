@@ -22,6 +22,8 @@ describe('nmap', function() {
       this.timeout(timeout);
 
       nmap.scan(opts, function(err, report) {
+console.log(err);
+console.log(report);
         should.not.exist(err);
 
         report.should.be.a('object');
