@@ -13,15 +13,12 @@ var nmap = require('../')
 describe('nmap', function() {
   describe('discovery method', function() {
     it('validate report', function(done) {
-      this.timeout(timeout);
-      done();
-/*
       nmap.discover(function(err, report) {
-        should.not.exist(err);
+        should.exist(err);
 
-        report.should.be.a('object');
+        should.not.exist(report);
+        done();
       });
-*/
     });
   });
 });
