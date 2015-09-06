@@ -8,10 +8,11 @@ var nmap = require('../')
   , fs = require('fs')
   , path = './scans/'
   , opts = {
-      timeout: 100,
-      range: ['scanme.nmap.org', 'localhost', '172.17.190.0/24'],
+      range: ['scanme.nmap.org', '172.17.190.0/24'],
       ports: '21,22,80,443'
     };
+
+fs.mkdirSync(path);
 
 nmap.scan(opts, function(err, report) {
   if (err) throw new Error(err);
