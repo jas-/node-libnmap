@@ -17,6 +17,7 @@ To install `npm install -g node-libnmap`
 * `blocksize` {Number}    Number of hosts per network scanning block
 * `threshold` {Number}    Max number of  spawned process
 * `flags`     {Array}     Array of flags for .spawn()
+* `udp`       {Boolean}   UDP scan mode enabled
 * `json`      {Boolean}   JSON object as output, false produces XML
 
 ## tests ##
