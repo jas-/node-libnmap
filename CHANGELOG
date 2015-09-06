@@ -1,3 +1,54 @@
+commit 7a4f54ad372081cc7de68d82ba9bf9aadc601120
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 02:03:07 2015 +0000
+
+    defaults.blocksize default value:
+    Lowered the default option of defaults.blocksize to 16 to create larger ranges when scanning large network blocks
+
+commit 41e538fbbfd1434011a388c9455d2a12ed44f311
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 01:15:45 2015 +0000
+
+    Updated the scan example, and other minor changes
+
+commit fe9b9644650fcd8308e95aa7e34562c5638a0c6e
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 5 08:44:24 2015 -0600
+
+    Error handling for empty reporting
+
+commit 2805c9c403e545ab9d3b5a457debd8ee5f8f3a60
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 5 08:38:04 2015 -0600
+
+    Removed iojs version specific & added debugging for travis-ci tests
+
+commit 46b9f8a26b39d6dca9c70224b514651d009c0362
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 5 08:35:58 2015 -0600
+
+    Removed iojs version specific & added debugging for travis-ci tests
+
+commit 71fe92bd56d8a079600a41703e3b7d6045a79cd2
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 5 08:30:09 2015 -0600
+
+    Updated .travis.yml to install nmap
+
+commit 1849b46093371da5406a3ace5ef205d9f635f5fc
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 5 08:26:41 2015 -0600
+
+    Updated .travis.yml to install nmap
+
+commit 92cad8f6d34fdc6d7cf0e8af4f26e128a39900d1
+Author: jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 5 08:23:50 2015 -0600
+
+    Validation object:
+    init(): Resolved async issues regarding returning errors
+    tests: Worked through failing test cases for v0.2.1
+
 commit b56e54fc25cfe4328f7f6b82a233ccb666bd7f5a
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sat Sep 5 13:35:13 2015 +0000
