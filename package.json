@@ -1,7 +1,7 @@
 {
   "name": "node-libnmap",
-  "version": "0.1.14",
-  "description": "Use nmap from node.js",
+  "version": "0.2.2",
+  "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
     "nmap",
@@ -10,7 +10,8 @@
     "threaded nmap scanner",
     "network host discovery",
     "host operating system discovery",
-    "port scanner"
+    "port scanner",
+    "network scanner"
   ],
   "repository": {
     "type": "git",
@@ -24,18 +25,16 @@
     "test": "./node_modules/.bin/mocha -R spec"
   },
   "dependencies": {
-    "async": "~0.2.10",
-    "hasbin": "^1.1.0",
-    "ipv6": "~3.1.1",
-    "netmask": "~1.0.4",
-    "xml2js": "^0.4.9"
+    "async": "~1.4.*",
+    "deepmerge": "~0.2.*",
+    "hasbin": "~1.1.*",
+    "ip-address": "^4.0.0",
+    "netmask": "~1.0.*",
+    "xml2js": "~0.4.*"
   },
   "devDependencies": {
-    "ip": "^0.3.3",
-    "chai": "~1.8.1",
-    "mocha": "~1.17.0",
-    "mockery": "^1.4.0"
+    "mocha": "~2.2.*",
+    "chai": "~2.3.*"
   },
-  "license": "MIT",
-  "engine": "node >= v0.11.*"
+  "license": "MIT"
 }
