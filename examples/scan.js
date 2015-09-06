@@ -9,8 +9,7 @@ var nmap = require('../')
   , path = './scans/'
   , opts = {
       timeout: 100,
-      //range: ['scanme.nmap.org', 'localhost', '172.17.190.0/17'],
-      range: ['scanme.nmap.org', 'localhost', '172.17.190.0/27'],
+      range: ['scanme.nmap.org', 'localhost', '172.17.190.0/24'],
       ports: '21,22,80,443'
     };
 
@@ -18,8 +17,6 @@ nmap.scan(opts, function(err, report) {
   if (err) throw new Error(err);
 
   for (var item in report) {
-    console.log(JSON.stringify(report[item]));
-/*
     for (var host in report[item].host) {
 
       var data = JSON.stringify(report[item].host[host])
@@ -30,6 +27,5 @@ nmap.scan(opts, function(err, report) {
         console.log('Wrote report for '+filename);
       });
     }
-*/
   }
 });
