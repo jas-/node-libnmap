@@ -23,8 +23,9 @@ To install `npm install -g node-libnmap`
 ## tests ##
 To test `npm test`
 
-## examples ##
-Here are a few usage examples & their output
+## example ##
+A default usage example. For more advanced and possible options please
+see [here](https://gist.github.com/jas-/eae6b0c6e82a4e072b97)
 
 ### scan ###
 A manually specified scan example using a single host (both IPv4 & IPv6 notation),
