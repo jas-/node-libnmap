@@ -1,3 +1,60 @@
+commit 89c091fd3541a4b1f9f5840cf3af4872e2078ac7
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 8 00:57:00 2015 +0000
+
+    Small changes
+
+commit e4fbbf8b0dbf9cf7b85c675bc79bd9b87be8973e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Sep 7 15:03:06 2015 +0000
+
+    Added a gist link for more examples
+
+commit 6332267f1cb9a8dd9598bd21caa62d7d4f83da5a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 18:43:09 2015 +0000
+
+    Updated test case for unimplented discover method
+
+commit 7c2abbccdeccd9b87e7a05b254e0f231bdc2fff5
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 18:39:26 2015 +0000
+
+    Implemented return error for unimplemented discover method
+
+commit 9dad6fde0bb044479bf6571a9014a4e4f529055c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 18:33:43 2015 +0000
+
+    Update to test case
+
+commit e08cd4473c6aaa633e2f898b87f86dacc3776041
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 15:44:24 2015 +0000
+
+    v0.2.4 - Support for UDP scans
+
+commit 36998e991e924ef2413f72cc1ffb98f0f51be113
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 14:58:45 2015 +0000
+
+    Version bump to v0.2.3:
+    Updated default host timeout var to 120 seconds
+    Updated examples/scan.js to create folder to prevent errors
+
+commit a30e902e0e291063316bf5eea1fe66e3cfc88ef2
+Merge: bcb587c b57e8bc
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 14:04:54 2015 +0000
+
+    Synced w/ v0.2.2
+
+commit bcb587c2d36d35df7f17c7d46498fda15605bdbe
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 6 14:01:55 2015 +0000
+
+    Updated CHANGELOG to reflect recent commits
+
 commit 02120092fbd83ed2aa28e677544d7264e44097b6
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sun Sep 6 14:00:29 2015 +0000
@@ -155,6 +212,25 @@ Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sun Aug 30 13:42:31 2015 +0000
 
     Reorganization of objects & members
+
+commit b57e8bc80c82f347b108f67a2f486cf1f5d2c4a1
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 00:12:08 2015 +0000
+
+    Version patch update
+
+commit ffc604b822e931eb06269ce05dbc1d9e1e261a3e
+Merge: 74286fa 8ea27fc
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 00:11:42 2015 +0000
+
+    Fix
+
+commit 8ea27fc5c5609e8ba42bd873f8987e0e93046603
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 30 00:09:43 2015 +0000
+
+    New branch
 
 commit 1a4af48f21a87955687480cd109c33f55da1fc3c
 Author: Jas- <jason.gerfen@gmail.com>
