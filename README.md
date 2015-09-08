@@ -3,7 +3,7 @@
 Access nmap using node.js
 
 ## install ##
-To install `npm install -g node-libnmap`
+To install `npm install node-libnmap`
 
 ## methods ##
 * `scan`      Performs scan given available range & optional port
