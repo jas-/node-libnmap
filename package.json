@@ -1,6 +1,6 @@
 {
   "name": "node-libnmap",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
@@ -25,16 +25,16 @@
     "test": "./node_modules/.bin/mocha -R spec"
   },
   "dependencies": {
-    "async": "~1.4.*",
-    "deepmerge": "~0.2.*",
-    "hasbin": "~1.1.*",
-    "ip-address": "^4.0.0",
-    "netmask": "~1.0.*",
-    "xml2js": "~0.4.*"
+    "async": "latest",
+    "deepmerge": "latest",
+    "hasbin": "latest",
+    "ip-address": "latest",
+    "netmask": "latest",
+    "xml2js": "latest"
   },
   "devDependencies": {
-    "mocha": "~2.2.*",
-    "chai": "~2.3.*"
+    "mocha": "latest",
+    "chai": "latest"
   },
   "license": "MIT"
 }

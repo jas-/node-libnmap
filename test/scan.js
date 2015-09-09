@@ -39,17 +39,5 @@ describe('nmap', function() {
         done();
       });
     });
-
-    it('UDP scan mode', function(done) {
-      this.timeout(timeout);
-      opts.udp = false;
-
-      nmap.scan(opts, function(err, report) {
-        should.not.exist(err);
-
-        report.should.be.a('object');
-        done();
-      });
-    });
   });
 });
