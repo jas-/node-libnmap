@@ -5,4 +5,5 @@ node_js:
   - "0.12"
   - "iojs"
 before_script:
-  sudo apt-get install nmap
+  sudo apt-get update
+  sudo apt-get install -y nmap
