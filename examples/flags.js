@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-var nmap = require('node-nmap')
+var nmap = require('../')
   , opts = {
       flags: [
         '-sX', // XMAS scan (requires root)

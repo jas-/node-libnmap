@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-var nmap = require('node-nmap')
+var nmap = require('../')
   , opts = {
       timeout: 900, // 900s = 10m and increases the reliability of scan results
       range: ['scanme.nmap.org', '192.168.0.0/17']
