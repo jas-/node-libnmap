@@ -14,9 +14,9 @@ describe('nmap', function() {
   describe('discovery method', function() {
     it('validate report', function(done) {
       nmap.discover(function(err, report) {
-        should.exist(err);
+        should.not.exist(err);
 
-        should.not.exist(report);
+        should.exist(report);
         done();
       });
     });

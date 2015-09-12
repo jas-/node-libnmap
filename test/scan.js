@@ -17,7 +17,7 @@ var nmap = require('../')
 describe('nmap', function() {
 
   describe('scan method', function() {
-    it('default mode', function(done) {
+    it('default', function(done) {
       this.timeout(timeout);
 
       nmap.scan(opts, function(err, report) {
@@ -28,7 +28,7 @@ describe('nmap', function() {
       });
     });
 
-    it('XML report', function(done) {
+    it('xml report', function(done) {
       this.timeout(timeout);
       opts.json = false;
 

@@ -13,9 +13,9 @@ var nmap = require('../')
 
 describe('nmap', function() {
 
-  describe('Error handling', function() {
+  describe('error handling', function() {
 
-    it('Missing nmap binary', function(done) {
+    it('missing nmap binary', function(done) {
       opts = {
         nmap: 'ping-pong'
       };
@@ -26,7 +26,7 @@ describe('nmap', function() {
       });
     });
 
-    it('Invalid host range (host)', function(done) {
+    it('invalid host range (host)', function(done) {
       opts = {
         range: ['10.0.5.256']
       };
@@ -37,7 +37,7 @@ describe('nmap', function() {
       });
     });
 
-    it('Invalid host range (range)', function(done) {
+    it('invalid host range (range)', function(done) {
       opts = {
         range: ['10.0.2.5-256']
       };
@@ -48,7 +48,7 @@ describe('nmap', function() {
       });
     });
 
-    it('Invalid host range (CIDR)', function(done) {
+    it('invalid host range (CIDR)', function(done) {
       opts = {
         range: ['256.128.0/17']
       };
@@ -59,7 +59,7 @@ describe('nmap', function() {
       });
     });
 
-    it('Invalid port range', function(done) {
+    it('invalid port range', function(done) {
       opts = {
         ports: '1,5-40,1024,-90'
       };
