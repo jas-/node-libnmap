@@ -7,11 +7,9 @@
 var nmap = require('../')
   , opts = {
       flags: [
-        '-sX', // XMAS scan (requires root)
         '-sV', // Open port to determine service (i.e. FTP, SSH etc)
-        '-sC', // Use any available pen-test scripts for open services found (requires root)
       ],
-      range: ['scanme.nmap.org', '192.168.0.0/17']
+      range: ['scanme.nmap.org', '192.168.0.0/26']
     };
 
 nmap.scan(opts, function(err, report) {
