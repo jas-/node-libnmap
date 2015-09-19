@@ -5,26 +5,14 @@
  */
 
 var nmap = require('../')
-  , fs = require('fs')
-  , path = './scans/'
   , opts = {
-      range: ['scanme.nmap.org', '172.17.190.0/24'],
-      ports: '21,22,80,443'
+      range: ['scanme.nmap.org', '172.17.190.0/24']
     };
 
 nmap.scan(opts, function(err, report) {
   if (err) throw new Error(err);
 
   for (var item in report) {
-    for (var host in report[item].host) {
-
-      var data = JSON.stringify(report[item].host[host])
-        , filename = report[item].host[host].address.addr;
-
-      fs.writeFile(path+filename+'.json', data, function(error) {
-        if (error) throw error;
-        console.log('Wrote report for '+filename);
-      });
-    }
+    console.log(JSON.stringify(report[item]));
   }
 });

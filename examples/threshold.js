@@ -7,7 +7,7 @@
 var nmap = require('../')
   , opts = {
       threshold: 2048, // maximum of 2048 child processes (depending on range & blocksize)
-      range: ['scanme.nmap.org', '192.168.0.0/17']
+      range: ['scanme.nmap.org', '192.168.0.0/26']
     };
 
 nmap.scan(opts, function(err, report) {
