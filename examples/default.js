@@ -6,7 +6,8 @@
 
 var nmap = require('../')
   , opts = {
-      range: ['scanme.nmap.org', '172.17.190.0/24']
+      //range: ['scanme.nmap.org', '172.17.190.0/24']
+      range: ['127.0.0.1']
     };
 
 nmap.scan(opts, function(err, report) {
