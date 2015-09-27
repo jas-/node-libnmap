@@ -7,6 +7,7 @@ To install `npm install node-libnmap`
 
 ## methods ##
 * `scan`      Performs scan given available range & optional port
+* `discover`  Retrieves list of online network neighbors
 
 ## options ##
 * `nmap`      {String}    Path to NMAP binary
@@ -34,9 +35,12 @@ a CIDR range a host range as well as a port range specification.
 ```javascript
 var nmap = require('node-libnmap')
   , opts = {
-      timeout: 100,
-      range: ['scanme.nmap.org', '10.0.2.0/25', '192.168.10.80-120'],
-      ports: '21,22,80,443'
+      range: [
+        'scanme.nmap.org',
+        '10.0.2.0/25',
+        '192.168.10.80-120',
+        'fe80::42:acff:fe11:fd4e/64'
+      ]
     };
 
 nmap.scan(opts, function(err, report) {

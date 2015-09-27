@@ -6,7 +6,7 @@
 
 var nmap = require('../');
 
-nmap.discover({verbose: true}, function(err, report) {
+nmap.discover(function(err, report) {
   if (err) console.log(new Error(err));
 
   for (var item in report) {
