@@ -29,8 +29,8 @@ A default usage example. For more advanced and possible options please
 see [here](https://gist.github.com/jas-/eae6b0c6e82a4e072b97)
 
 ### scan ###
-A manually specified scan example using a single host (both IPv4 & IPv6 notation),
-a CIDR range a host range as well as a port range specification.
+The example show shows the types of host ranges supported. In this example the
+default IANA range of reserved ports is scanned per host in each range (1024).
 
 ```javascript
 var nmap = require('node-libnmap')
