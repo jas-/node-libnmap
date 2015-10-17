@@ -1,3 +1,21 @@
+commit 7556c0c0e82e4c6c211938469c847d0068766af5
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 17:27:34 2015 +0000
+
+    Added fix for travis-ci stalls
+
+commit 0d4da762ef9b38ae23bbe33f618463274cd866ce
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 17:24:54 2015 +0000
+
+    Added new CONTRIBUTING document
+
+commit c42c54019dd1b2e7bfa673e0c53a015ea9bbbb4b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 17:09:10 2015 +0000
+
+    Updated CHANGELOG
+
 commit 93aac4c510c764b8fd93b75d81a6b9c82d502617
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sat Oct 17 17:07:50 2015 +0000
