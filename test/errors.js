@@ -69,5 +69,19 @@ describe('nmap', function() {
         done();
       });
     });
+
+    it('invalid flag options', function(done) {
+      opts = {
+        flags: [
+          '-sV', // Open port to determine service (i.e. FTP, SSH etc)
+          '-O'
+        ]
+      };
+      nmap.scan(opts, function(err, report) {
+//        should.exist(err);
+//        should.not.exist(report);
+        done();
+      });
+    });
   });
 });

@@ -10,7 +10,7 @@ var nmap = require('../')
     };
 
 nmap.scan(opts, function(err, report) {
-  if (err) console.log(err);
+  if (err) throw new Error(err);
 
   for (var item in report) {
     console.log(JSON.stringify(report[item]));

@@ -15,9 +15,13 @@ describe('nmap', function() {
   describe('discovery method', function() {
     it('validate report', function(done) {
       nmap.discover(function(err, report) {
-        should.not.exist(err);
-
-        should.exist(report);
+        if (!os.networkInterfaces().eth0[0].hasOwnProperty('subnet')) {
+          should.exist(err);
+          should.not.exist(report);
+        } else {
+          should.not.exist(err);
+          should.exist(report);
+        }
         done();
       });
     });
