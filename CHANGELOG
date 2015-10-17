@@ -1,3 +1,140 @@
+commit 93aac4c510c764b8fd93b75d81a6b9c82d502617
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 17:07:50 2015 +0000
+
+    Error handling & test cases;
+    Add better error handling for recieved data from nmap proc as well as test cases
+
+commit b131ac713725dd007c1d52e3c9b601db4970f4db
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 16:42:23 2015 +0000
+
+    Error handling, refactoring for better handling
+
+commit 2ac96915aa0086874c72bc9181a4a5d2c3dd4b9f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 27 18:14:26 2015 +0000
+
+    Readme updated
+
+commit 9581ad0d97ef5a09ff33027308b52047c8ee8ef6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 27 18:12:46 2015 +0000
+
+    v0.2.11 bump
+
+commit a8f0257628fe748ac04e76ddb3f8ccdd2003d45b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 22 02:06:25 2015 +0000
+
+    Second attempt at fix for issue #22 - async.done() called twice
+
+commit eb64d546f9812d6253e523d2f04ef61562c8c3a0
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 22 02:03:58 2015 +0000
+
+    Second attempt at fix for issue #22 - async.done() called twice
+
+commit 79fd31d2fe6f3250eed2dbfaf78da9aba456018f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 22 01:00:57 2015 +0000
+
+    Fix for issue #22; async.done() multiple times
+
+commit 20a7bc67907c6f3dec128a2c3628b96558ee4463
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 22 00:47:46 2015 +0000
+
+    Version bump to v0.2.10
+
+commit 3996b85b81ae5b37845b0675ccfd2aa555197f58
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 19 23:10:07 2015 +0000
+
+    v0.2.9 release:
+    Cleaned up reporting iterator
+    Version bump
+    Examples were changed to reflect ranges more accurately
+    Fix for ranges / blocksize * cpu count and single IP's
+
+commit 288580eef3338d34800e9dd7e7730224ce990945
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 12 16:31:17 2015 +0000
+
+    Test header case modifications
+
+commit 49af0f46fbd70462fc9902b7648820821168a50f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 12 16:28:27 2015 +0000
+
+    tools.settings() provides interfaces for network calculations or throws error regarding upgrading node
+
+commit 8c0033474087210e1afef61586ca3c552ec16a62
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 12 15:49:08 2015 +0000
+
+    New example for handling discovery method
+
+commit 880c4abf60668be2732ba0155024b4e741496933
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 12 15:48:43 2015 +0000
+
+    New branch for discover() method
+
+commit 6ebc850eff1e01bd64915b6b734ba4bb857a794a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Sep 10 02:53:32 2015 +0000
+
+    Updated examples to use relative path
+
+commit 7482770370c56e927ba181399631f0bb1583fcbe
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Sep 9 03:30:25 2015 +0000
+
+    Concatinated before_script for travis-ci service
+
+commit 67c3a5534ff09f72da8f81abf5b203f929a80f9f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Sep 9 02:09:37 2015 +0000
+
+    Added timeout example
+
+commit 635b1bfb7ab2e98403dadbb309a9befb11c716bd
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Sep 9 01:57:36 2015 +0000
+
+    Update .travis.yml to reflect apt-get
+
+commit fbc84450d21100871f6d31e113cf36a3d4a39f75
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Sep 9 01:46:57 2015 +0000
+
+    renamed callback
+
+commit 9f7c7a7d9b11d8ec6760d96eb41769f5d9756ed0
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Sep 9 01:29:42 2015 +0000
+
+    Version bump, removed UDP example from test case & updated package.json to use latest available dependencies
+
+commit e1d7831ca3b4d595e49fec043f7702b8f3bdd44a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 8 01:34:43 2015 +0000
+
+    Version bump, examples & readme
+
+commit 40bdea107aec6043390ed581e5aac40f75d1fe02
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 8 01:17:05 2015 +0000
+
+    Version bump v0.2.6
+
+commit 4ff8e88e8f6b462f28c85acc52e53a094cca8f89
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Sep 8 00:58:31 2015 +0000
+
+    Update to CHANGELOG
+
 commit 89c091fd3541a4b1f9f5840cf3af4872e2078ac7
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Tue Sep 8 00:57:00 2015 +0000
