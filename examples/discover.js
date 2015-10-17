@@ -7,7 +7,7 @@
 var nmap = require('../');
 
 nmap.discover(function(err, report) {
-  if (err) console.log(new Error(err));
+  if (err) console.log(err);
 
   for (var item in report) {
     console.log(JSON.stringify(report[item]));

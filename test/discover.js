@@ -5,6 +5,7 @@
  */
 
 var nmap = require('../')
+  , os = require('os')
   , timeout = 1024 * 1024
   , chai = require('chai')
   , should = chai.should()
