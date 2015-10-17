@@ -1,3 +1,15 @@
+commit 80cb81e52c7f57da490f3e276099a93c3056ad37
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 17:33:49 2015 +0000
+
+    Fix for discover method test case
+
+commit 2ffed2ff7bea59d18bb74627a9c8840740404ccc
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 17:28:37 2015 +0000
+
+    Updated changelog
+
 commit 7556c0c0e82e4c6c211938469c847d0068766af5
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sat Oct 17 17:27:34 2015 +0000
