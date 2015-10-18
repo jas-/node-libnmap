@@ -8,7 +8,7 @@ var nmap = require('../')
   , opts = {
       flags: [
         '-sV', // Open port to determine service (i.e. FTP, SSH etc)
-        '-O'
+        //'-O'
       ],
       range: ['scanme.nmap.org', '192.168.0.0/26']
     };
