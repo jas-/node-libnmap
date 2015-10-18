@@ -1,17 +1,20 @@
 {
   "name": "node-libnmap",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
     "nmap",
-    "nmap host discovery",
     "libnmap",
+    "nmap host discovery",
     "threaded nmap scanner",
     "network host discovery",
     "host operating system discovery",
     "port scanner",
-    "network scanner"
+    "network scanner",
+    "services enumeration",
+    "host fingerprinting",
+    "service auditing",
   ],
   "repository": {
     "type": "git",
