@@ -1,11 +1,12 @@
 {
   "name": "libnmap",
-  "version": "0.2.12",
+  "version": "0.2.15",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
     "nmap",
     "libnmap",
+    "node-libnmap",
     "nmap host discovery",
     "threaded nmap scanner",
     "network host discovery",
