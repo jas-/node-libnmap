@@ -1,5 +1,5 @@
 /*!
- * node-libnmap
+ * libnmap
  * Copyright(c) 2013-2015 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */

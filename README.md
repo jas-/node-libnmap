@@ -1,10 +1,10 @@
-# node-libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap)
+# libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap)
 
 Access nmap using node.js
 
 ## install ##
 
-To install `npm install node-libnmap`
+To install `npm install libnmap`
 
 ## methods ##
 
@@ -39,7 +39,7 @@ The example show shows the types of host ranges supported. In this example the
 default IANA range of reserved ports is scanned per host in each range (1024).
 
 ```javascript
-var nmap = require('node-libnmap')
+var nmap = require('libnmap')
   , opts = {
       range: [
         'scanme.nmap.org',
@@ -64,7 +64,7 @@ The discover method requires nodejs < `v0.11.2` and can be used to aquire
 information about neighbors per network interface.
 
 ```javascript
-var nmap = require('node-libnmap');
+var nmap = require('libnmap');
 
 nmap.discover(opts, function(err, report) {
   if (err) throw new Error(err);

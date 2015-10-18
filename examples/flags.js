@@ -1,10 +1,10 @@
 /*!
- * node-libnmap
+ * libnmap
  * Copyright(c) 2013-2015 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('node-libnmap')
+var nmap = require('libnmap')
   , opts = {
       flags: [
         '-sV', // Open port to determine service (i.e. FTP, SSH etc)

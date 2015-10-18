@@ -1,10 +1,10 @@
 /*!
- * node-libnmap
+ * libnmap
  * Copyright(c) 2013-2015 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('node-libnmap')
+var nmap = require('libnmap')
   , opts = {
       range: ['scanme.nmap.org', '172.17.190.0/24']
     };
