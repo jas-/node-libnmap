@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-var nmap = require('../')
+var nmap = require('node-libnmap')
   , opts = {
       range: ['scanme.nmap.org', '172.17.190.0/24']
     };

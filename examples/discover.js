@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-var nmap = require('../');
+var nmap = require('node-libnmap');
 
 nmap.discover({verbose: true}, function(err, report) {
   if (err) throw new Error(err);

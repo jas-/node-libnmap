@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-var nmap = require('../')
+var nmap = require('node-libnmap')
   , opts = {
       udp: true, // requires root privileges
       range: ['scanme.nmap.org', '192.168.0.0/26']

@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-var nmap = require('../')
+var nmap = require('node-libnmap')
   , opts = {
       // Use 4, 8, 16 or 32 for class A & B (default is 16)
       // The larger the scan range the smaller the blocksize
