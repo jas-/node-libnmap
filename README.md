@@ -1,12 +1,10 @@
-# node-libnmap 
-<!---
-[![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap)
---->
+# libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap)
+
 Access nmap using node.js
 
 ## install ##
 
-To install `npm install node-libnmap`
+To install `npm install libnmap`
 
 ## methods ##
 
@@ -41,7 +39,7 @@ The example show shows the types of host ranges supported. In this example the
 default IANA range of reserved ports is scanned per host in each range (1024).
 
 ```javascript
-var nmap = require('node-libnmap')
+var nmap = require('libnmap')
   , opts = {
       range: [
         'scanme.nmap.org',
@@ -66,7 +64,7 @@ The discover method requires nodejs < `v0.11.2` and can be used to aquire
 information about neighbors per network interface.
 
 ```javascript
-var nmap = require('node-libnmap');
+var nmap = require('libnmap');
 
 nmap.discover(opts, function(err, report) {
   if (err) throw new Error(err);
@@ -77,27 +75,13 @@ nmap.discover(opts, function(err, report) {
 });
 ```
 
+## contributing ##
+
+Contributions are welcome & appreciated. Refer to the [contributing document](https://github.com/jas-/node-libnmap/blob/master/CONTRIBUTING.md)
+to help facilitate pull requests.
+
 ## license ##
 
-This software is licensed under the MIT License.
+This software is licensed under the [MIT License](https://github.com/jas-/node-libnmap/blob/master/LICENSE).
 
 Copyright Jason Gerfen, 2013-2015.
-
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to permit
-persons to whom the Software is furnished to do so, subject to the
-following conditions:
-
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-USE OR OTHER DEALINGS IN THE SOFTWARE.

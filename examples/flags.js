@@ -1,14 +1,15 @@
 /*!
- * node-libnmap
+ * libnmap
  * Copyright(c) 2013-2015 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('../')
+var nmap = require('libnmap')
   , opts = {
       flags: [
         '-sV', // Open port to determine service (i.e. FTP, SSH etc)
-        '-O'
+        '-O', // OS finger printing (requires elevated privileges)
+        '-sC' // Enables the nmap scripts (all) against each host (requires elevated privileges)
       ],
       range: ['scanme.nmap.org', '192.168.0.0/26']
     };

@@ -1,10 +1,10 @@
 /*!
- * node-libnmap
+ * libnmap
  * Copyright(c) 2013-2015 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('../')
+var nmap = require('libnmap')
   , opts = {
       threshold: 2048, // maximum of 2048 child processes (depending on range & blocksize)
       range: ['scanme.nmap.org', '192.168.0.0/26']

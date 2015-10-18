@@ -1,10 +1,10 @@
 /*!
- * node-libnmap
+ * libnmap
  * Copyright(c) 2013-2015 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('../')
+var nmap = require('libnmap')
   , opts = {
       // Use 4, 8, 16 or 32 for class A & B (default is 16)
       // The larger the scan range the smaller the blocksize
