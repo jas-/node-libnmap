@@ -14,7 +14,7 @@
     "network scanner",
     "services enumeration",
     "host fingerprinting",
-    "service auditing",
+    "service auditing"
   ],
   "repository": {
     "type": "git",
