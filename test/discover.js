@@ -15,6 +15,7 @@ describe('nmap', function() {
   describe('discovery method', function() {
     it('validate report', function(done) {
       nmap.discover(function(err, report) {
+        /* If 'subnet' doesn't exist in os.networkInterfaces() expect errors */
         for (var adapter in ifaces) {
           if (!ifaces[adapter][0].internal) {
             if (!ifaces[adapter][0].hasOwnProperty('subnet')) {

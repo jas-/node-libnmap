@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-var nmap = require('libnmap')
+var nmap = require('../')
   , opts = {
       flags: [
         '-sV', // Open port to determine service (i.e. FTP, SSH etc)

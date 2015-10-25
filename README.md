@@ -66,7 +66,7 @@ information about neighbors per network interface.
 ```javascript
 var nmap = require('libnmap');
 
-nmap.discover(opts, function(err, report) {
+nmap.discover(function(err, report) {
   if (err) throw new Error(err);
 
   for (var item in report) {
@@ -74,6 +74,10 @@ nmap.discover(opts, function(err, report) {
   }
 });
 ```
+
+### sample reports ###
+
+To see some output examples please take a look at the [json (default) & xml reports](https://gist.github.com/jas-/23e2a32110562388bef5).
 
 ## contributing ##
 
