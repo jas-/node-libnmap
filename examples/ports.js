@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-var nmap = require('libnmap')
+var nmap = require('../')
   , opts = {
       ports: '1-65535',
       range: ['scanme.nmap.org', '192.168.0.0/26']

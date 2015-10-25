@@ -72,14 +72,16 @@ describe('nmap', function() {
 
     it('invalid flag options', function(done) {
       opts = {
+        range: ['localhost'],
         flags: [
           '-sV', // Open port to determine service (i.e. FTP, SSH etc)
-          '-O'
+          '-O', // OS finger printing (requires elevated privileges)
+          '-sC' // Enables the nmap scripts (all) against each host (requires elevated privileges)
         ]
       };
       nmap.scan(opts, function(err, report) {
-//        should.exist(err);
-//        should.not.exist(report);
+        should.exist(err);
+        should.not.exist(report);
         done();
       });
     });
