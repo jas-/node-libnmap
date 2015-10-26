@@ -85,5 +85,17 @@ describe('nmap', function() {
         done();
       });
     });
+
+    it('unspecified range', function(done) {
+      opts = {
+        range: []
+      };
+      nmap.scan(opts, function(err, report) {
+        should.exist(err);
+        should.not.exist(report);
+        done();
+      });
+    });
+
   });
 });
