@@ -35,8 +35,6 @@
     "hasbin": "latest",
     "ip-address": "latest",
     "netmask": "latest",
-    "npm": "^3.3.9",
-    "shrinkwrap": "^0.4.0",
     "xml2js": "latest"
   },
   "devDependencies": {
