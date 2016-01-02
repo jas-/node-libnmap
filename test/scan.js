@@ -10,7 +10,11 @@ var nmap = require('../')
   , should = chai.should()
   , expect = chai.expect
   , opts = {
-      range: ['127.0.0.1', 'scanme.nmap.org', '2001:db8::/128'],
+      range: [
+        '127.0.0.1',
+        'scanme.nmap.org',
+        '2001:db8::/128'
+      ],
       ports: '22,135'
     };
 
