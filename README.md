@@ -88,4 +88,4 @@ to help facilitate pull requests.
 
 This software is licensed under the [MIT License](https://github.com/jas-/node-libnmap/blob/master/LICENSE).
 
-Copyright Jason Gerfen, 2013-2015.
+Copyright Jason Gerfen, 2013-2016.
