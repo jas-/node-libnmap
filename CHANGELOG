@@ -1,3 +1,220 @@
+commit 3642b8caaf081d46681b61586bf463665dbef6a0
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 2 16:17:16 2016 +0000
+
+    Issue #29 fix; discover() method validation
+
+commit 2b178478337079048b3d75c972a6f738d684f291
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 1 15:02:51 2015 +0000
+
+    Applied pr #27 - XML keys
+
+commit 579976c2b3234b0be43946995266e0aa307e5ffa
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 1 15:01:10 2015 +0000
+
+    v0.2.21 version bump
+
+commit 5a9c5ad6efb06a66906d4adee16b948d55b53ee8
+Merge: ba4b100 088d5ca
+Author: Jason Gerfen <jason.gerfen@gmail.com>
+Date:   Mon Oct 26 06:47:25 2015 -0600
+
+    Merge pull request #27 from regulatre/master
+    
+    Specified object key names for attributes/char to overide $ and _
+
+commit 088d5ca0be04b3402f1bf87b944470c1de684659
+Author: Brad Hein <linuxbrad@gmail.com>
+Date:   Thu Oct 22 16:15:00 2015 -0400
+
+    Override default $ object key name
+    
+    The xml2js parser is used to convert nmap results output into objects
+    used by node-libnmap. The parser by default uses $ for object key
+    names as it parses the rather complex XML object returned by nmap
+    
+    As it turns out, Mongo (and probably other dbs) don't like key names
+    that use special characters, for security reasons among others.
+    So I order to promote easy storage of the nmap scan result object I
+    have adjusted these default key names such that they confirm to simple
+    naming standards and no longer consist of special characters.
+    
+    After this commit it is possible to dump an entire scan result object
+    right into Mongo if that is your desire.
+
+commit ba4b100e7aa02ff4c19a2ffcb28f8fc809dc489d
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Oct 26 03:58:33 2015 +0000
+
+    Version bump for npm release
+
+commit 07f5433906235389c440bb0fe6c8d6bb2c4e88df
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Oct 26 03:56:43 2015 +0000
+
+    Set all dependencies to a version lock
+
+commit ab018f6737edd13ff375e2dac740004f969cbebb
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Oct 26 03:52:56 2015 +0000
+
+    Version bump; v0.2.19
+
+commit b90ae1961d1398f76ad3a5abf90185d70bf5685a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Oct 26 03:51:51 2015 +0000
+
+    Removed npm shrinkwrap
+
+commit b4bf3ef8ed093a8eba5d45d20a0cd31f56f14f7e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Oct 26 02:58:02 2015 +0000
+
+    Version bump & fix for missing hosts
+
+commit cc6c79eb0624119f6fa69cbb370de5a32d1dfd44
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Oct 26 02:48:50 2015 +0000
+
+    Updated to package.json
+
+commit f9080020055ea544ad809ab6896c8e2c07606e32
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 25 16:06:11 2015 +0000
+
+    Version bump
+
+commit 7756e6fe1d7cfccb49ca27eaf19872531b6d5fa4
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 25 16:05:03 2015 +0000
+
+    Fix for discover example & version bump to v0.2.17
+
+commit 78c894510bd67fabeacfc52c8736e12bd1d45b51
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 25 16:00:24 2015 +0000
+
+    Added examples/accuracy.js
+
+commit 1cef1198970f69d9f3927fb967ef07dfc691ef30
+Merge: 4017a01 6faa636
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 25 15:59:11 2015 +0000
+
+    Merge branch 'v0.2.16'
+
+commit 6faa6368234c990b069f3e01c5df8838b39668f2
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 25 15:54:52 2015 +0000
+
+    Options fixes & readme output exmaple
+
+commit 4daa4c021743f79f9adce610b38c26fdd7fa28da
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 25 15:03:34 2015 +0000
+
+    Fixes for flags, example output & accuracy
+
+commit 7156c5d74f303ef7f119f8d31b0a11a895992b04
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 25 13:45:47 2015 +0000
+
+    Fix for optional 'opts' arg in discover example
+
+commit 3c94e957e6d140e58e0c476135554f83a713178c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 25 13:44:19 2015 +0000
+
+    Version bump; v0.2.16
+    Examples:
+      Relative path for module fix
+    Tests:
+      Added comment for discover regarding missing object key
+      Fix for invalid flags scan; requires a range specification
+
+commit 4017a010a1f96e57cbbd0b3dd13cab80121d853a
+Merge: 0c46c5c 19ebe6a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 18:02:33 2015 +0000
+
+    Merge branch 'v0.2.15'
+
+commit 19ebe6ad8b50ba48573a461d94dc83f2289a6b32
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 18:02:14 2015 +0000
+
+    Version bump
+
+commit 0c46c5c185a9a8701a00e144686acba4376d0dfd
+Merge: 28d3575 63d1b95
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 16:59:51 2015 +0000
+
+    Readme
+
+commit 63d1b95d59fad1530694f7b3f42972fcc365f303
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 16:54:19 2015 +0000
+
+    Fix in package.json
+
+commit b4401a401834e2309705835d20359857c42e3c32
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 16:47:35 2015 +0000
+
+    Added lib/ & examples/default2io.js example
+
+commit c0de7d6d9cb313f439237fe765f592cf7209fc5e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 16:41:15 2015 +0000
+
+    Version bump to v0.2.12 & name change
+
+commit 90abce9b715c29624abec07566b5f5cd48956b57
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 16:33:29 2015 +0000
+
+    Removed global module support & updated keywords
+
+commit aedd881787cd1abd20e0cf5375be5f6fe88e0bfb
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 16:02:56 2015 +0000
+
+    Added global instlal shebang line & updates to examples reflecting change
+
+commit cb97b8d94773c9953a4b5b86af56076cb08109aa
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 15:50:20 2015 +0000
+
+    Removed debugging output for travis-ci service
+
+commit 27990b08437a62db0711dc83f6e04907b621f2b9
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 15:48:18 2015 +0000
+
+    Debugging output for travis-ci service
+
+commit 451c3da047814cc2cf78fc663091d005b9046a46
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Oct 18 15:41:20 2015 +0000
+
+    Updated README; contributing & license sections
+
+commit 28d35758edefa427e75136fdff54e5e13c9abe37
+Merge: 0b418fc c36b1ec
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 17:36:26 2015 +0000
+
+    Merge branch 'master' of github.com:jas-/node-libnmap
+
+commit 0b418fcfe16703a757bd0c5d7ffb5ab7b7b64ba9
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Oct 17 17:33:59 2015 +0000
+
+    Updated changelog
+
 commit 80cb81e52c7f57da490f3e276099a93c3056ad37
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sat Oct 17 17:33:49 2015 +0000
@@ -40,6 +257,14 @@ Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sat Oct 17 16:42:23 2015 +0000
 
     Error handling, refactoring for better handling
+
+commit c36b1ecc6d46b283e0f918a923697df0e6acecab
+Author: Jason Gerfen <jason.gerfen@gmail.com>
+Date:   Fri Oct 2 06:57:11 2015 -0600
+
+    Removed Travis-CI status badge
+    
+    Just to test the traffic coming in I removed the Travis-CI badge
 
 commit 2ac96915aa0086874c72bc9181a4a5d2c3dd4b9f
 Author: Jas- <jason.gerfen@gmail.com>
