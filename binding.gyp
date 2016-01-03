@@ -5,9 +5,10 @@
       "type": "shared_library",
       "variables": {
         'path': 'src/nmap/',
+        'sources': '<!(find <(path) -type f -name *.c)'
       },
       "sources": [
-        "",
+        "<(sources)",
       ],
       "include_dirs" : [
         "<(path)",
@@ -36,9 +37,10 @@
         'cwd': "<!(pwd)",
         'path': "src/",
         'ldpath': "build/Release",
+        'sources': '<!(find <(path) -type f -name *.c)'
       },
       "sources": [
-        "",
+        "<(sources)",
       ],
       "include_dirs" : [
         "<!(node -e \"require('nan')\")",
@@ -60,4 +62,3 @@
     }
   ],
 }
-
