@@ -13,7 +13,7 @@ var nmap = require('../')
       range: [
         '127.0.0.1',
         'scanme.nmap.org',
-        '2001:db8::/128'
+        '::1'
       ],
       ports: '22,135'
     };
