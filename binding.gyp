@@ -5,29 +5,14 @@
       "type": "shared_library",
       "variables": {
         'path': 'src/nmap/',
-        'sources': '<!(find <(path) -type f -name *.c)'
+        'sources': '<!(find <(path) -type f -name *.c)',
+        'incs': '<!(find <(path) -type d -name lib*)'
       },
       "sources": [
         "<(sources)",
       ],
       "include_dirs" : [
-        "<(path)",
-        "<(path)libdnet-stripped/",
-        "<(path)liblinear/",
-        "<(path)liblua/",
-        "<(path)libnetutil/",
-        "<(path)libpcap/",
-        "<(path)libpcre/",
-        "<(path)macosx/",
-        "<(path)mswin32/",
-        "<(path)nbase/",
-        "<(path)ncat/",
-        "<(path)ndiff/",
-        "<(path)nmap-update/",
-        "<(path)nping/",
-        "<(path)nselib/",
-        "<(path)nsock/",
-        "<(path)zenmap/",
+        "<(incs)"
       ]
     },
     {
@@ -46,7 +31,7 @@
         "<!(node -e \"require('nan')\")",
       ],
       "dependencies": [
-			  "nmap",
+        "nmap",
 		  ],
       "conditions": [
         ['OS=="linux"', {
