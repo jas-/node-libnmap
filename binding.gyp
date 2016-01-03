@@ -4,7 +4,7 @@
       "target_name": "nmap",
       "type": "shared_library",
       "variables": {
-        path: "src/nmap/",
+        'path': 'src/nmap/',
       },
       "sources": [
         "",
@@ -28,18 +28,14 @@
         "<(path)nsock/",
         "<(path)zenmap/",
       ]
-    }
-  ],
-},
-{
-  "targets": [
+    },
     {
       "target_name": "libnmap",
       "type": "loadable_module",
       "variables": {
-        cwd: "<!(pwd)",
-        path: "src/",
-        ldpath: "build/Release",
+        'cwd': "<!(pwd)",
+        'path': "src/",
+        'ldpath': "build/Release",
       },
       "sources": [
         "",
