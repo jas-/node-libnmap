@@ -25,6 +25,7 @@
     "url": "https://github.com/jas-/node-libnmap/issues"
   },
   "scripts": {
+    "install": "node-gyp rebuild",
     "start": "node index.js",
     "test": "./node_modules/.bin/mocha -R spec"
   },
