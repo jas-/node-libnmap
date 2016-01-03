@@ -1,3 +1,45 @@
+commit 165454cdd61955311ee1030617fa412494b26eff
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 3 15:33:18 2016 +0000
+
+    Tests: scan.js; fix for localhost in ipv6 notation
+
+commit fe77cfa7015ba3605e1bce192d2dd0d4aaab64df
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 2 21:29:56 2016 +0000
+
+    Test: scan.js range formatting for readability
+
+commit cf3253f3fe3d7ac4ec3efcd2be6f3b0e78545610
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 2 17:10:29 2016 +0000
+
+    Tests: Added IPv6 address to scan.js example
+
+commit b4a7f43ba3cb8d0c4a296efeee97ff3cc01e3ac9
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 2 17:09:23 2016 +0000
+
+    Examples: Added ipv6 example
+
+commit 65cb64253441b88dde811bb69d3befa674f199f2
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 2 16:28:08 2016 +0000
+
+    Version bump & copywrite years updated
+
+commit 5ad85da73dd6042bef21c5109b7d68a32b60a350
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 2 16:21:01 2016 +0000
+
+    Version bump & travis-ci versioning for node.js
+
+commit 8dfb58a3ecf6c468e3ab8c5765a28e11e0bc3721
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jan 2 16:17:56 2016 +0000
+
+    Changelog update for v0.2.22
+
 commit 3642b8caaf081d46681b61586bf463665dbef6a0
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sat Jan 2 16:17:16 2016 +0000
