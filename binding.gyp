@@ -6,11 +6,10 @@
       "variables": {
         "cwd": "<!(pwd)",
         "path": "src/",
-        "ldpath": "build/Release",
-        "sources": "<!(find <(path) -type f -name *.c)"
+        "ldpath": "build/Release"
       },
       "sources": [
-        "",
+        "<(path)libnmap.cc"
       ],
       "include_dirs" : [
         "<!(node -e \"require('nan')\")",

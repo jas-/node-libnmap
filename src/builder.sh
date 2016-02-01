@@ -53,3 +53,5 @@ for dep in "${deps[@]}"; do
     make 1>/dev/null
   fi
 done
+
+cd ${base}

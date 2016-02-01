@@ -2,37 +2,47 @@
   "targets": [
     {
       "target_name": "nbase",
-      "type": "shared_library",
+      "type": "static_library",
       "variables": {
-        "path": "src/nmap/nbase/"
+        "cwd": "<!(pwd)",
+        "path": "../../src/nmap/nbase/",
+        "ldpath": "<(cwd)build/src/gyp/"
       },
-      "sources": [
-        "<(path)nbase_winunix.c",
-        "<(path)getaddrinfo.c",
-        "<(path)nbase_str.c",
-        "<(path)nbase_misc.c",
-        "<(path)nbase_time.c",
-        "<(path)inet_pton.c",
-        "<(path)inet_ntop.c",
-        "<(path)strcasecmp.c",
-        "<(path)nbase_rnd.c",
-        "<(path)nbase_memalloc.c",
-        "<(path)test/test-escape_windows_command_arg.c",
-        "<(path)getopt.c",
-        "<(path)snprintf.c",
-        "<(path)getnameinfo.c",
-        "<(path)nbase_addrset.c",
+      "include_dirs": [
+        "<(path)"
       ],
-      "include_dirs" : [
-        "<(path)",
+      "sources": [
+        "<(path)getopt.c",
+        "<(path)nbase_memalloc.c",
+        "<(path)nbase_str.c",
+        "<(path)strcasecmp.c",
+        "<(path)snprintf.c",
+        "<(path)nbase_time.c",
       ],
       "conditions": [
+        ['OS=="win"', {
+          'defines': [
+            'WIN32'
+          ]
+        }],
         ['OS=="linux"', {
+          "libraries":[
+            "<(cwd)/<(ldpath)"
+          ],
           "cflags": [
             "-ggdb",
             "-fPIC",
             "-std=gnu99",
-          ]
+            "-w",
+            "-g",
+            "-Wl,--whole-archive"
+          ],
+          "link_settings": {
+            "libraries": [
+              "-lssl",
+              "-lcrypto"
+            ]
+          }
         }]
       ]
     }
