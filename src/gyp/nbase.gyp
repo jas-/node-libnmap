@@ -8,6 +8,10 @@
         "path": "../../src/nmap/nbase/",
         "ldpath": "<(cwd)build/src/gyp/"
       },
+      "defines": [
+        "HAVE_CONFIG_H",
+        "NBASE_WINUNIX_H",
+      ],
       "include_dirs": [
         "<(path)"
       ],
@@ -18,11 +22,19 @@
         "<(path)strcasecmp.c",
         "<(path)snprintf.c",
         "<(path)nbase_time.c",
+        "<(path)nbase_misc.c",
+        "<(path)nbase_addrset.c",
+        "<(path)getaddrinfo.c",
+        "<(path)nbase_rnd.c",
+        "<(path)inet_pton.c",
+        "<(path)nbase_winunix.c",
+        "<(path)getnameinfo.c",
+        "<(path)inet_ntop.c",
       ],
       "conditions": [
         ['OS=="win"', {
-          'defines': [
-            'WIN32'
+          "defines": [
+            "WIN32"
           ]
         }],
         ['OS=="linux"', {
