@@ -1,4 +1,4 @@
-# node-libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap)
+# node-libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=v0.2.0)](https://travis-ci.org/jas-/node-libnmap)
 
 Access nmap using node.js
 v0.2.0 is a breaking change version iteration. Please update implementations to
