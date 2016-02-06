@@ -18,5 +18,5 @@ node_js:
   - "iojs"
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install graphviz && npm install nvm; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash && brew update && brew install nmap; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update && sudo apt-get install -y nmap; fi
