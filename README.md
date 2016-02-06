@@ -1,4 +1,4 @@
-# libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=v0.2.24)](https://travis-ci.org/jas-/node-libnmap)
+# libnmap [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=v0.2.26)](https://travis-ci.org/jas-/node-libnmap)
 
 Access nmap using node.js
 
