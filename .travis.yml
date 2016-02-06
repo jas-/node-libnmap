@@ -1,4 +1,14 @@
+os:
+  - linux
+  - osx
+
+addons:
+  apt:
+    packages:
+      - nmap
+
 language: node_js
+
 node_js:
   - "4.1"
   - "4.0"
@@ -6,7 +16,6 @@ node_js:
   - "0.11"
   - "0.10"
   - "iojs"
+
 before_install:
-  - sudo apt-get update
-before_script:
-  - sudo apt-get install -y nmap
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install graphviz; fi
