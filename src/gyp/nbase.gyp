@@ -3,11 +3,6 @@
     {
       "target_name": "nbase",
       "type": "static_library",
-      "variables": {
-        "cwd": "<!(pwd)",
-        "path": "../../src/nmap/nbase/",
-        "ldpath": "<(cwd)build/src/gyp/"
-      },
       "defines": [
         "HAVE_CONFIG_H",
         "NBASE_WINUNIX_H",
@@ -38,6 +33,11 @@
           ]
         }],
         ['OS=="linux"', {
+          "variables": {
+            "cwd": "<!(pwd)",
+            "path": "../../src/nmap/nbase/",
+            "ldpath": "<(cwd)build/src/gyp/"
+          },
           "libraries":[
             "<(cwd)/<(ldpath)"
           ],
