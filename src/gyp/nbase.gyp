@@ -5,8 +5,13 @@
       "type": "static_library",
       "defines": [
         "HAVE_CONFIG_H",
-        "NBASE_WINUNIX_H",
+        "NBASE_WINUNIX_H"
       ],
+      "variables": {
+        "cwd": "<!(pwd)",
+        "path": "../../src/nmap/nbase/",
+        "ldpath": "<(cwd)build/src/gyp/"
+      },
       "include_dirs": [
         "<(path)"
       ],
@@ -22,9 +27,9 @@
         "<(path)getaddrinfo.c",
         "<(path)nbase_rnd.c",
         "<(path)inet_pton.c",
-        "<(path)nbase_winunix.c",
-        "<(path)getnameinfo.c",
         "<(path)inet_ntop.c",
+        "<(path)getnameinfo.c",
+        "<(path)nbase_winunix.c",
       ],
       "conditions": [
         ['OS=="win"', {
@@ -33,20 +38,32 @@
           ]
         }],
         ['OS=="linux"', {
-          "variables": {
-            "cwd": "<!(pwd)",
-            "path": "../../src/nmap/nbase/",
-            "ldpath": "<(cwd)build/src/gyp/"
-          },
+          "defines": [
+            "HAVE_NETDB_H",
+            "HAVE_STRING_H",
+            "HAVE_SYS_TYPES_H",
+            "HAVE_SYS_SOCKET_H",
+            "HAVE_NETDB_H",
+            "HAVE_STRING_H",
+            "HAVE_SYS_PARAM_H",
+            "HAVE_SYS_TYPES_H",
+            "HAVE_SYS_SELECT_H",
+            "HAVE_UNISTD_H",
+            "HAVE_SYS_STAT_H",
+            "HAVE_INTTYPES_H"
+          ],
           "libraries":[
             "<(cwd)/<(ldpath)"
           ],
           "cflags": [
-            "-ggdb",
-            "-fPIC",
-            "-std=gnu99",
             "-w",
             "-g",
+            "-O2",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-Wmissing-prototypes",
+            "-Wstrict-prototypes",
             "-Wl,--whole-archive"
           ],
           "link_settings": {
