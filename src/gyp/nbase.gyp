@@ -27,9 +27,6 @@
         "<(path)getaddrinfo.c",
         "<(path)nbase_rnd.c",
         "<(path)inet_pton.c",
-        "<(path)inet_ntop.c",
-        "<(path)getnameinfo.c",
-        "<(path)nbase_winunix.c",
       ],
       "conditions": [
         ['OS=="win"', {

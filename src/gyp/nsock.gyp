@@ -5,8 +5,9 @@
       "type": "shared_library",
       "variables": {
         "cwd": "<!(pwd)",
-        "path": "src/nmap/nsock/src/",
-        "inc": "src/nmap/nsock/include/"
+        "path": "../../src/nmap/nsock/src/",
+        "inc": "../../src/nmap/nsock/include/",
+        "ldpath": "<(cwd)build/src/gyp/"
       },
       "sources": [
         "<(path)nsock_engines.c",
@@ -35,6 +36,8 @@
       ],
       "include_dirs" : [
         "<(inc)",
+        "<(cwd)/<(ldpath)",
+        "../../src/nmap/nbase/"
       ],
       "conditions": [
         ['OS=="linux"', {
