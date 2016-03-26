@@ -5,7 +5,9 @@
       "type": "shared_library",
       "variables": {
         "cwd": "<!(pwd)",
-        "path": "nmap/",
+        "lpath": "nmap/",
+        "path": "../../src/nmap/",
+        "ldpath": "<(cwd)build/src/gyp/"
       },
       "sources": [
         "<(path)osscan2.cc",
@@ -84,19 +86,25 @@
         "-L<(path)libpcre/"
       ],
       "dependencies": [
-        "<(path)../nbase.gyp:nbase",
-        "<(path)../nsock.gyp:nsock"
+        "<(lpath)../libpcap.gyp:libpcap",
+        "<(lpath)../nbase.gyp:nbase",
+        "<(lpath)../nsock.gyp:nsock"
 		  ],
       "conditions": [
         ['OS=="linux"', {
+          "cflags": [
+            "-fPIC",
+            "-std=gnu99",
+            "-w",
+            "-g",
+            "-O2",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-Wl,--whole-archive"
+          ],
           "link_settings": {
             "libraries": [
-              "-libdnet",
-              "-liblinear",
-              "-liblua",
-              "-libnetutil",
-              "-libpcap",
-              "-libpcre"
             ]
           }
         }]
