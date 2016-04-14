@@ -1,3 +1,248 @@
+commit 3b2083753365949bc326ec0a5ace35a1edd8835f
+Merge: 824aeab baa2939
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Apr 14 10:23:22 2016 +0000
+
+    Merge branch 'master' into v0.2.29
+
+commit baa2939d721ae6aa969b7d33f989558255af870f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Apr 14 10:23:09 2016 +0000
+
+    Version bump v0.2.29
+
+commit 824aeab60eb344a504a46c2ca4b471c01ae0876c
+Author: Christian Kiely <ckiely91@gmail.com>
+Date:   Mon Mar 28 12:45:32 2016 +1100
+
+    Stop -oX - flag being added if it already exists
+
+commit ac5485892e88fe91a8ef3cc54fbf6d0e2f390fbb
+Merge: ee8f15a e07d1f4
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Mar 26 15:48:33 2016 +0000
+
+    Version bump to v0.2.28
+
+commit e07d1f45d9ac3d45e3524b995520b10d950c7089
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Mar 26 15:47:03 2016 +0000
+
+    Update to .travis-ci to work with osx builds
+
+commit d2a5307b0bbb800e67347b4315d1f1acaea6df38
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Mar 26 15:38:11 2016 +0000
+
+    Version bump for travis-ci
+
+commit b65cb278db1a1095061b227fd0af0268e697268f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Mar 26 15:10:53 2016 +0000
+
+    v0.2.28: Version bump to address issue #33
+
+commit ee8f15a5cded769997ab98e4ebf2cfd68d71a74d
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:50:19 2016 +0000
+
+    Version bump to v0.2.27 & disabled osx tests for travis-ci
+
+commit 934a370df60fa531bf0dd975ab653a46c88cb798
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:47:47 2016 +0000
+
+    Removed linux conditional from before_install
+
+commit 78f935596ff51255af328bed0cd1e1ae38e7f50b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:43:00 2016 +0000
+
+    Another possible fix #2
+
+commit ef125ec58935468764e51ae01eaa67756527435a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:31:26 2016 +0000
+
+    Another possible fix
+
+commit e5dc2895ffaa8fcc1620f2774a612fb0eead416f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:29:47 2016 +0000
+
+    Commented out default build line
+
+commit 17c4c32726597ac0e1460fb6985e7d5d90abf585
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:28:20 2016 +0000
+
+    Another possible fix for nvm on osx test builds
+
+commit 8c39421a6055737a1b58172cb20d5d4387a35190
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:22:02 2016 +0000
+
+    Build status reflects version bump (v0.2.27)
+
+commit f857a40b83c2c77ba435a59b9b73487842c12a22
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:21:14 2016 +0000
+
+    Version bump
+
+commit 66eb608f1607450d23641befc95760586de80cb0
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 17:20:24 2016 +0000
+
+    Possible fix for osx nvm issue
+
+commit 638e9957b9d07257fd818c26c01e145ded4b5558
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 16:40:22 2016 +0000
+
+    Fix for travis-ci branch in readme
+
+commit fa0dd22f2eafe785c0305874cff2044319ab0199
+Merge: aebae0f 6569b3e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 16:39:14 2016 +0000
+
+    v0.2.26 merge
+
+commit 6569b3eeb663bd8fc738b24f03df26bc2604cf39
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 16:24:11 2016 +0000
+
+    Added fix for brew installation of nmap & nvm from wget
+
+commit c1ea750ba66e55b9b4968daa82347ec0803d50a2
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 16:19:24 2016 +0000
+
+    Added installation of nvm for osx
+
+commit 2a9233b99108ab3ec95b9d3660c2b945102c4dae
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 16:16:59 2016 +0000
+
+    Added apt-get installation to before_install to ensure nmap installed
+
+commit 42e39adb42d4717fe6fa4f2fdbd325597f821125
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 15:33:10 2016 +0000
+
+    Updated travis-ci version info for build status
+
+commit de5bd2d1b9ad0cdb6205e27d8e96a8025cc84fb6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 15:28:27 2016 +0000
+
+    Migrating to newer .travis.yml format including multiple OS testing envs
+
+commit c38149a18f12541e3e6697053c35ca2f510a8db9
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 15:24:42 2016 +0000
+
+    Version bump to v0.2.26
+
+commit 6a19797e1b02740bdb107920aeecb3d2442c253d
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 15:19:36 2016 +0000
+
+    Fix for .travis.yml for package repo
+
+commit aebae0fc6ac3c0026536c1ce56057dd909b2bf44
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 15:12:52 2016 +0000
+
+    Fix for .travis.yml for package repo
+
+commit 0e201de0b4d5197f8df8e15f26d72d0ca9489984
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Feb 6 15:04:29 2016 +0000
+
+    Version bump to v0.2.25
+
+commit 3e4560483c2ee1f5915ebb1580bb5f3679113db7
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Feb 4 11:32:50 2016 +0000
+
+    Removed unnecessary apt-get update from travis.yml
+
+commit 94eb23196b1d3f5f4c4886098e5846082d5fa93f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Feb 4 11:26:40 2016 +0000
+
+    Applied fix for IPv6 & IPv4 discover mode by enabling ARP ping for IPv4 & Neighbor Discovery (RFC 4861) for IPv6
+
+commit aff030e615f6b9f5f19ad92039b46c902b5729c6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Feb 4 11:03:25 2016 +0000
+
+    Updated readme to reflect appropriate branch for travis-ci
+
+commit edade8e78e732fd1a36b79a4a01c895938f89458
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 10 12:59:52 2016 +0000
+
+    IPv6 adapters() fix for variable names
+
+commit a66c69d162e253ccbd6358729c9d917eebdca077
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 10 12:55:49 2016 +0000
+
+    adapters() fix
+
+commit c0e58f4c7f844cc9d32fed34093de6f1e3cc00d5
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 10 12:12:58 2016 +0000
+
+    IPv6: Object fix; validation (early morning in a rush, wtf)
+
+commit 60f1d5c9121a753653858d072d58e34d0b348a41
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 10 12:10:08 2016 +0000
+
+    IPv6: Object fix; validation.IPv6 vs. validation.test.IPv6
+
+commit edb2e13db270fbc7a312f5fd93b5340146a31ab7
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 10 12:06:37 2016 +0000
+
+    IPv6: Typo for validation.test.IPv6 vs. validation.test.ipv6
+
+commit ef0f43da2342b3923e289950c871159e21fb1eb1
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 10 12:05:27 2016 +0000
+
+    IPv6: Another fix regarding library init for ip-address
+
+commit e07a0564d78d8df410e786f77916cb318e4e686d
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 10 11:58:53 2016 +0000
+
+    IPv6: Fix for issue #29
+    
+    - Conditional to handle IPv6 netmask test & convert using ip-address to CIDR notation
+
+commit 1ea19778a221a6415b20c3641e201176114be84a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Jan 8 12:01:06 2016 +0000
+
+    Version bump to v0.2.24
+
+commit da14e7e1ee5b7ce1144b0a93fcdffdefba3ad148
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 3 15:38:33 2016 +0000
+
+    Version bump to v0.2.23
+
+commit ad094132976bf330eb1c5f5aecf223da4af0f9c7
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 3 15:37:26 2016 +0000
+
+    CHANGELOG updated to reflect v0.2.23
+
 commit 165454cdd61955311ee1030617fa412494b26eff
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sun Jan 3 15:33:18 2016 +0000
