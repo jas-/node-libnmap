@@ -1,6 +1,6 @@
 {
   "name": "libnmap",
-  "version": "0.2.29",
+  "version": "0.2.30",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
@@ -16,7 +16,10 @@
     "services enumeration",
     "host fingerprinting",
     "service auditing",
-    "IPv6 host discovery"
+    "IPv6 host discovery",
+    "network",
+    "scanner",
+    "security"
   ],
   "repository": {
     "type": "git",
