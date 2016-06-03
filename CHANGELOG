@@ -1,3 +1,39 @@
+commit 7f643a16472897fd00299d206b313f4d377a57ca
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Jun 3 23:39:56 2016 +0000
+
+    Fixes for ip-address API changes & dependency changes
+
+commit d2cd25be2aad3a97ac41813180c21f0b74224c47
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue May 31 23:34:48 2016 +0000
+
+    Version bump; v0.2.31
+
+commit 702281617040c7c633cb6085ba1f3c62be5def03
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon May 30 15:37:22 2016 +0000
+
+    Version update & keywords
+
+commit d7e17f26d56cfc1571452ac26f7cf2a9d1e44aa2
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon May 30 14:24:52 2016 +0000
+
+    Version update & keywords
+
+commit 1785073dbed93e3e47ccf1e99e5f6ef9d3a80da4
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon May 30 14:22:43 2016 +0000
+
+    Version bump; v0.2.30 & dependency update
+
+commit 5849b861a18b3ccbddfa95ff9912abf070fba9aa
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Apr 14 10:24:20 2016 +0000
+
+    Update to CHANGELOG
+
 commit 3b2083753365949bc326ec0a5ace35a1edd8835f
 Merge: 824aeab baa2939
 Author: Jas- <jason.gerfen@gmail.com>
