@@ -33,12 +33,12 @@
     "test": "./node_modules/.bin/mocha -R spec"
   },
   "dependencies": {
-    "async": "^1.5.2",
+    "async": "^2.0.0-rc.5",
     "caller-id": "~0.1.0",
     "deepmerge": "~0.2.10",
     "hasbin": "^1.2.3",
-    "ip-address": "^4.2.0",
-    "netmask": "~1.0.5",
+    "ip-address": "^5.8.0",
+    "netmask": "^1.0.6",
     "xml2js": "~0.4.13"
   },
   "devDependencies": {
