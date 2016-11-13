@@ -1,3 +1,88 @@
+commit 1cb877b9679d01f8bac0cc0e2504bf4ad975e6ff
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 13 16:40:24 2016 +0000
+
+    Merged branch (v0.3.0)
+
+commit ce8baa55d364f29239528d2e5037b93b8ecfeb7d
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 13 16:38:52 2016 +0000
+
+    Removed mocha from dependencies hive
+
+commit 9634dd43f400f9a9e3f27003dfe7e2f3e8c9bf37
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 13 16:22:04 2016 +0000
+
+    Updated outdated package (deepmerge)
+
+commit 8d8a026eb4b6ab715214dd1370fcc6067220ea7f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 13 16:19:09 2016 +0000
+
+    Updated discover.js test case to accommodate for newer node versions (> 4.x)
+
+commit 4bb1cd0d46389d6f0ffc512c4054c611e302411b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 10 13:24:34 2016 +0000
+
+    Migration to es6
+
+commit cd4b61f18be78f2fef38ed5665e5e88480e5413c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jul 10 13:26:25 2016 +0000
+
+    Version bump for package.json
+
+commit 7b9368c769f3649963ccd1090cd276472425a9fd
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jul 10 13:24:25 2016 +0000
+
+    Added some nifty banners
+
+commit d86a107dc7ff74739ac5a0aefd72343eb8b10749
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Jun 7 19:36:38 2016 +0000
+
+    Version bump; v0.2.33
+
+commit c2dda42070deab5603a37a15965cbf9f4580828c
+Merge: bd96a36 2c67dae
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Jun 6 12:18:36 2016 +0000
+
+    Version bump; v0.2.32. Bug fix for issue #38
+
+commit 2c67dae18e47add9f3179f89d9f8574997b475ff
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Jun 6 12:17:23 2016 +0000
+
+    Updated README to reflect travis-ci tests
+
+commit 8f264141da659fda97a4d553c45ca87c301c4ef6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Jun 6 12:11:20 2016 +0000
+
+    Fix for issue #38
+
+commit fbd59a7e58636dec702233abf619eb4f355c6051
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Jun 4 12:19:08 2016 +0000
+
+    Version bump; v0.2.32; removed @scope comments & eliminated duplicates calls to ip-address dep
+
+commit bd96a3677cd52e3d2970b0b725f15f1d6e946a70
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Jun 3 23:43:47 2016 +0000
+
+    Merged v0.2.31 branch & updated travis-ci badge
+
+commit 48f6e97b5635fb95d027a4606e64c5e0d4e1171c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Jun 3 23:41:00 2016 +0000
+
+    CHANGELOG updated
+
 commit 7f643a16472897fd00299d206b313f4d377a57ca
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Fri Jun 3 23:39:56 2016 +0000
