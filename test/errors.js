@@ -11,6 +11,7 @@ var nmap = require('../')
   , opts;
 
 
+
 describe('nmap', function() {
 
   describe('error handling', function() {

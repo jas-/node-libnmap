@@ -4,5 +4,4 @@
  * License: MIT
  */
 
-//module.exports = require('./lib/libnmap.js');
-export default require('./lib/libnmap-es6.js');
+module.exports = require('./lib/libnmap.js');

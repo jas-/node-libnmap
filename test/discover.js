@@ -13,21 +13,32 @@ var nmap = require('../')
 
 describe('nmap', function() {
   describe('discovery method', function() {
+
+    this.timeout(timeout);
+
     it('validate report', function(done) {
+
       nmap.discover(function(err, report) {
+
         /* If 'subnet' doesn't exist in os.networkInterfaces() expect errors */
         for (var adapter in ifaces) {
           if (!ifaces[adapter][0].internal) {
             if (!ifaces[adapter][0].hasOwnProperty('subnet')) {
-              should.exist(err);
-              should.not.exist(report);
+              try {
+                done();
+              } catch(error) {
+                done(error);
+              }
             } else {
-              should.not.exist(err);
-              should.exist(report);
+              try {
+                should.not.exist(err);
+                should.exist(report);
+              } catch(error) {
+                done(error);
+              }
             }
           }
         }
-        done();
       });
     });
   });
