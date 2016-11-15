@@ -15,6 +15,13 @@ node_js:
   - "5"
   - "4"
 
+env:
+  - NODE_VERSION="iojs"
+  - NODE_VERSION="node"
+  - NODE_VERSION="6"
+  - NODE_VERSION="5"
+  - NODE_VERSION="4"
+
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install nvm; git clone https://github.com/creationix/nvm.git /tmp/.nvm; source /tmp/.nvm/nvm.sh; nvm install $NODE_VERSION; fi
 
