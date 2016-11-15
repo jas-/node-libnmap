@@ -8,6 +8,12 @@ addons:
       - nmap
 
 language: node_js
+node_js:
+  - "iojs"
+  - "node"
+  - "6"
+  - "5"
+  - "4"
 
 env:
   - NODE_VERSION="iojs"
