@@ -8,19 +8,18 @@ addons:
       - nmap
 
 language: node_js
-node_js:
-  - "iojs"
-  - "node"
-  - "6"
-  - "5"
-  - "4"
 
 env:
-  - NODE_VERSION="iojs"
-  - NODE_VERSION="node"
-  - NODE_VERSION="6"
-  - NODE_VERSION="5"
-  - NODE_VERSION="4"
+  - NODE_VERSION="v4.12"
+  - NODE_VERSION="v5.10"
+  - NODE_VERSION="v6.21"
+  - NODE_VERSION="v7.12"
+  - NODE_VERSION="v8.28"
+  - NODE_VERSION="v9.12"
+  - NODE_VERSION="v0.12.17"
+  - NODE_VERSION="v0.11.16"
+  - NODE_VERSION="v0.10.48"
+  - NODE_VERSION="iojs-v3.3.1"
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install nvm; git clone https://github.com/creationix/nvm.git /tmp/.nvm; source /tmp/.nvm/nvm.sh; nvm install $NODE_VERSION; fi
