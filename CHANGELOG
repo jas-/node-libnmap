@@ -1,3 +1,75 @@
+commit ea88aa1bfc23130ae6e1429daebab328dd5fa7d1
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 19 18:06:03 2016 +0000
+
+    Version bump; v0.3.5
+
+commit f29b8bec85874d954d5cb3a52d0cfa641dd12025
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 19 18:05:18 2016 +0000
+
+    Error handling return to address issue #41
+
+commit 50b32cae8bae9a36ca1009e12c9ab29224a0a5e6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Nov 16 23:49:35 2016 +0000
+
+    node.js versioning fix for travis-ci builds
+
+commit 9183c9657dee3dc1afc480c564ba8227e00ac734
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Nov 16 23:40:50 2016 +0000
+
+    Version bump; v0.3.4
+
+commit 68cc98d085523ada055347d3609825e4e94a1692
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Nov 16 23:40:05 2016 +0000
+
+    Version bump; fix for travis-ci versioning for OSX & Linux
+
+commit 8722599293a1abaf71376cd35a0478d13335c751
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Nov 15 00:54:57 2016 +0000
+
+    Version bump v0.3.3
+
+commit 1682ebb108985fddadd8cc2c27aa0e314fc45960
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Nov 15 00:53:42 2016 +0000
+
+    OSX fix part duex
+
+commit f3c3a58a360bd1d5dbd91f5b22fc88f7865154f6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Nov 15 00:47:27 2016 +0000
+
+    Fix for build versions:
+
+commit 8227806d81e867375e0dc1fe483ec1b92b02e462
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Nov 15 00:44:29 2016 +0000
+
+    Version bump; v0.3.2. Fixes for Travis-CI OSX env
+
+commit e88dd4aac73aa3a74a96194c54da5a6ccbfa01bf
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Nov 15 00:32:54 2016 +0000
+
+    Version bump to v0.3.1
+
+commit 489fa2805deb2cc511dfbf6e9b79a7f99c3812e3
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Nov 15 00:31:48 2016 +0000
+
+    Travis-CI node.js versions fix
+
+commit 0240516e15b4825292d6ff743c6db855865be055
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 13 16:40:46 2016 +0000
+
+    Updated changelog
+
 commit 1cb877b9679d01f8bac0cc0e2504bf4ad975e6ff
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sun Nov 13 16:40:24 2016 +0000
