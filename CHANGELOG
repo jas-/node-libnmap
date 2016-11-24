@@ -1,3 +1,45 @@
+commit abb49caa8f8b0a8d0c30976e50611b268a9a1fd1
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 20 21:50:12 2016 +0000
+
+    Re-arranged stickers in readme
+
+commit 8e0438f3b141a4a085780720f6162157e38f9063
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 20 21:14:53 2016 +0000
+
+    Fix for link; part deux
+
+commit ffc6b0907f2ccc1a024381efc7b62d506a81c36d
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 20 21:09:55 2016 +0000
+
+    Fix for link in readme for vulnabilities
+
+commit 909c80de865ae93c11d01498a5958a226996f5db
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 20 21:07:57 2016 +0000
+
+    Version bump; v0.3.6
+
+commit d6781e2fb2a0cae8cb19368fca2b3c13c69a6ab0
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 20 21:06:37 2016 +0000
+
+    Minor fix regarding build status & vulnability status on readme
+
+commit b3b90810068d2118761b8d4a81088fce2e47b80c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 20 21:05:45 2016 +0000
+
+    Minor fix regarding build status & vulnability status on readme
+
+commit 6bbe44dfe2f5107f905135450f7cec03c44b062b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 19 18:06:41 2016 +0000
+
+    Update to changelog
+
 commit ea88aa1bfc23130ae6e1429daebab328dd5fa7d1
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sat Nov 19 18:06:03 2016 +0000
