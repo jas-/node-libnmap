@@ -1,3 +1,42 @@
+commit fc77e077f4b80c9c62bce144cad9a07d269d6e53
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 3 16:36:35 2016 +0000
+
+    Version bump; v0.3.8
+
+commit 5bafc3ec3959e0d5b4d094eaedee3b781b0ae094
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 3 15:32:00 2016 +0000
+
+    Version bump; v0.3.7 & package dependency updates
+
+commit 39b655e1af0ab7dce967b80dd86e90acdea5962d
+Merge: 8e0438f 1af6571
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Nov 24 00:10:57 2016 +0000
+
+    Merge tag 'v0.3.7'
+    
+    0.3.7
+
+commit 1af6571974ca13519262a4dc37932132f13dbce0
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Nov 24 00:09:31 2016 +0000
+
+    0.3.7
+
+commit debf1918bcfcc1c4b0877cd23f6cfb5cc2459407
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Nov 24 00:09:20 2016 +0000
+
+    Removed version to accommodate for npm tags
+
+commit 4c681a322214076d109648dbbd91ac257e4b2cd1
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Nov 20 21:50:56 2016 +0000
+
+    Version bump & changelog update; v0.3.7
+
 commit abb49caa8f8b0a8d0c30976e50611b268a9a1fd1
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sun Nov 20 21:50:12 2016 +0000
