@@ -1,6 +1,6 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2016 Jason Gerfen <jason.gerfen@gmail.com>
+ * Copyright(c) 2013-2017 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
