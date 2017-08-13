@@ -14,7 +14,7 @@ var nmap = require('../')
         '--scan-delay 10s', // Account for host 'rate limiting'
         '--max-rate 30', // Slows down packet spewing to account for IDS protections
       ],
-      range: ['scanme.nmap.org', '172.17.190.0/24']
+      range: ['scanme.nmap.org', '172.17.0.0/24'],
     };
 
 nmap.scan(opts, function(err, report) {
