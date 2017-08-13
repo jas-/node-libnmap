@@ -12,7 +12,7 @@ var nmap = require('../')
         '-O', // OS finger printing (requires elevated privileges)
         '-sC' // Enables the nmap scripts (all) against each host (requires elevated privileges)
       ],
-      range: ['scanme.nmap.org', '192.168.0.0/25']
+      range: ['scanme.nmap.org', '172.17.0.0/24']
     };
 
 nmap.scan(opts, function(err, report) {
