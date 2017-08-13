@@ -1,6 +1,6 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2016 Jason Gerfen <jason.gerfen@gmail.com>
+ * Copyright(c) 2013-2017 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
@@ -18,10 +18,10 @@ var nmap = require('../')
       ports: '22,135'
     };
 
-describe('nmap', function() {
+describe('scan method', function() {
 
-  describe('scan method', function() {
-    it('default', function(done) {
+  context('reporting', function() {
+    it('json', function(done) {
       this.timeout(timeout);
 
       nmap.scan(opts, function(err, report) {
@@ -32,7 +32,7 @@ describe('nmap', function() {
       });
     });
 
-    it('xml report', function(done) {
+    it('xml', function(done) {
       this.timeout(timeout);
       opts.json = false;
 
