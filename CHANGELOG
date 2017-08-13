@@ -1,3 +1,117 @@
+commit 18b6d84ffdfaabe083ea8677de32428e4e78b9fd
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 22:22:18 2017 +0000
+
+    Version bump; v0.4.1. Fix for CIDR parallel scan args
+
+commit bf11a594f51487ff14e8e73088ffa1676fdcd9e1
+Merge: 9ac9067 b10007e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 17:34:52 2017 +0000
+
+    Merge branch 'master' of github.com:jas-/node-libnmap
+
+commit 9ac90672f694fe221cfd69a7446d9d55c9e16e8c
+Merge: 7b4458c f337a5b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 17:34:15 2017 +0000
+
+    Merge branch 'v0.4.0'
+
+commit f337a5ba32d2e3cb1a65a0391b9bc9e2d89983d5
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 17:29:03 2017 +0000
+
+    Added conditional for IPv6 CIDR range prcoessing
+
+commit b40b7d5523fca135f387c03d891c7c499db325cb
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 17:00:37 2017 +0000
+
+    Moved CIDR test for IPv6 as the range is not handled
+
+commit a985d5280b13c1c7a06200a40337f7ecb5cc5ea7
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 16:57:44 2017 +0000
+
+    Updated dependencies
+
+commit 46acf0a512d344048cb8ebb0afe3f59e641a0173
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 16:38:44 2017 +0000
+
+    Version bump; v.0.4.0
+
+commit f8f6468ba2dac78c0a51712659164d60e5d1a5a6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 14:10:59 2017 +0000
+
+    Issue #47; CIDR range calculations for parallel scans
+
+commit c6e7a7baf7bcfca50503b0f56c90c0ef7362ee24
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 12:35:29 2017 +0000
+
+    Updated dependencies & added CIDR calculation module
+
+commit b10007e90c163e820aa80262db55fb90dfe695bf
+Author: Jason Gerfen <jason.gerfen@gmail.com>
+Date:   Sun Jan 1 08:17:45 2017 -0700
+
+    Set theme jekyll-theme-cayman
+
+commit 144a568ade5b8acc3201e89b806f42300d0f6f2e
+Author: Jason Gerfen <jason.gerfen@gmail.com>
+Date:   Sun Jan 1 08:17:11 2017 -0700
+
+    Set theme jekyll-theme-hacker
+
+commit 7b4458cc01d2adbe9463d34b5cf5b6404cadb3ce
+Merge: 37d0f08 5e2fd3a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 1 15:15:15 2017 +0000
+
+    Merge branch 'master' of github.com:jas-/node-libnmap
+
+commit 37d0f08c723438657ad9ebb39befb1070a417016
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 1 15:14:10 2017 +0000
+
+    Version bump; v0.3.9 & copyright dates
+
+commit 5de9d81822b22281c3c5e3774f95eff3c62a20c8
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Jan 1 15:11:58 2017 +0000
+
+    Re-arranged documentation
+
+commit 5e2fd3a12135bebbd563ebd1cbbd0e783a1bd57c
+Author: Jason Gerfen <jason.gerfen@gmail.com>
+Date:   Sun Jan 1 08:03:55 2017 -0700
+
+    Set theme jekyll-theme-architect
+
+commit 37f6f47ec5f1b9413133cac5c5da27d4307baa50
+Merge: 39b655e 8eef337
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 3 16:37:54 2016 +0000
+
+    Merge tag 'v0.3.8'
+    
+    0.3.8
+
+commit 8eef337622e7bfe480f519043b8f6dc6d8b41354
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 3 16:37:28 2016 +0000
+
+    0.3.8
+
+commit 11c2ea016002f4a8013302cd10c890a1ca50a230
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 3 16:37:17 2016 +0000
+
+    Updates to changelog & versioning
+
 commit fc77e077f4b80c9c62bce144cad9a07d269d6e53
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sat Dec 3 16:36:35 2016 +0000
