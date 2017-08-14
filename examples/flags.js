@@ -6,7 +6,6 @@
 
 var nmap = require('../')
   , opts = {
-      verbose: true,
       flags: [
         '-sV', // Open port to determine service (i.e. FTP, SSH etc)
         '-O', // OS finger printing (requires elevated privileges)
