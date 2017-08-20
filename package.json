@@ -1,6 +1,6 @@
 {
   "name": "libnmap",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
@@ -38,6 +38,7 @@
     "cidr-js": "^2.3.1",
     "deepmerge": "^1.5.0",
     "hasbin": "^1.2.3",
+    "ip-address": "^5.8.8",
     "netmask": "^1.0.6",
     "xml2js": "^0.4.17"
   },

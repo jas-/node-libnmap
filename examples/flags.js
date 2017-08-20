@@ -9,7 +9,9 @@ var nmap = require('../')
       flags: [
         '-sV', // Open port to determine service (i.e. FTP, SSH etc)
         '-O', // OS finger printing (requires elevated privileges)
-        '-sC' // Enables the nmap scripts (all) against each host (requires elevated privileges)
+        '-sC', // Enables the nmap scripts (all) against each host (requires elevated privileges)
+        '--traceroute', // Turns on tracerouting
+        '--script traceroute-geolocation' // Turns on GeoIP functionality per hops
       ],
       range: ['scanme.nmap.org', '172.17.0.0/24']
     };
