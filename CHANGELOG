@@ -1,3 +1,54 @@
+commit b4cbac43565903b73f30cf4937266706cb2edc61
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Aug 22 01:25:18 2017 +0000
+
+    Fixes for discovery method & subnetting calculations
+
+commit 929e5242a7246e298bf9e6f0ca32f6e26d89d2c5
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 20 16:06:13 2017 +0000
+
+    v0.4.5 - bug fixes for excluding specified targets
+
+commit 49f51208c10ca22d41a5942c60eadcc751dd4b22
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Aug 19 14:42:48 2017 +0000
+
+    v0.4.4; Bug fix (again) for #47
+
+commit 4549416528877ec632aaa0f831e680a36f5b8500
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Thu Aug 17 11:23:18 2017 +0000
+
+    Fix for CIDR range calculations; math is hard
+
+commit a25484f9d073c4ea249b233dcd5f74dc77f704f1
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Mon Aug 14 11:05:03 2017 +0000
+
+    Version bump; v0.4.3. Bug Fixes:
+     - Removed ip-address dependency
+     - Fixed CIDR range calculation with small subnets due to invalid returns when coupled with 'blocksize' range (Issue #47)
+     - Added test case to address varying Class A,B,C network sizes
+
+commit 14df70e5476988a8eb7271c9d9bdabaaf66cfbec
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 22:33:01 2017 +0000
+
+    Version bump to v0.4.2
+
+commit 5554f58dfb4e7dec298bde40592bc4aa76e5d27a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 22:25:15 2017 +0000
+
+    Version bump
+
+commit 34dcad3c10b2b2e2b5fa0b3616b9249c219eb9e0
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 13 22:24:22 2017 +0000
+
+    Updated changelog
+
 commit 18b6d84ffdfaabe083ea8677de32428e4e78b9fd
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sun Aug 13 22:22:18 2017 +0000
