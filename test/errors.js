@@ -81,8 +81,8 @@ describe('nmap', function() {
         ]
       };
       nmap.scan(opts, function(err, report) {
-        should.not.exist(err);
-        should.exist(report);
+        should.exist(err);
+        should.not.exist(report);
         done();
       });
     });
