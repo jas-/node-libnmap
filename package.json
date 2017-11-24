@@ -33,14 +33,14 @@
     "test": "./node_modules/.bin/mocha -R spec"
   },
   "dependencies": {
-    "async": "^2.5.0",
+    "async": "^2.6.0",
     "caller-id": "^0.1.0",
     "cidr-js": "^2.3.1",
-    "deepmerge": "^1.5.0",
+    "deepmerge": "^1.5.2",
     "hasbin": "^1.2.3",
     "ip-address": "^5.8.8",
     "netmask": "^1.0.6",
-    "xml2js": "^0.4.17"
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "mocha": "latest",
