@@ -9,42 +9,17 @@ addons:
 
 language: node_js
 
-node_js:
-  - "lts/*"
-  - "4"
-  - "5"
-  - "6"
-  - "7"
-  - "8"
+env:
+  - NODE_VERSION="4"
+  - NODE_VERSION="5"
+  - NODE_VERSION="6"
+  - NODE_VERSION="7"
+  - NODE_VERSION="8"
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      NODE_VERSION="v0.10.48"
-      NODE_VERSION="v0.11.16"
-      NODE_VERSION="v0.12.17"
-      NODE_VERSION="v4.6.2"
-      NODE_VERSION="v5.12.0"
-      NODE_VERSION="v6.9.1"
-      NODE_VERSION="v7.1.0"
-      NODE_VERSION="iojs-v3.3.1"
-      
-      brew install nvm;
-      git clone https://github.com/creationix/nvm.git /tmp/.nvm;
-      source /tmp/.nvm/nvm.sh;
-      nvm install $NODE_VERSION;
-    fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install nvm; git clone https://github.com/creationix/nvm.git /tmp/.nvm; source /tmp/.nvm/nvm.sh; nvm install $NODE_VERSION; fi
 
 install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew update;
-      brew install nmap;
-      npm install;
-      npm test;
-    fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      sudo apt-get update;
-      sudo apt-get install -y nmap;
-      npm install;
-      npm test;
-    fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install nmap; npm install; npm test; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update && sudo apt-get install -y nmap; nvm install $NODE_VERSION; npm install; npm test; fi
 
