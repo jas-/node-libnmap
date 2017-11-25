@@ -10,14 +10,20 @@ addons:
 language: node_js
 
 env:
-  - NODE_VERSION="v0.10.48"
-  - NODE_VERSION="v0.11.16"
-  - NODE_VERSION="v0.12.17"
   - NODE_VERSION="v4.6.2"
   - NODE_VERSION="v5.12.0"
   - NODE_VERSION="v6.9.1"
   - NODE_VERSION="v7.1.0"
-  - NODE_VERSION="iojs-v3.3.1"
+
+node_js:
+  - "node"
+  - "iojs"
+  - "lts/*"
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+  - "8"
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install nvm; git clone https://github.com/creationix/nvm.git /tmp/.nvm; source /tmp/.nvm/nvm.sh; nvm install $NODE_VERSION; fi
