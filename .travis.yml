@@ -38,11 +38,13 @@ install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       brew update;
       brew install nmap;
+      npm install;
+      npm test;
     fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       sudo apt-get update;
       sudo apt-get install -y nmap;
+      npm install;
+      npm test;
     fi
-    npm install;
-    npm test;
 
