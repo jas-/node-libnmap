@@ -10,8 +10,6 @@ addons:
 language: node_js
 
 node_js:
-  - "node"
-  - "iojs"
   - "lts/*"
   - "4"
   - "5"
