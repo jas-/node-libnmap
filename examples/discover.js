@@ -10,6 +10,6 @@ nmap.discover({verbose: true}, function(err, report) {
   if (err) throw new Error(err);
 
   for (var item in report) {
-    console.log(JSON.stringify(report[item]));
+    console.log(JSON.stringify(report[item], null, 2));
   }
 });

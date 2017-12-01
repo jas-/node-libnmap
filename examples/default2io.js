@@ -18,7 +18,7 @@ nmap.scan(opts, function(err, report) {
   for (var item in report) {
     for (var host in report[item].host) {
 
-      var data = JSON.stringify(report[item].host[host])
+      var data = JSON.stringify(report[item].host[host], null, 2)
         , filename = item;
 
       fs.writeFile(path+filename+'.json', data, function(error) {

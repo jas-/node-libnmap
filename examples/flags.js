@@ -20,6 +20,6 @@ nmap.scan(opts, function(err, report) {
   if (err) throw err;
 
   for (var item in report) {
-    console.log(JSON.stringify(report[item]));
+    console.log(JSON.stringify(report[item], null, 2));
   }
 });
