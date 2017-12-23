@@ -16,15 +16,13 @@ nmap.scan(opts, function(err, report) {
   if (err) throw new Error(err);
 
   for (var item in report) {
-    for (var host in report[item].host) {
+    var data = JSON.stringify(report[item], null, 2)
+      , filename = item.replace(' ', '-');
 
-      var data = JSON.stringify(report[item].host[host], null, 2)
-        , filename = item;
+    fs.writeFile(path+filename+'.json', data, function(error) {
+      if (error) return console.log(error);
 
-      fs.writeFile(path+filename+'.json', data, function(error) {
-        if (error) console.log(error);
-        console.log('Wrote report for '+filename);
-      });
-    }
+      console.log('Wrote report for '+filename);
+    });
   }
 });
