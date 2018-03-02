@@ -33,7 +33,7 @@ To test `npm test`
 ## examples ##
 
 A default usage example. For more advanced and possible options please
-see [here](https://gist.github.com/jas-/eae6b0c6e82a4e072b97)
+see [here](https://github.com/jas-/node-libnmap/tree/master/examples)
 
 ### scan ###
 
