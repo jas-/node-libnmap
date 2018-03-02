@@ -1,15 +1,17 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2017 Jason Gerfen <jason.gerfen@gmail.com>
+ * Copyright(c) 2013-2018 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('../')
-  , timeout = 1024 * 1024
-  , chai = require('chai')
-  , should = chai.should()
-  , expect = chai.expect
-  , ifaces = require('os').networkInterfaces();
+'use strict'
+
+const nmap = require('../');
+const timeout = 1024 * 1024;
+const chai = require('chai');
+const should = chai.should();
+const expect = chai.expect;
+const ifaces = require('os').networkInterfaces();
 
 describe('nmap', function() {
   describe('discovery method', function() {
@@ -21,7 +23,7 @@ describe('nmap', function() {
       nmap.discover(function(err, report) {
 
         /* If 'subnet' doesn't exist in os.networkInterfaces() expect errors */
-        for (var adapter in ifaces) {
+        for (let adapter in ifaces) {
           if (!ifaces[adapter][0].internal) {
             if (!ifaces[adapter][0].hasOwnProperty('subnet')) {
               try {

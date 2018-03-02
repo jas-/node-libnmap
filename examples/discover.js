@@ -1,15 +1,17 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2017 Jason Gerfen <jason.gerfen@gmail.com>
+ * Copyright(c) 2013-2018 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('../');
+'use strict'
 
-nmap.discover({verbose: true}, function(err, report) {
+const nmap = require('../');
+
+nmap.discover(function(err, report) {
   if (err) throw new Error(err);
 
-  for (var item in report) {
+  for (let item in report) {
     console.log(JSON.stringify(report[item], null, 2));
   }
 });

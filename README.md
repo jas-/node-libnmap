@@ -41,20 +41,20 @@ The example show shows the types of host ranges supported. In this example the
 default IANA range of reserved ports is scanned per host in each range (1024).
 
 ```javascript
-var nmap = require('libnmap')
-  , opts = {
-      range: [
-        'scanme.nmap.org',
-        '10.0.2.0/25',
-        '192.168.10.80-120',
-        'fe80::42:acff:fe11:fd4e/64'
-      ]
-    };
+const nmap = require('libnmap');
+const opts = {
+  range: [
+    'scanme.nmap.org',
+    '10.0.2.0/25',
+    '192.168.10.80-120',
+    'fe80::42:acff:fe11:fd4e/64'
+  ]
+};
 
 nmap.scan(opts, function(err, report) {
   if (err) throw new Error(err);
 
-  for (var item in report) {
+  for (let item in report) {
     console.log(JSON.stringify(report[item]));
   }
 });
@@ -66,12 +66,12 @@ The discover method requires nodejs < `v0.11.2` and can be used to aquire
 information about neighbors per network interface.
 
 ```javascript
-var nmap = require('libnmap');
+const nmap = require('libnmap');
 
 nmap.discover(function(err, report) {
   if (err) throw new Error(err);
 
-  for (var item in report) {
+  for (let item in report) {
     console.log(JSON.stringify(report[item]));
   }
 });
@@ -90,4 +90,4 @@ to help facilitate pull requests.
 
 This software is licensed under the [MIT License](https://github.com/jas-/node-libnmap/blob/master/LICENSE).
 
-Copyright Jason Gerfen, 2013-2017.
+Copyright Jason Gerfen, 2013-2018.

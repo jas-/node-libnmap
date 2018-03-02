@@ -1,15 +1,16 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2017 Jason Gerfen <jason.gerfen@gmail.com>
+ * Copyright(c) 2013-2018 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('../')
-  , chai = require('chai')
-  , should = chai.should()
-  , expect = chai.expect
-  , opts;
+'use strict'
 
+const nmap = require('../');
+const chai = require('chai');
+const should = chai.should();
+const expect = chai.expect;
+let opts;
 
 
 describe('nmap', function() {

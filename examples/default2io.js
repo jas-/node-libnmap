@@ -1,23 +1,26 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2017 Jason Gerfen <jason.gerfen@gmail.com>
+ * Copyright(c) 2013-2018 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
-var nmap = require('../')
-  , fs = require('fs')
-  , path = './scans/'
-  , opts = {
-      range: ['scanme.nmap.org', '172.17.190.0/26'],
-      ports: '21,22,80,443'
-    };
+'use strict'
+
+const nmap = require('../');
+const fs = require('fs');
+const path = './scans/';
+const opts = {
+  range: ['scanme.nmap.org', '172.17.190.0/26'],
+  ports: '21,22,80,443'
+};
+
 
 nmap.scan(opts, function(err, report) {
   if (err) throw new Error(err);
 
-  for (var item in report) {
-    var data = JSON.stringify(report[item], null, 2)
-      , filename = item.replace(' ', '-');
+  for (let item in report) {
+    let data = JSON.stringify(report[item], null, 2),
+        filename = item.replace(' ', '-');
 
     fs.writeFile(path+filename+'.json', data, function(error) {
       if (error) return console.log(error);

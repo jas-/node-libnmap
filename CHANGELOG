@@ -1,3 +1,141 @@
+commit 306a90ad9edf7cf2599825ff4768200bf404cf8e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Mar 2 11:33:37 2018 +0000
+
+    Conversion to ES6 (partial), updates to copyrights etc
+
+commit c3f451be47fee7a068427a83636788bee2866d30
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Mar 2 10:40:46 2018 +0000
+
+    ES6 migration
+
+commit 7fabe45a5460a5232f4065daeac6c9630ba23d13
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Mar 2 09:52:35 2018 +0000
+
+    Migration to ES6 syntax
+
+commit 2bfc48443e97280d88bbf91f607a8a99530b3588
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 23 22:49:32 2017 +0000
+
+    Switched travis-ci badge for master branch
+
+commit 78399efc7336fe2af262487531c44423c37d0dcf
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 23 22:25:52 2017 +0000
+
+    Update to dependencies
+
+commit 5b137b399b09ac4180b70544b10c690891b95377
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 23 22:21:17 2017 +0000
+
+    URI for travis-ci badge
+
+commit 202893912487f8c50a4d96265369a0287f673bc1
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Dec 23 22:18:55 2017 +0000
+
+    Fix for multiple host definitions when a CIDR range exists & example fix
+
+commit e06c518c19afd136e911201dfa1740af6f66db76
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Dec 1 19:47:14 2017 +0000
+
+    Added fix for issue #49 regarding use of %PATH% vs. absolute path for nmap binary
+
+commit da6ab45af780d8b1811ace46e5ca229d3de81f0c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Dec 1 19:46:24 2017 +0000
+
+    Added JSON output formatting
+
+commit 5526609104780b1ad903968ed6c927044a952f00
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Dec 1 19:32:09 2017 +0000
+
+    Version bump; v0.4.8
+
+commit c355cf76ea1e383a50536dee7400244888a6877a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 22:14:08 2017 +0000
+
+    Test for travis-ci on osx
+
+commit b345ea97b704724c41129e5630f4382006c9db1c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 22:11:11 2017 +0000
+
+    Test for travis-ci on osx
+
+commit fe388733f7f656a28e2459b64f4d78be934471f2
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 22:09:02 2017 +0000
+
+    Test for travis-ci on osx
+
+commit c048ceb743c92393984f876a8dd63bcd384f958a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 22:05:36 2017 +0000
+
+    Test for travis-ci on osx
+
+commit 27c51c0722c11be2341fca90c5af5235ec80fc9e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 20:30:36 2017 +0000
+
+    Linting for .travis-ci
+
+commit 83e5063d63caa8937506df249af9662d8698290e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 20:21:58 2017 +0000
+
+    More fixes for .travis-ci to make sure OSX builds work
+
+commit f7fca2ebedd22cf76db9bb7eeb71756f27a5fe46
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 20:10:20 2017 +0000
+
+    Removed iojs & node travis-ci test env; outdated or redundant
+
+commit f3092cc643ed3a59d4cf37c3bd537d2a07631b56
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 19:45:36 2017 +0000
+
+    Travis-ci updates regarding versions (removed older non ES5 compatible node.js versions
+
+commit 77b10c17dc2edc81e8f982e7c1d6326925a2d79f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 19:35:05 2017 +0000
+
+    Travis-ci updates regarding versions (removed older non ES5 compatible node.js versions
+
+commit c823d23232a89f92811cec5273259d2ba00dbb59
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Nov 25 19:25:16 2017 +0000
+
+    Version bump: v0.4.7 - Issue #49 regarding hasbin async vs. sync behavior & dependency updates
+
+commit 3deaf1323e2649ec52f1637b1b1f6f93936a1f19
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Nov 24 00:06:20 2017 +0000
+
+    Updated dependencies
+
+commit d46eebceafb480fc61b26be2442100ce6b5b6d37
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Nov 24 00:05:47 2017 +0000
+
+    Version bump to v0.4.6
+
+commit 498b9340e0a696b7f2ca2359ed5b594fecc3329c
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Tue Aug 22 01:29:46 2017 +0000
+
+    Version v0.4.5 bump
+
 commit b4cbac43565903b73f30cf4937266706cb2edc61
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Tue Aug 22 01:25:18 2017 +0000
