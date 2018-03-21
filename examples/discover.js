@@ -8,7 +8,7 @@
 
 const nmap = require('../');
 
-nmap.discover(function(err, report) {
+nmap.discover({debug: true}, function(err, report) {
   if (err) throw new Error(err);
 
   for (let item in report) {
