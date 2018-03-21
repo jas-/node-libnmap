@@ -34,12 +34,12 @@
   },
   "dependencies": {
     "async": "^2.6.0",
-    "caller-id": "^0.1.0",
     "cidr-js": "^2.3.1",
     "deepmerge": "^2.0.1",
     "hasbin": "^1.2.3",
     "ip-address": "^5.8.9",
     "netmask": "^1.0.6",
+    "stack-trace": "0.0.10",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {

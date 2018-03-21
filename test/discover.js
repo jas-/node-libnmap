@@ -14,7 +14,7 @@ const expect = chai.expect;
 const ifaces = require('os').networkInterfaces();
 
 describe('nmap', function() {
-  describe('discovery method', function() {
+  context('discovery method', function() {
 
     this.timeout(timeout);
 

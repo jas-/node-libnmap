@@ -16,7 +16,7 @@ let opts;
 
 describe('nmap', function() {
 
-  describe('error handling', function() {
+  context('error handling', function() {
 
     this.timeout(timeout);
 

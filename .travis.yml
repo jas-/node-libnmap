@@ -8,18 +8,14 @@ addons:
       - nmap
 
 language: node_js
-
-env:
-  - NODE_VERSION="4"
-  - NODE_VERSION="5"
-  - NODE_VERSION="6"
-  - NODE_VERSION="7"
-  - NODE_VERSION="8"
-
-before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install nvm; git clone https://github.com/creationix/nvm.git /tmp/.nvm; source /tmp/.nvm/nvm.sh; nvm install $NODE_VERSION; fi
+node_js:
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+  - "8"
 
 install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install nmap; npm install; npm test; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update && sudo apt-get install -y nmap; nvm install $NODE_VERSION; npm install; npm test; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install nmap; npm install; node examples/discover.js; npm test; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update && sudo apt-get install -y nmap; npm install; npm test; fi
 
