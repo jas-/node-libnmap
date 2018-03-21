@@ -7,6 +7,7 @@
 'use strict'
 
 const nmap = require('../');
+const timeout = 1024 * 1024;
 const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect;
@@ -16,6 +17,8 @@ let opts;
 describe('nmap', function() {
 
   describe('error handling', function() {
+
+    this.timeout(timeout);
 
     it('missing nmap binary', function(done) {
       opts = {
