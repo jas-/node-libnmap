@@ -1,20 +1,138 @@
-commit 306a90ad9edf7cf2599825ff4768200bf404cf8e
+commit 52421c9ec95e5cf616f2b49033658865a8466025
 Author: Jas- <jason.gerfen@gmail.com>
-Date:   Fri Mar 2 11:33:37 2018 +0000
+Date:   Fri Apr 13 06:11:15 2018 +0000
 
-    Conversion to ES6 (partial), updates to copyrights etc
+    Version bump in package.json
 
-commit c3f451be47fee7a068427a83636788bee2866d30
+commit 1b6fcc1e4871ed35ec97450023b2df0399a49527
+Merge: efce9d5 41c2922
 Author: Jas- <jason.gerfen@gmail.com>
-Date:   Fri Mar 2 10:40:46 2018 +0000
+Date:   Wed Mar 21 13:53:38 2018 +0000
 
-    ES6 migration
+    1
 
-commit 7fabe45a5460a5232f4065daeac6c9630ba23d13
+commit efce9d5c23560d6672d4b19ab95ef11c19f150a3
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 07:12:53 2018 +0000
+
+    v0.4.11 - Staged version bump
+    
+    Addresses unhandled exceptions with use of error domain
+    Creates module based libraries
+    Moves further towards ES6
+
+commit 41c2922958b0bba15a232d2999577f434ae43028
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 11:04:33 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx; part nine
+
+commit d916d31b3e79dd9516872cb29b8fa2de51bfeb6a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 10:58:28 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx; part eight
+
+commit 7816c56ab1a8c74c79ad49919b0b707be626aad1
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 10:19:13 2018 +0000
+
+    Moved anonymous functions to ES6 notation
+
+commit 722fea8cc93ad30408d1ee2a49945d73dd5978c6
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 08:54:07 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx; part seven
+
+commit 2739e883aeb3989b64c621d3c8a08f7c8bf6a27b
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 08:40:48 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx; part six
+
+commit e4b18caca0dae50efb082d0b32c9e3245cd7352e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 08:32:05 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx; part five
+
+commit 6222edbf6d0ef6be1e22bc8834e1721387a6d061
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 07:56:57 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx; part four
+
+commit 214d78df20670504c814cc93333cba20b92a8305
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 07:44:06 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx; part tre
+
+commit eb55bb93bb563169c5804866fa19377aea8cef4d
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 07:19:22 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx; part duex
+
+commit 5a10ca13d341467e72d4b31d4aa274cb95c31c2a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 07:12:53 2018 +0000
+
+    Attempts to fix nvm version for travis-ci in linux/osx
+
+commit bd1f79f8f04eaabbbd284167d53751f39317560f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 07:00:27 2018 +0000
+
+    Added iteration to handle those adapters using multiple IP addresses per RFC 7934
+
+commit 8c001d241db59a191e9bd7f2b05c0e33863e7d57
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Wed Mar 21 06:52:29 2018 +0000
+
+    v0.4.11: Version bump; conversion to modular libraries & addresses bug in handling of unhandled exceptions
+
+commit ccaa3d7198d87201de70db1adfa0e1ae29297ddf
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Mar 2 14:29:00 2018 +0000
+
+    Tests passing ES6 classes migration
+
+commit 378a05f9dd50cb4b987b0d29f94591b2d9f1860e
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Mar 2 14:28:45 2018 +0000
+
+    Tests passing ES6 classes migration
+
+commit ab65a2e07f9bd0b284cd426deb4de5f9a92ae953
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Mar 2 13:13:10 2018 +0000
+
+    Rewrite to facilitate ES6:
+     - Version bump to v0.4.11
+     - Migrated all object/functions to specific files and created classes from them
+
+commit 9991c1b70f344197197140596a7c5e4604ec3033
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Mar 2 12:45:06 2018 +0000
+
+    Updated link to examples
+
+commit 83184307e56b70010ad741252e1ef6cc0692dbba
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Mar 2 12:25:41 2018 +0000
+
+    Version bump
+
+commit 42e93c81ba157f46008e768a6811014d0b156c21
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Fri Mar 2 09:52:35 2018 +0000
 
-    Migration to ES6 syntax
+    v0.4.10:
+     - Updates to module dependencies
+     - Migration to ES6 variable declarations
+     - Updates to test cases, example usage examples, changelog, readme etc
 
 commit 2bfc48443e97280d88bbf91f607a8a99530b3588
 Author: Jas- <jason.gerfen@gmail.com>
