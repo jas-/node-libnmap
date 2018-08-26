@@ -1,3 +1,21 @@
+commit 7d624968036ca23604cdbd8b84cbf033fb5e393a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 26 14:33:12 2018 +0000
+
+    Implemented package locking
+
+commit 92eac0ede90113aa9ed9fd460f041b2c379132c7
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 26 14:31:04 2018 +0000
+
+    v0.4.13: Version bump
+
+commit c5f639d04b8bbb9f967df5909ffc451320b3db2f
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Apr 13 06:12:06 2018 +0000
+
+    CHANGELOG update
+
 commit 52421c9ec95e5cf616f2b49033658865a8466025
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Fri Apr 13 06:11:15 2018 +0000
