@@ -31,7 +31,7 @@ describe('nmap', function() {
       });
     });
 
-    it('invalid host range (host)', function(done) {
+    it('invalid host range', function(done) {
       opts = {
         range: ['10.0.5.256']
       };
@@ -42,7 +42,7 @@ describe('nmap', function() {
       });
     });
 
-    it('invalid host range (range)', function(done) {
+    it('invalid ip range', function(done) {
       opts = {
         range: ['10.0.2.5-256']
       };
@@ -53,7 +53,7 @@ describe('nmap', function() {
       });
     });
 
-    it('invalid host range (CIDR)', function(done) {
+    it('invalid CIDR range', function(done) {
       opts = {
         range: ['256.128.0/17']
       };
@@ -101,6 +101,5 @@ describe('nmap', function() {
         done();
       });
     });
-
   });
 });
