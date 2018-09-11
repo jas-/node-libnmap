@@ -20,6 +20,7 @@ const opts = {
   ports: '22,135'
 };
 
+//These tests will fail without admin permissions
 
 describe('scan method', function() {
 
