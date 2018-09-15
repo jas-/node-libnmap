@@ -17,6 +17,5 @@ node_js:
   - "9"
   - "10"
 
-install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install nmap; npm install; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update && sudo apt-get install -y nmap; npm install; npm test; fi
+before_script:
+  npm install
