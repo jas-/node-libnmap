@@ -1,3 +1,78 @@
+commit 6103871b1ceae361958fa194a24731f5754ba3f3
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 16 15:08:00 2018 +0000
+
+    v0.4.14: Removed conditional for linux pre install
+
+commit 02204990f19738c7e6b33c6696f3a1a17e675137
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 16 15:03:51 2018 +0000
+
+    v0.4.14: Removed conditional for linux pre install
+
+commit 6e797385f80d20fcba1771a49d1519f002647afd
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Sep 16 14:54:35 2018 +0000
+
+    v0.4.14: Fix for .match()
+
+commit f51515317fd14a2d752eb4d1cb9339ef40cf38a3
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 15 14:15:53 2018 +0000
+
+    v0.4.14: Fix for use of .match()
+
+commit ba26dafeaf232539050ec5d7ca03cf05aafbba17
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 15 00:20:32 2018 +0000
+
+    v0.4.14: Travis-CI: OSX fix candidate #004
+
+commit 8bcad169d3254b72e050f232130d5050dd554fb3
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 15 00:09:51 2018 +0000
+
+    v0.4.14: Travis-CI: OSX fix candidate #003
+
+commit 355c2ce6f34a50bbb64128e4c6612db6b48523d4
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sat Sep 15 00:00:48 2018 +0000
+
+    v0.4.14: Travis-CI: OSX fix candidate #002
+
+commit 1928f849586a627193bca082a7e070844af084c3
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Sep 14 23:49:16 2018 +0000
+
+    v0.4.14: Travis-CI: OSX fix candidate #001
+
+commit 42354941745c92da5132ed033d700d24503c66c9
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Sep 14 11:04:16 2018 +0000
+
+    v0.4.14: Fix for Travis-CI (OSX)
+
+commit 9270388d31400ccaecadea8143906a0f13d8100a
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Sep 14 03:31:28 2018 +0000
+
+    Updated .gitignore to remove folder from npm publish
+
+commit 7cfcd39525755194d905c8b9caf66e52c97d7736
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Fri Sep 14 03:24:52 2018 +0000
+
+    v0.4.13: 20180914
+     - Potential candidate for issues #53 & #54
+     - Removed validation test harness
+     - Moved away from .test() to .match() for opts.ports validation
+
+commit 3640d0b6533c9a439b3bdc88f7e49cf971bfbfad
+Author: Jas- <jason.gerfen@gmail.com>
+Date:   Sun Aug 26 14:48:11 2018 +0000
+
+    Updated changelog & version number
+
 commit 7d624968036ca23604cdbd8b84cbf033fb5e393a
 Author: Jas- <jason.gerfen@gmail.com>
 Date:   Sun Aug 26 14:33:12 2018 +0000
