@@ -7,7 +7,7 @@
 'use strict'
 
 const nmap = require('../');
-const timeout = 1024 * 1024;
+const timeout = 1024 * 1024 * 3;
 const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect;
@@ -21,13 +21,13 @@ const opts = {
 };
 
 
-describe('scan method', function() {
+describe('scan method', function () {
 
-  context('reporting', function() {
-    it('json', function(done) {
+  context('reporting', function () {
+    it('json', function (done) {
       this.timeout(timeout);
 
-      nmap.scan(opts, function(err, report) {
+      nmap.scan(opts, function (err, report) {
         should.not.exist(err);
 
         report.should.be.a('object');
@@ -35,11 +35,11 @@ describe('scan method', function() {
       });
     });
 
-    it('xml', function(done) {
+    it('xml', function (done) {
       this.timeout(timeout);
       opts.json = false;
 
-      nmap.scan(opts, function(err, report) {
+      nmap.scan(opts, function (err, report) {
         should.not.exist(err);
 
         report.should.be.a('object');
