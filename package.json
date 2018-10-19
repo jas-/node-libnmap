@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "async": "^2.6.1",
-    "cidr-js": "^2.3.1",
+    "cidr-js": "git+https://github.com/jas-/cidr-js.git#v2.3.2",
     "deepmerge": "^2.1.1",
     "hasbin": "^1.2.3",
     "ip-address": "^5.8.9",
