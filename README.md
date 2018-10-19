@@ -2,7 +2,8 @@
 
 API to access nmap from node.js
 
-[![npm](https://img.shields.io/npm/v/libnmap.svg)](https://npmjs.com/package/libnmap) [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap) [![Dependencies](https://img.shields.io/david/jas-/node-libnmap.svg)](https://david-dm.org/jas-/node-libnmap) ![Downloads](https://img.shields.io/npm/dm/libnmap.svg) [![Vulnerabilities](https://snyk.io.cnpmjs.org/test/npm/libnmap/)](https://snyk.io/test/npm/libnmap) 
+[![npm](https://img.shields.io/npm/v/libnmap.svg)](https://npmjs.com/package/libnmap) [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap) [![Dependencies](https://img.shields.io/david/jas-/node-libnmap.svg)](https://david-dm.org/jas-/node-libnmap) ![Downloads](https://img.shields.io/npm/dm/libnmap.svg) [![Known Vulnerabilities](https://snyk.io/test/github/jas-/node-libnmap/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jas-/node-libnmap?targetFile=package.json)
+
 
 ## install ##
 
