@@ -13,6 +13,8 @@ const should = chai.should();
 const expect = chai.expect;
 const ifaces = require('os').networkInterfaces();
 
+console.log(JSON.stringify(ifaces));
+
 describe('nmap', function () {
   context('discovery method', function () {
 
