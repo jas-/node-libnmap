@@ -22,7 +22,7 @@ describe('nmap', function () {
 
     it('validate report', function (done) {
 
-      nmap.discover(function (err, report) {
+      nmap.discover({ debug: true }, function (err, report) {
 
         /* If 'subnet' doesn't exist in os.networkInterfaces() expect errors */
         for (let adapter in ifaces) {
