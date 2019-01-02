@@ -2,7 +2,7 @@
 
 API to access nmap from node.js
 
-[![npm](https://img.shields.io/npm/v/libnmap.svg)](https://npmjs.com/package/libnmap) [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap) [![Dependencies](https://img.shields.io/david/jas-/node-libnmap.svg)](https://david-dm.org/jas-/node-libnmap) ![Downloads](https://img.shields.io/npm/dm/libnmap.svg) [![Known Vulnerabilities](https://snyk.io/test/github/jas-/node-libnmap/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jas-/node-libnmap?targetFile=package.json)
+[![npm](https://img.shields.io/npm/v/libnmap.svg)](https://npmjs.com/package/libnmap) [![Build Status](https://travis-ci.org/jas-/node-libnmap.png?branch=master)](https://travis-ci.org/jas-/node-libnmap) [![Dependencies](https://img.shields.io/david/jas-/node-libnmap.svg)](https://david-dm.org/jas-/node-libnmap) ![Downloads](https://img.shields.io/npm/dm/libnmap.svg) [![Known Vulnerabilities](https://snyk.io/test/github/jas-/node-libnmap/badge.svg)](https://snyk.io/test/github/jas-/node-libnmap)
 
 
 ## install ##
@@ -26,10 +26,6 @@ To install `npm install libnmap`
 * `flags`     {Array}     Array of flags for .spawn()
 * `udp`       {Boolean}   UDP scan mode enabled
 * `json`      {Boolean}   JSON object as output, false produces XML
-
-## tests ##
-
-To test `npm test`
 
 ## examples ##
 
@@ -83,6 +79,10 @@ nmap.discover(function(err, report) {
 
 To see some output examples please take a look at the [json (default) & xml reports](https://gist.github.com/jas-/23e2a32110562388bef5).
 
+## tests ##
+
+To test `npm test`
+
 ## contributing ##
 
 Contributions are welcome & appreciated. Refer to the [contributing document](https://github.com/jas-/node-libnmap/blob/master/CONTRIBUTING.md)
@@ -92,4 +92,4 @@ to help facilitate pull requests.
 
 This software is licensed under the [MIT License](https://github.com/jas-/node-libnmap/blob/master/LICENSE).
 
-Copyright Jason Gerfen, 2013-2018.
+Copyright Jason Gerfen, 2013-2019.
