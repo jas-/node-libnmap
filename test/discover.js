@@ -7,11 +7,13 @@
 'use strict'
 
 const nmap = require('../');
-const timeout = 1024 * 1024 * 3;
+
 const chai = require('chai');
-const should = chai.should();
-const expect = chai.expect;
 const ifaces = require('os').networkInterfaces();
+
+const should = chai.should();
+
+const timeout = 1024 * 1024 * 3;
 
 describe('nmap', function () {
   context('discovery method', function () {
@@ -20,7 +22,7 @@ describe('nmap', function () {
 
     it('validate report', function (done) {
 
-      nmap.discover({verbose: true}, function (err, report) {
+      nmap.discover(function (err, report) {
 
         /* If 'subnet' doesn't exist in os.networkInterfaces() expect errors */
         for (let adapter in ifaces) {
