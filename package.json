@@ -30,7 +30,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/.bin/mocha -R spec"
+    "test": "./node_modules/.bin/mocha -R spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "async": "^2.6.1",
@@ -40,11 +42,13 @@
     "ip-address": "^5.8.9",
     "netmask": "^1.0.6",
     "stack-trace": "0.0.10",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.19",
+    "snyk": "^1.192.3"
   },
   "devDependencies": {
     "mocha": "latest",
     "chai": "latest"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
