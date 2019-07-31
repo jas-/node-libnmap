@@ -33,18 +33,18 @@
     "test": "./node_modules/.bin/mocha -R spec"
   },
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "3.1.0",
     "cidr-js": "git+https://github.com/jas-/cidr-js.git#v2.3.2",
-    "deepmerge": "^2.1.1",
+    "deepmerge": "4.0.0",
     "hasbin": "^1.2.3",
-    "ip-address": "^5.8.9",
+    "ip-address": "6.1.0",
     "netmask": "^1.0.6",
     "stack-trace": "0.0.10",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "mocha": "latest",
-    "chai": "latest"
+    "chai": "latest",
+    "mocha": "^6.2.0"
   },
   "license": "MIT"
 }
