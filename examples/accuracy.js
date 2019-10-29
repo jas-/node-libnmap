@@ -8,7 +8,7 @@
 
 const nmap = require('../');
 const opts = {
-  timeout: 900, // 900s = 10m and increases the reliability of scan results
+  timeout: 900, // 900s = 15m and increases the reliability of scan results
   flags: [
     '-T0', // Paranoid scan type; very slow but accurate
     '--max-retries 10', // Don't give up on slow responding hosts
