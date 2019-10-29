@@ -8,7 +8,7 @@
 
 const nmap = require('../');
 const opts = {
-  timeout: 900, // 900s = 10m and increases the reliability of scan results
+  timeout: 900, // 900s = 15m and increases the reliability of scan results
   range: ['scanme.nmap.org', '192.168.0.0/26']
 };
 
