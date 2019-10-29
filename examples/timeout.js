@@ -1,6 +1,6 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2018 Jason Gerfen <jason.gerfen@gmail.com>
+ * Copyright(c) 2013-2019 Jason Gerfen <jason.gerfen@gmail.com>
  * License: MIT
  */
 
@@ -8,7 +8,7 @@
 
 const nmap = require('../');
 const opts = {
-  timeout: 900, // 900s = 10m and increases the reliability of scan results
+  timeout: 900, // 900s = 15m and increases the reliability of scan results
   range: ['scanme.nmap.org', '192.168.0.0/26']
 };
 

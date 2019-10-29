@@ -20,7 +20,7 @@ To install `npm install libnmap`
 * `verbose`   {Boolean}   Turn on verbosity during scan(s)
 * `ports`     {String}    Range of ports to scan
 * `range`     {Array}     An array of hostnames/ipv4/ipv6, CIDR or ranges
-* `timeout`   {Number}    Number of minutes to wait for host/port response
+* `timeout`   {Number}    Number of seconds to wait for host/port response
 * `blocksize` {Number}    Number of hosts per network scanning block
 * `threshold` {Number}    Max number of  spawned process
 * `flags`     {Array}     Array of flags for .spawn()
@@ -92,4 +92,4 @@ to help facilitate pull requests.
 
 This software is licensed under the [MIT License](https://github.com/jas-/node-libnmap/blob/master/LICENSE).
 
-Copyright Jason Gerfen, 2013-2018.
+Copyright Jason Gerfen, 2013-2019.
