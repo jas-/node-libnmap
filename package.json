@@ -1,6 +1,6 @@
 {
   "name": "libnmap",
-  "version": "v0.4.19",
+  "version": "v0.4.21",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
@@ -33,11 +33,11 @@
     "test": "./node_modules/.bin/mocha -R spec"
   },
   "dependencies": {
-    "async": "^2.6.3",
+    "async": "^3.1.0",
     "cidr-js": "git+https://github.com/jas-/cidr-js.git#v2.3.2",
-    "deepmerge": "^2.2.1",
+    "deepmerge": "^4.2.2",
     "hasbin": "^1.2.3",
-    "ip-address": "^5.9.4",
+    "ip-address": "^6.1.0",
     "netmask": "^1.0.6",
     "stack-trace": "0.0.10",
     "xml2js": "^0.4.22"
@@ -45,6 +45,9 @@
   "devDependencies": {
     "mocha": "latest",
     "chai": "latest"
+  },
+  "engines": {
+    "node": "^6 || ^8 || ^10 || ^12"
   },
   "license": "MIT"
 }

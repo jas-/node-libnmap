@@ -9,13 +9,10 @@ addons:
 
 language: node_js
 node_js:
-  - "4"
-  - "5"
   - "6"
-  - "7"
   - "8"
-  - "9"
   - "10"
+  - "12"
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install nmap; fi
