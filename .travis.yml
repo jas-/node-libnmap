@@ -1,8 +1,3 @@
-os:
-  - linux
-  - osx
-  - windows
-
 addons:
   apt:
     packages:
@@ -19,6 +14,11 @@ node_js:
   - "10"
   - "12"
 
-before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install nmap; fi
-  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install nmap && $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"); fi
+jobs:
+  include:
+    - os: linux
+    - os: osx
+    - os: windows
+      before_install:
+        - choco install nmap
+        - PowerShell $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User");
