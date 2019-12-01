@@ -1,3 +1,10 @@
+language: node_js
+node_js:
+  - "6"
+  - "8"
+  - "10"
+  - "12"
+
 addons:
   apt:
     packages:
@@ -5,14 +12,6 @@ addons:
   homebrew:
     packages:
       - nmap
-    update: true
-
-language: node_js
-node_js:
-  - "6"
-  - "8"
-  - "10"
-  - "12"
 
 jobs:
   include:
@@ -21,4 +20,4 @@ jobs:
     - os: windows
       before_install:
         - choco install nmap
-        - PowerShell $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User");
+        - PowerShell -Command \$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User");

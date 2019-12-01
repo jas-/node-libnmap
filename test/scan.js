@@ -17,7 +17,8 @@ const opts = {
     'scanme.nmap.org',
     '::1'
   ],
-  ports: '22,135'
+  ports: '22,135',
+  verbose: true
 };
 
 
