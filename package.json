@@ -38,7 +38,7 @@
     "deepmerge": "^2.2.1",
     "hasbin": "^1.2.3",
     "ip-address": "^5.9.4",
-    "netmask": "^1.0.6",
+    "netmask": "^2.0.1",
     "stack-trace": "0.0.10",
     "xml2js": "^0.4.22"
   },
