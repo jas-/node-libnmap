@@ -30,7 +30,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/.bin/mocha -R spec"
+    "test": "./node_modules/.bin/mocha -R spec",
+    "test:no-defaults": "./node_modules/.bin/mocha test/no-defaults.spec.js"
   },
   "dependencies": {
     "async": "^2.6.3",
