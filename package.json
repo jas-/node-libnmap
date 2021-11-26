@@ -1,8 +1,8 @@
 {
-  "name": "libnmap",
+  "name": "libnmap-xtr",
   "version": "v0.4.19",
   "description": "libnmap for node.js",
-  "author": "Jason Gerfen <jason.gerfen@gmail.com>",
+  "author": "Jason Gerfen <jason.gerfen@gmail.com>, Evandro Brandão <evandroaribel@gmail.com>",
   "keywords": [
     "nmap",
     "libnmap",
@@ -23,15 +23,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jas-/node-libnmap.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jas-/node-libnmap/issues"
+    "url": "https://github.com/kingaribel/node-libnmap.git"
   },
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/.bin/mocha -R spec",
-    "test:no-defaults": "./node_modules/.bin/mocha test/no-defaults.spec.js"
+    "test": "./node_modules/.bin/mocha "
   },
   "dependencies": {
     "async": "^2.6.3",
