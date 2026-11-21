@@ -15,7 +15,7 @@ const opts = {
 };
 
 
-nmap.scan(opts, function (err, report) {
+nmap.scan(opts, (err, report) => {
   if (err) throw new Error(err);
 
   console.log(JSON.stringify(report, null, 2));

@@ -12,7 +12,7 @@
 const nmap = require('../');
 
 
-nmap.discover(function(err, report) {
+nmap.discover((err, report) => {
   if (err) throw err;
 
   console.log(JSON.stringify(report, null, 2));
