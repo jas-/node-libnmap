@@ -1,0 +1,4 @@
+[submodule "src/nmap"]
+	path = src/nmap
+	url = https://github.com/nmap/nmap.git
+	ignore = dirty

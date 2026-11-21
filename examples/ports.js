@@ -1,22 +1,23 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2019 Jason Gerfen <jason.gerfen@gmail.com>
- * License: MIT
+ * Copyright(c) 2013 Jason Gerfen <jason.gerfen@gmail.com>
+ * License: NPSL-0.95
  */
 
 'use strict'
 
+// Scans a list of ports.
+// Examples: '512' (single), '1-65535' (range), '10-30,80,443' (multiple)
+
 const nmap = require('../');
 const opts = {
-  ports: '1-65535',
-  range: ['scanme.nmap.org', '192.168.0.0/26']
+  ports: '21-25,80,443,8000-8100',
+  range: ['scanme.nmap.org']
 };
 
 
 nmap.scan(opts, function(err, report) {
-  if (err) throw new Error(err);
+  if (err) throw err;
 
-  for (let item in report) {
-    console.log(JSON.stringify(report[item], null, 2));
-  }
+  console.log(JSON.stringify(report, null, 2));
 });

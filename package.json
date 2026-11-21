@@ -1,10 +1,14 @@
 {
   "name": "libnmap",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "v0.5.0",
 =======
   "version": "v0.4.19",
 >>>>>>> 3b98523 (v0.4.17: Version bump; dependencies, timeout docs & copywright)
+=======
+  "version": "0.5.0",
+>>>>>>> 24d4bf4 (v0.5.0: 20261121: Moved project to a dynamic compilation of the nmap tool)
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
@@ -33,9 +37,13 @@
     "url": "https://github.com/jas-/node-libnmap/issues"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "./node_modules/.bin/mocha -R spec"
+    "install": "node scripts/fetch-nmap.js && node-gyp rebuild",
+    "build": "node scripts/fetch-nmap.js && node-gyp rebuild",
+    "prepack": "node scripts/fetch-nmap.js --check",
+    "test": "node --test test/unit.js test/local.js",
+    "test:network": "node --test test/scan.js test/discover.js"
   },
+<<<<<<< HEAD
   "dependencies": {
     "async": "^2.6.3",
     "cidr-js": "git+https://github.com/jas-/cidr-js.git#v2.3.2",
@@ -49,10 +57,29 @@
     "netmask": "^1.0.6",
     "stack-trace": "0.0.10",
     "xml2js": "^0.4.22"
+=======
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "index.js",
+  "gypfile": true,
+  "os": [
+    "linux",
+    "darwin"
+  ],
+  "engines": {
+    "node": ">=18"
+>>>>>>> 24d4bf4 (v0.5.0: 20261121: Moved project to a dynamic compilation of the nmap tool)
   },
-  "devDependencies": {
-    "mocha": "latest",
-    "chai": "latest"
-  },
-  "license": "MIT"
+  "files": [
+    "index.js",
+    "lib/",
+    "binding.gyp",
+    "scripts/",
+    "src/addon.cc",
+    "examples/"
+  ],
+  "nmap": {
+    "repository": "https://github.com/nmap/nmap",
+    "version": "7.992",
+    "commit": "0ee561663c1d7d2d4e708cd414dccfd3d9df30d9"
+  }
 }

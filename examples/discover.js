@@ -1,17 +1,19 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2019 Jason Gerfen <jason.gerfen@gmail.com>
- * License: MIT
+ * Copyright(c) 2013 Jason Gerfen <jason.gerfen@gmail.com>
+ * License: NPSL-0.95
  */
 
 'use strict'
 
+// Finds the neighbors on the IPv4 network of each network interface.
+// As root, nmap uses ARP requests, which also give the MAC address.
+
 const nmap = require('../');
 
-nmap.discover({verbose:true}, function (err, report) {
-  if (err) throw new Error(err);
 
-  for (let item in report) {
-    console.log(JSON.stringify(report[item], null, 2));
-  }
+nmap.discover(function(err, report) {
+  if (err) throw err;
+
+  console.log(JSON.stringify(report, null, 2));
 });
