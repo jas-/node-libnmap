@@ -10,7 +10,7 @@ as a node.js module, so an installed `nmap` binary is not necessary.
 To install `npm install libnmap`
 
 The install gets the nmap and OpenSSL sources and compiles them. This occurs one
-time and can take some minutes. It needs Linux or macOS, node.js 18 or later,
+time and can take some minutes. It needs Linux or macOS, node.js 22 or later,
 `make`, a C/C++ compiler, `perl` and `python3`.
 
 ## methods ##
