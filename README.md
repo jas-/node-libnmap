@@ -1,7 +1,6 @@
 # libnmap
 
-API to access nmap from node.js. The install compiles [nmap](https://github.com/nmap/nmap)
-as a node.js module, so an installed `nmap` binary is not necessary.
+Build & leverage [nmap](https://github.com/nmap/nmap) as a node.js module, no need to install an `nmap` binary.
 
 [![npm](https://img.shields.io/npm/v/libnmap.svg)](https://npmjs.com/package/libnmap) [![CI](https://github.com/jas-/node-libnmap/actions/workflows/ci.yml/badge.svg)](https://github.com/jas-/node-libnmap/actions/workflows/ci.yml) ![Downloads](https://img.shields.io/npm/dm/libnmap.svg) [![Known Vulnerabilities](https://snyk.io/test/github/jas-/node-libnmap/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jas-/node-libnmap?targetFile=package.json)
 
@@ -9,9 +8,72 @@ as a node.js module, so an installed `nmap` binary is not necessary.
 
 To install `npm install libnmap`
 
-The install gets the nmap and OpenSSL sources and compiles them. This occurs one
-time and can take some minutes. It needs Linux or macOS, node.js 22 or later,
-`make`, a C/C++ compiler, `perl` and `python3`.
+The install gets the nmap and OpenSSL sources and compiles them. See `build tools` for details.
+
+### build tools ###
+
+Example package requirements.
+
+<details>
+<summary>Debian, Ubuntu (apt)</summary>
+
+```sh
+sudo apt-get install build-essential perl python3 nodejs npm
+```
+</details>
+
+<details>
+<summary>Fedora, RHEL, CentOS, Rocky, AlmaLinux (dnf)</summary>
+
+```sh
+sudo dnf install gcc gcc-c++ make perl python3 diffutils tar nodejs npm
+```
+</details>
+
+<details>
+<summary>openSUSE (zypper)</summary>
+
+```sh
+sudo zypper install gcc gcc-c++ make perl python3 nodejs npm
+```
+</details>
+
+<details>
+<summary>Arch Linux, Manjaro (pacman)</summary>
+
+```sh
+sudo pacman -S --needed base-devel perl python nodejs npm
+```
+</details>
+
+<details>
+<summary>Gentoo (emerge)</summary>
+
+```sh
+sudo emerge --ask dev-lang/perl dev-lang/python net-libs/nodejs
+```
+
+The compiler and `make` are part of the base system.
+</details>
+
+<details>
+<summary>Alpine (apk)</summary>
+
+```sh
+sudo apk add build-base linux-headers perl python3 nodejs npm
+```
+</details>
+
+<details>
+<summary>macOS</summary>
+
+```sh
+xcode-select --install
+brew install node
+```
+
+The Xcode command line tools supply the compiler, `make`, `perl` and `python3`.
+</details>
 
 ## methods ##
 
