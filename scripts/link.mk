@@ -3,7 +3,7 @@
 include Makefile
 
 # The same inputs as the nmap program, but without main.o and without the link step.
-libnmap.a: build-netutil build-liblinear build-pcap build-zlib build-pcre build-nsock build-nbase build-dnet build-lua $(OBJS)
+libnmap.a: build-netutil build-liblinear build-pcap build-zlib build-pcre build-nsock build-nbase build-dnet build-lua $(if $(strip $(LIBSSH2_LIBS)),build-libssh2) $(OBJS)
 	rm -f $@
 	$(AR) rcs $@ $(OBJS)
 

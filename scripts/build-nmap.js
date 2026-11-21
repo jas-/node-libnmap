@@ -28,6 +28,9 @@ const CONFIGURE = [
   '--with-liblua=included',
   '--with-libdnet=included',
   '--with-liblinear=included',
+  // Not in the nmap sources. Without these flags, configure uses the system OpenSSL when it finds one.
+  '--without-openssl',
+  '--without-libssh2',
 ];
 
 const stampText = JSON.stringify({ commit: pin.commit, flags: FLAGS, configure: CONFIGURE });
