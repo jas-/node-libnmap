@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [v0.5.0, master]
+    branches: [v1.0.0, master]
   pull_request:
 
 # The jobs only read the repository.
