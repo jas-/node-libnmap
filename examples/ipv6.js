@@ -1,10 +1,14 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2019 Jason Gerfen <jason.gerfen@gmail.com>
- * License: MIT
+ * Copyright(c) 2013 Jason Gerfen <jason.gerfen@gmail.com>
+ * License: NPSL-0.95
  */
 
 'use strict'
+
+// Scans IPv4 and IPv6 hosts. nmap scans one address family for each run,
+// so this range starts two runs at the same time. The one report has the
+// hosts of the two runs.
 
 const nmap = require('../');
 const opts = {
@@ -12,10 +16,8 @@ const opts = {
 };
 
 
-nmap.scan(opts, function(err, report) {
-  if (err) throw new Error(err);
+nmap.scan(opts, (err, report) => {
+  if (err) throw err;
 
-  for (let item in report) {
-    console.log(JSON.stringify(report[item], null, 2));
-  }
+  console.log(JSON.stringify(report, null, 2));
 });

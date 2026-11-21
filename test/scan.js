@@ -1,16 +1,17 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2019 Jason Gerfen <jason.gerfen@gmail.com>
- * License: MIT
+ * Copyright(c) 2013 Jason Gerfen <jason.gerfen@gmail.com>
+ * License: NPSL-0.95
  */
 
 'use strict'
 
+// Network test: scans scanme.nmap.org. Run it with: npm run test:network
+
+const { describe, it } = require('node:test');
+const assert = require('node:assert/strict');
+
 const nmap = require('../');
-const timeout = 1024 * 1024 * 3;
-const chai = require('chai');
-const should = chai.should();
-const expect = chai.expect;
 const opts = {
   range: [
     '127.0.0.1',
@@ -21,28 +22,23 @@ const opts = {
 };
 
 
-describe('scan method', function () {
+describe('scan method', () => {
 
-  context('reporting', function () {
-    it('json', function (done) {
-      this.timeout(timeout);
-
-      nmap.scan(opts, function (err, report) {
-        should.not.exist(err);
-
-        report.should.be.a('object');
+  describe('reporting', () => {
+    it('json', (t, done) => {
+      nmap.scan(opts, (err, report) => {
+        assert.ifError(err);
+        assert.equal(typeof report, 'object');
+        assert.equal(report.host.length, 3);
         done();
       });
     });
 
-    it('xml', function (done) {
-      this.timeout(timeout);
-      opts.json = false;
-
-      nmap.scan(opts, function (err, report) {
-        should.not.exist(err);
-
-        report.should.be.a('object');
+    it('xml', (t, done) => {
+      nmap.scan(Object.assign({}, opts, { json: false }), (err, report) => {
+        assert.ifError(err);
+        assert.equal(typeof report, 'string');
+        assert.match(report, /^<\?xml/);
         done();
       });
     });

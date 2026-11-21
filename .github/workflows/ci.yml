@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [v1.0.0, master]
+  pull_request:
+
+# The jobs only read the repository.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    timeout-minutes: 30
+    name: ${{ matrix.os }} / node ${{ matrix.node }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [22, 24, 26]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      # Compiles nmap and the module. This takes some minutes.
+      - run: npm install
+
+      # Unit tests and a loopback scan: a TCP connect scan of 127.0.0.1, with no DNS and no raw packets.
+      # The network tests (npm run test:network) scan scanme.nmap.org and the networks of the runner.
+      - run: npm test

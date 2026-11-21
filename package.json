@@ -1,6 +1,6 @@
 {
   "name": "libnmap",
-  "version": "v0.4.19",
+  "version": "1.0.0",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
@@ -29,22 +29,38 @@
     "url": "https://github.com/jas-/node-libnmap/issues"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "./node_modules/.bin/mocha -R spec"
+    "install": "node scripts/fetch-sources.js && node-gyp rebuild",
+    "build": "node scripts/fetch-sources.js && node-gyp rebuild",
+    "prepack": "node scripts/fetch-sources.js --check",
+    "test": "node --test test/unit.js test/local.js",
+    "test:network": "node --test test/scan.js test/discover.js"
   },
-  "dependencies": {
-    "async": "^2.6.3",
-    "cidr-js": "git+https://github.com/jas-/cidr-js.git#v2.3.2",
-    "deepmerge": "^2.2.1",
-    "hasbin": "^1.2.3",
-    "ip-address": "^5.9.4",
-    "netmask": "^1.0.6",
-    "stack-trace": "0.0.10",
-    "xml2js": "^0.4.22"
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "index.js",
+  "gypfile": true,
+  "os": [
+    "linux",
+    "darwin"
+  ],
+  "engines": {
+    "node": ">=22"
   },
-  "devDependencies": {
-    "mocha": "latest",
-    "chai": "latest"
+  "files": [
+    "index.js",
+    "lib/",
+    "binding.gyp",
+    "scripts/",
+    "src/addon.cc",
+    "examples/"
+  ],
+  "nmap": {
+    "repository": "https://github.com/nmap/nmap",
+    "version": "7.992",
+    "commit": "0ee561663c1d7d2d4e708cd414dccfd3d9df30d9"
   },
-  "license": "MIT"
+  "openssl": {
+    "repository": "https://github.com/openssl/openssl",
+    "version": "3.5.9",
+    "commit": "45e844fa2a14ec92d146bd8f5778ac130b6625fb"
+  }
 }

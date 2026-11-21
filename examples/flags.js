@@ -1,28 +1,28 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2019 Jason Gerfen <jason.gerfen@gmail.com>
- * License: MIT
+ * Copyright(c) 2013 Jason Gerfen <jason.gerfen@gmail.com>
+ * License: NPSL-0.95
  */
 
 'use strict'
+
+// More nmap flags for a scan. A flag can include its value.
 
 const nmap = require('../');
 const opts = {
   flags: [
     '-sV', // Open port to determine service (i.e. FTP, SSH etc)
     '-O', // OS finger printing (requires elevated privileges)
-    '-sC', // Enables the nmap scripts (all) against each host (requires elevated privileges)
-    '--traceroute', // Turns on tracerouting
+    '-sC', // Enables the default nmap scripts against each host
+    '--traceroute', // Turns on tracerouting (requires elevated privileges)
     '--script traceroute-geolocation' // Turns on GeoIP functionality per hops
   ],
-  range: ['scanme.nmap.org', '172.17.0.0/24']
+  range: ['scanme.nmap.org']
 };
 
 
-nmap.scan(opts, function(err, report) {
+nmap.scan(opts, (err, report) => {
   if (err) throw err;
 
-  for (let item in report) {
-    console.log(JSON.stringify(report[item], null, 2));
-  }
+  console.log(JSON.stringify(report, null, 2));
 });

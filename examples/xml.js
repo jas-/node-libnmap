@@ -1,22 +1,22 @@
 /*!
  * libnmap
- * Copyright(c) 2013-2019 Jason Gerfen <jason.gerfen@gmail.com>
- * License: MIT
+ * Copyright(c) 2013 Jason Gerfen <jason.gerfen@gmail.com>
+ * License: NPSL-0.95
  */
 
 'use strict'
 
+// With json: false the report is the nmap XML document as a string.
+
 const nmap = require('../');
 const opts = {
   json: false,
-  range: ['scanme.nmap.org', '192.168.0.0/26']
+  range: ['scanme.nmap.org']
 };
 
 
-nmap.scan(opts, function(err, report) {
-  if (err) throw new Error(err);
+nmap.scan(opts, (err, report) => {
+  if (err) throw err;
 
-  for (let item in report) {
-    console.log(report[item], null, 2);
-  }
+  console.log(report);
 });

@@ -1,3 +1,11 @@
 .git/
 .c9/
 node_modules/*
+
+# node-gyp build output
+build/
+*.node
+
+# Local test harness
+vm/
+.vm/
