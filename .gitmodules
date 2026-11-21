@@ -2,3 +2,8 @@
 	path = src/nmap
 	url = https://github.com/nmap/nmap.git
 	ignore = dirty
+[submodule "src/openssl"]
+	path = src/openssl
+	url = https://github.com/openssl/openssl.git
+	ignore = dirty
+	shallow = true

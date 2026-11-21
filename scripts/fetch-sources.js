@@ -1,5 +1,5 @@
 'use strict';
-// Gets the nmap sources before the build: existing files, git submodule, or pinned download.
+// Gets the nmap and OpenSSL sources before the build: existing files, git submodule, or pinned download.
 
 const fs = require('node:fs');
 const os = require('node:os');
@@ -7,11 +7,16 @@ const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 
 const root = path.join(__dirname, '..');
-const dest = path.join(root, 'src', 'nmap');
-const { nmap: pin } = require(path.join(root, 'package.json'));
+const pkg = require(path.join(root, 'package.json'));
 
-function hasSources() {
-  return fs.existsSync(path.join(dest, 'nmap.cc')) && fs.existsSync(path.join(dest, 'configure'));
+// Each source has its pin in package.json and a file that shows that the sources are there.
+const sources = [
+  { name: 'nmap', pin: pkg.nmap, marker: 'configure' },
+  { name: 'openssl', pin: pkg.openssl, marker: 'Configure' },
+].map((source) => ({ ...source, dest: path.join(root, 'src', source.name) }));
+
+function hasSources(source) {
+  return fs.existsSync(path.join(source.dest, source.marker));
 }
 
 function git(args, opts = {}) {
@@ -30,15 +35,15 @@ function isGitCheckout() {
   }
 }
 
-async function download() {
+async function download({ name, pin, dest }) {
   const url = `${pin.repository}/archive/${pin.commit}.tar.gz`;
-  console.log(`libnmap: downloading nmap ${pin.version} (${pin.commit.slice(0, 12)})`);
+  console.log(`libnmap: downloading ${name} ${pin.version} (${pin.commit.slice(0, 12)})`);
   const res = await fetch(url);
   if (!res.ok) throw new Error(`download of ${url} failed: HTTP ${res.status}`);
 
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'libnmap-'));
   try {
-    const archive = path.join(tmp, 'nmap.tar.gz');
+    const archive = path.join(tmp, `${name}.tar.gz`);
     fs.writeFileSync(archive, Buffer.from(await res.arrayBuffer()));
     fs.mkdirSync(dest, { recursive: true });
     execFileSync('tar', ['-xzf', archive, '-C', dest, '--strip-components=1'], { stdio: 'inherit' });
@@ -47,31 +52,34 @@ async function download() {
   }
 }
 
-function check() {
+function check({ name, pin, dest }) {
   const actual = git(['-C', dest, 'rev-parse', 'HEAD']);
   if (actual !== pin.commit) {
-    console.error(`libnmap: src/nmap is at ${actual}, but package.json pins ${pin.commit}.`);
-    console.error('Set "nmap.commit" in package.json to the submodule commit.');
+    console.error(`libnmap: src/${name} is at ${actual}, but package.json pins ${pin.commit}.`);
+    console.error(`Set "${name}.commit" in package.json to the submodule commit.`);
     process.exit(1);
   }
 }
 
 async function main() {
   if (process.argv.includes('--check')) {
-    check();
+    sources.forEach(check);
     return;
   }
-  if (hasSources()) return;
 
-  if (isGitCheckout()) {
-    console.log('libnmap: running git submodule update --init');
-    git(['submodule', 'update', '--init', '--depth', '1'], { stdio: 'inherit' });
-  } else {
-    await download();
-  }
+  for (const source of sources) {
+    if (hasSources(source)) continue;
 
-  if (!hasSources()) {
-    throw new Error(`no nmap sources in ${dest}`);
+    if (isGitCheckout()) {
+      console.log(`libnmap: running git submodule update --init src/${source.name}`);
+      git(['submodule', 'update', '--init', '--depth', '1', `src/${source.name}`], { stdio: 'inherit' });
+    } else {
+      await download(source);
+    }
+
+    if (!hasSources(source)) {
+      throw new Error(`no ${source.name} sources in ${source.dest}`);
+    }
   }
 }
 

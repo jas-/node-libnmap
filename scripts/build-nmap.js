@@ -1,6 +1,6 @@
 'use strict';
-// Compiles the nmap sources to a static library (libnmap.a), as position-independent code.
-// Uses nmap's own configure and make. No nmap program is built.
+// Compiles the OpenSSL and nmap sources to static libraries, as position-independent code.
+// Uses the configure and make of each project. No nmap or openssl program is built.
 // Prints the link inputs (libraries) for binding.gyp. All other output goes to stderr.
 
 const fs = require('node:fs');
@@ -12,7 +12,10 @@ const root = path.join(__dirname, '..');
 const dir = path.join(root, 'src', 'nmap');
 const stamp = path.join(dir, '.libnmap-build');
 const linkmk = path.join(__dirname, 'link.mk');
-const { nmap: pin } = require(path.join(root, 'package.json'));
+const ssl = path.join(root, 'src', 'openssl');
+const sslPrefix = path.join(ssl, '.libnmap');
+const sslStamp = path.join(sslPrefix, '.libnmap-build');
+const { nmap: pin, openssl: sslPin } = require(path.join(root, 'package.json'));
 
 const FLAGS = '-fPIC -O2 -w';
 
@@ -28,16 +31,37 @@ const CONFIGURE = [
   '--with-liblua=included',
   '--with-libdnet=included',
   '--with-liblinear=included',
-  // Not in the nmap sources. Without these flags, configure uses the system OpenSSL when it finds one.
-  '--without-openssl',
-  '--without-libssh2',
+  // The OpenSSL that this script compiles, not the system OpenSSL.
+  `--with-openssl=${sslPrefix}`,
+  '--with-libssh2=included',
 ];
 
-const stampText = JSON.stringify({ commit: pin.commit, flags: FLAGS, configure: CONFIGURE });
+// Only the static libraries and the headers.
+const SSL_CONFIGURE = ['no-shared', 'no-tests', 'no-apps', 'no-docs', '-fPIC', '-w',
+  `--prefix=${sslPrefix}`, '--libdir=lib'];
 
-function run(cmd, args, env = process.env) {
+const sslStampText = JSON.stringify({ commit: sslPin.commit, configure: SSL_CONFIGURE });
+
+const stampText = JSON.stringify({ commit: pin.commit, openssl: sslPin.commit, flags: FLAGS,
+  configure: CONFIGURE });
+
+function run(cmd, args, env = process.env, cwd = dir) {
   // stdout is reserved for the link inputs.
-  execFileSync(cmd, args, { cwd: dir, env, stdio: ['ignore', 2, 2] });
+  execFileSync(cmd, args, { cwd, env, stdio: ['ignore', 2, 2] });
+}
+
+function buildOpenssl(make, jobs) {
+  if (fs.existsSync(sslStamp) && fs.readFileSync(sslStamp, 'utf8') === sslStampText) return;
+  if (!fs.existsSync(path.join(ssl, 'Configure'))) {
+    throw new Error('src/openssl is empty. Run: node scripts/fetch-sources.js');
+  }
+
+  console.error('libnmap: configuring OpenSSL');
+  run('perl', ['Configure', ...SSL_CONFIGURE], process.env, ssl);
+  console.error('libnmap: compiling OpenSSL');
+  run(make, ['-j', jobs, 'build_libs'], process.env, ssl);
+  run(make, ['install_dev'], process.env, ssl);
+  fs.writeFileSync(sslStamp, sslStampText);
 }
 
 function isBuilt() {
@@ -47,10 +71,12 @@ function isBuilt() {
 
 function build() {
   if (!fs.existsSync(path.join(dir, 'configure'))) {
-    throw new Error('src/nmap is empty. Run: node scripts/fetch-nmap.js');
+    throw new Error('src/nmap is empty. Run: node scripts/fetch-sources.js');
   }
   const make = process.env.MAKE || 'make';
   const jobs = String(Math.max(1, os.cpus().length));
+
+  buildOpenssl(make, jobs);
 
   console.error('libnmap: configuring nmap');
   run('./configure', CONFIGURE, { ...process.env, CFLAGS: FLAGS, CXXFLAGS: FLAGS });
@@ -61,6 +87,8 @@ function build() {
 
 // Makes the Makefile's relative paths absolute, because gyp links from another directory.
 function absolute(token) {
+  // The static OpenSSL of this build, and not a system library with the same name.
+  if (token === '-lssl' || token === '-lcrypto') return path.join(sslPrefix, 'lib', `lib${token.slice(2)}.a`);
   if (token.startsWith('-L')) return `-L${path.resolve(dir, token.slice(2))}`;
   if (token.startsWith('-')) return token;
   return path.resolve(dir, token);

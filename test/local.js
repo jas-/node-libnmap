@@ -175,6 +175,14 @@ describe('scan method (loopback only)', () => {
     setTimeout(() => child.kill(), 1500);
   });
 
+  it('includes OpenSSL and libssh2', (t, done) => {
+    tools.scan(['--version'], (err, output) => {
+      assert.ifError(err);
+      assert.match(output, /Compiled with:.* openssl-.* nmap-libssh2-/);
+      done();
+    });
+  });
+
   it('gives an error for an empty range', (t, done) => {
     nmap.scan({ range: [] }, (err, report) => {
       assert.ok(err instanceof Error);

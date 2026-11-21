@@ -29,9 +29,9 @@
     "url": "https://github.com/jas-/node-libnmap/issues"
   },
   "scripts": {
-    "install": "node scripts/fetch-nmap.js && node-gyp rebuild",
-    "build": "node scripts/fetch-nmap.js && node-gyp rebuild",
-    "prepack": "node scripts/fetch-nmap.js --check",
+    "install": "node scripts/fetch-sources.js && node-gyp rebuild",
+    "build": "node scripts/fetch-sources.js && node-gyp rebuild",
+    "prepack": "node scripts/fetch-sources.js --check",
     "test": "node --test test/unit.js test/local.js",
     "test:network": "node --test test/scan.js test/discover.js"
   },
@@ -57,5 +57,10 @@
     "repository": "https://github.com/nmap/nmap",
     "version": "7.992",
     "commit": "0ee561663c1d7d2d4e708cd414dccfd3d9df30d9"
+  },
+  "openssl": {
+    "repository": "https://github.com/openssl/openssl",
+    "version": "3.5.9",
+    "commit": "45e844fa2a14ec92d146bd8f5778ac130b6625fb"
   }
 }

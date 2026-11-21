@@ -75,6 +75,26 @@ describe('network ranges', () => {
 });
 
 
+describe('report names', () => {
+  it('keeps the object prototype when a name is __proto__', () => {
+    const doc = xml.parse('<r><__proto__ x="1"/><a __proto__="y" b="2"/></r>');
+
+    assert.equal(Object.getPrototypeOf(doc.r), Object.prototype);
+    assert.equal(Object.getPrototypeOf(doc.r.a[0].item), Object.prototype);
+    assert.equal(doc.r.a[0].item.b, '2');
+    assert.equal({}.x, undefined);
+  });
+
+  it('does not decode a reference to a surrogate', () => {
+    const doc = xml.parse('<r a="&#xD800; &#xDFFF; &#x1F600; &#x110000;"/>');
+
+    assert.equal(doc.r.item.a, '&#xD800; &#xDFFF; \u{1F600} &#x110000;');
+    assert.ok(doc.r.item.a.isWellFormed === undefined ||
+      doc.r.item.a.isWellFormed());
+  });
+});
+
+
 describe('reports', () => {
   const one = '<?xml version="1.0"?>\n<nmaprun scanner="nmap" args="a">\n' +
     '<verbose level="0"/>\n<host><address addr="10.0.0.1"/></host>\n' +
@@ -134,10 +154,10 @@ describe('tools', () => {
       assert.ifError(err);
       assert.deepEqual(result.scans, [
         ['-sU', '--host-timeout=120s', '-T4', '--max-retries', '3', '--script',
-          '(default or vuln) and safe', '-oX', '-', '-p22,80', '10.0.0.0/24',
-          'scanme.nmap.org'],
+          '(default or vuln) and safe', '-oX', '-', '-p22,80', '--',
+          '10.0.0.0/24', 'scanme.nmap.org'],
         ['-sU', '--host-timeout=120s', '-T4', '--max-retries', '3', '--script',
-          '(default or vuln) and safe', '-oX', '-', '-6', '-p22,80', '::1']
+          '(default or vuln) and safe', '-oX', '-', '-6', '-p22,80', '--', '::1']
       ]);
       done();
     });
@@ -147,6 +167,35 @@ describe('tools', () => {
     tools.init({ flags: [], range: [] }, { range: ['10.0.0.1', '!'] }, err => {
       assert.match(err, /did not pass validation/);
       done();
+    });
+  });
+
+  it('gives an error for a host that is an nmap option', () => {
+    const hosts = ['-oN/tmp/x', '--datadir=/tmp/x/10.0.0.0/24',
+      '-iL /etc/passwd 10.0.0.0/24', '::1 --script x', 'fe80::1%eth0 -oN x'];
+
+    hosts.forEach(host => {
+      tools.init({ flags: [], range: [] }, { range: [host] }, err => {
+        assert.match(err, /did not pass validation/);
+      });
+    });
+  });
+
+  it('gives an error for a flag with a NUL character', () => {
+    tools.init({ flags: [], range: [] },
+      { range: ['10.0.0.1'], flags: ['-T4\0--script=x'] },
+      err => assert.match(err, /Flags must be/));
+  });
+
+  it('gives an error for ports that are not valid', () => {
+    ['80 --script=x', 'http', '1-1024;x', '-'].forEach(ports => {
+      tools.init({ flags: [], range: [] }, { range: ['10.0.0.1'], ports },
+        err => assert.match(err, /Port\(s\) must match/));
+    });
+
+    ['80', '1-1024', '22,80,443', 'T:80,U:53', '1-', '-100'].forEach(ports => {
+      tools.init({ flags: [], range: [] }, { range: ['10.0.0.1'], ports },
+        err => assert.equal(err, null));
     });
   });
 });
