@@ -10,6 +10,11 @@ To install `npm install libnmap`
 
 The install gets the nmap and OpenSSL sources and compiles them. See `build tools` for details.
 
+Some package managers (pnpm, yarn, bun, and npm with `ignore-scripts`) do not
+run install scripts unless you allow them. If a scan gives the error "the nmap
+module is not compiled", allow the install script of `libnmap` and run
+`npm rebuild libnmap`.
+
 ### build tools ###
 
 Example package requirements.
