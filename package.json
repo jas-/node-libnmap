@@ -1,6 +1,6 @@
 {
   "name": "libnmap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
