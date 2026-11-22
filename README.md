@@ -6,6 +6,8 @@ Build & leverage [nmap](https://github.com/nmap/nmap) as a node.js module, no ne
 
 ## install ##
 
+![npm install libnmap](docs/install.gif)
+
 To install `npm install libnmap`
 
 The install gets the nmap and OpenSSL sources and compiles them. See `build tools` for details.
@@ -100,6 +102,8 @@ More examples are in the `examples/` folder.
 
 ### scan ###
 
+![scan report](docs/scan.gif)
+
 ```javascript
 const nmap = require('libnmap');
 const opts = {
@@ -120,6 +124,8 @@ nmap.scan(opts, function(err, report) {
 ```
 
 ### discover ###
+
+![discover report](docs/discover.gif)
 
 ```javascript
 const nmap = require('libnmap');
