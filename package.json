@@ -1,6 +1,6 @@
 {
   "name": "libnmap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "libnmap for node.js",
   "author": "Jason Gerfen <jason.gerfen@gmail.com>",
   "keywords": [
@@ -56,11 +56,13 @@
   "nmap": {
     "repository": "https://github.com/nmap/nmap",
     "version": "7.992",
-    "commit": "0ee561663c1d7d2d4e708cd414dccfd3d9df30d9"
+    "commit": "0ee561663c1d7d2d4e708cd414dccfd3d9df30d9",
+    "sha256": "7f4330726c73bf6208107cf5cfb50fcf437d496c2b2f7bfdd362b2fa2857ddde"
   },
   "openssl": {
     "repository": "https://github.com/openssl/openssl",
     "version": "3.5.9",
-    "commit": "45e844fa2a14ec92d146bd8f5778ac130b6625fb"
+    "commit": "45e844fa2a14ec92d146bd8f5778ac130b6625fb",
+    "sha256": "8d27658bfb4e0bf3ccb18ff3a7f848d9e5532d820497d5caa080d126bb1865a0"
   }
 }
